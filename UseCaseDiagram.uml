@@ -1,28 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_HddAoE6xEfGnD9oHUm1OLQ" name="sandwich_ordering_system">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_HddAoE6xEfGnD9oHUm1OLQ" name="sandwich_ordering_system">
   <packageImport xmi:type="uml:PackageImport" xmi:id="_HdqcAE6xEfGnD9oHUm1OLQ">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Package" xmi:id="_dQzXME68EfGnD9oHUm1OLQ" name="Sandwich Order System">
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_s6__ME68EfGnD9oHUm1OLQ" name="Place order of sandwich"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_2LHfsE68EfGnD9oHUm1OLQ" name="Select sandwich ingredients"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_8ZSSIE68EfGnD9oHUm1OLQ" name="Select sandwich bread type"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_-d_U0E68EfGnD9oHUm1OLQ" name="Edit order entered"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_Aq0YwE69EfGnD9oHUm1OLQ" name="Delete order entered"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_NOulQE69EfGnD9oHUm1OLQ" name="Confirm/save order"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_Md_gUE7HEfGnD9oHUm1OLQ" name="Create an account"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_OxhpME7HEfGnD9oHUm1OLQ" name="Login an existing account"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_ZcZ3gE7HEfGnD9oHUm1OLQ" name="Create types of bread"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_bUy8gE7HEfGnD9oHUm1OLQ" name="Create ingredients"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_dgR8oE7HEfGnD9oHUm1OLQ" name="Edit types of bread"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_h-z9cE7HEfGnD9oHUm1OLQ" name="Delete types of bread"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_keRCcE7HEfGnD9oHUm1OLQ" name="Edit ingredients in menu"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_mM2rME7HEfGnD9oHUm1OLQ" name="Delete ingredients in menu"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_Jr1FQE7IEfGnD9oHUm1OLQ" name="Create an account"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_ULrIQE7IEfGnD9oHUm1OLQ" name="Login an existing account"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_jMmw0E7IEfGnD9oHUm1OLQ" name="Confirm/save created items"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_lXNnME7IEfGnD9oHUm1OLQ" name="Confirm/save created items' details"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_s6__ME68EfGnD9oHUm1OLQ" name="Place order of sandwich">
+      <include xmi:type="uml:Include" xmi:id="_TNpOME7SEfGnD9oHUm1OLQ" addition="_2LHfsE68EfGnD9oHUm1OLQ"/>
+      <include xmi:type="uml:Include" xmi:id="_T9L0wE7SEfGnD9oHUm1OLQ" addition="_8ZSSIE68EfGnD9oHUm1OLQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_2LHfsE68EfGnD9oHUm1OLQ" name="Select sandwich ingredients">
+      <include xmi:type="uml:Include" xmi:id="_UhrB4E7SEfGnD9oHUm1OLQ" addition="_OxhpME7HEfGnD9oHUm1OLQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_8ZSSIE68EfGnD9oHUm1OLQ" name="Select sandwich bread type">
+      <include xmi:type="uml:Include" xmi:id="_VEpMEE7SEfGnD9oHUm1OLQ" addition="_OxhpME7HEfGnD9oHUm1OLQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_-d_U0E68EfGnD9oHUm1OLQ" name="Edit order entered">
+      <include xmi:type="uml:Include" xmi:id="_QQBmgE7SEfGnD9oHUm1OLQ" addition="_OxhpME7HEfGnD9oHUm1OLQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Aq0YwE69EfGnD9oHUm1OLQ" name="Delete order entered">
+      <include xmi:type="uml:Include" xmi:id="_RDvicE7SEfGnD9oHUm1OLQ" addition="_OxhpME7HEfGnD9oHUm1OLQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_NOulQE69EfGnD9oHUm1OLQ" name="Confirm/save order">
+      <include xmi:type="uml:Include" xmi:id="_R0bYgE7SEfGnD9oHUm1OLQ" addition="_OxhpME7HEfGnD9oHUm1OLQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Md_gUE7HEfGnD9oHUm1OLQ" name="Create a customer account"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_OxhpME7HEfGnD9oHUm1OLQ" name="Login an customer account"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ZcZ3gE7HEfGnD9oHUm1OLQ" name="Create types of bread">
+      <include xmi:type="uml:Include" xmi:id="_zMgmQE7MEfGnD9oHUm1OLQ" addition="_ULrIQE7IEfGnD9oHUm1OLQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_bUy8gE7HEfGnD9oHUm1OLQ" name="Create ingredients">
+      <include xmi:type="uml:Include" xmi:id="_0IYYoE7MEfGnD9oHUm1OLQ" addition="_ULrIQE7IEfGnD9oHUm1OLQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_dgR8oE7HEfGnD9oHUm1OLQ" name="Edit types of bread">
+      <include xmi:type="uml:Include" xmi:id="_1YiY8E7MEfGnD9oHUm1OLQ" addition="_ULrIQE7IEfGnD9oHUm1OLQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_h-z9cE7HEfGnD9oHUm1OLQ" name="Delete types of bread">
+      <include xmi:type="uml:Include" xmi:id="_2YqZME7MEfGnD9oHUm1OLQ" addition="_ULrIQE7IEfGnD9oHUm1OLQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_keRCcE7HEfGnD9oHUm1OLQ" name="Edit ingredients in menu">
+      <include xmi:type="uml:Include" xmi:id="_3IG5IE7MEfGnD9oHUm1OLQ" addition="_ULrIQE7IEfGnD9oHUm1OLQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_mM2rME7HEfGnD9oHUm1OLQ" name="Delete ingredients in menu">
+      <include xmi:type="uml:Include" xmi:id="_3tzAIE7MEfGnD9oHUm1OLQ" addition="_ULrIQE7IEfGnD9oHUm1OLQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Jr1FQE7IEfGnD9oHUm1OLQ" name="Create a staff account"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ULrIQE7IEfGnD9oHUm1OLQ" name="Login a staff account"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_lXNnME7IEfGnD9oHUm1OLQ" name="Confirm/save created item and their details">
+      <include xmi:type="uml:Include" xmi:id="_SnIn0E7SEfGnD9oHUm1OLQ" addition="_ULrIQE7IEfGnD9oHUm1OLQ"/>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_i19o4E68EfGnD9oHUm1OLQ" name="Customer"/>
   <packagedElement xmi:type="uml:Actor" xmi:id="_kQ9AME68EfGnD9oHUm1OLQ" name="Staff"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_prne0E7MEfGnD9oHUm1OLQ" memberEnd="_pros8E7MEfGnD9oHUm1OLQ _pros8U7MEfGnD9oHUm1OLQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_proF4E7MEfGnD9oHUm1OLQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_proF4U7MEfGnD9oHUm1OLQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_pros8E7MEfGnD9oHUm1OLQ" name="create types of bread" type="_ZcZ3gE7HEfGnD9oHUm1OLQ" association="_prne0E7MEfGnD9oHUm1OLQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_pros8U7MEfGnD9oHUm1OLQ" name="staff" type="_kQ9AME68EfGnD9oHUm1OLQ" association="_prne0E7MEfGnD9oHUm1OLQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_qXOAkE7MEfGnD9oHUm1OLQ" memberEnd="_qXOnok7MEfGnD9oHUm1OLQ _qXOno07MEfGnD9oHUm1OLQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qXOnoE7MEfGnD9oHUm1OLQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qXOnoU7MEfGnD9oHUm1OLQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_qXOnok7MEfGnD9oHUm1OLQ" name="create ingredients" type="_bUy8gE7HEfGnD9oHUm1OLQ" association="_qXOAkE7MEfGnD9oHUm1OLQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_qXOno07MEfGnD9oHUm1OLQ" name="staff" type="_kQ9AME68EfGnD9oHUm1OLQ" association="_qXOAkE7MEfGnD9oHUm1OLQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_q7i1oE7MEfGnD9oHUm1OLQ" memberEnd="_q7kDwE7MEfGnD9oHUm1OLQ _q7kDwU7MEfGnD9oHUm1OLQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q7jcsE7MEfGnD9oHUm1OLQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_q7jcsU7MEfGnD9oHUm1OLQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_q7kDwE7MEfGnD9oHUm1OLQ" name="edit types of bread" type="_dgR8oE7HEfGnD9oHUm1OLQ" association="_q7i1oE7MEfGnD9oHUm1OLQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_q7kDwU7MEfGnD9oHUm1OLQ" name="staff" type="_kQ9AME68EfGnD9oHUm1OLQ" association="_q7i1oE7MEfGnD9oHUm1OLQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_rmR0sE7MEfGnD9oHUm1OLQ" memberEnd="_rmSbwU7MEfGnD9oHUm1OLQ _rmSbwk7MEfGnD9oHUm1OLQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rmR0sU7MEfGnD9oHUm1OLQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rmSbwE7MEfGnD9oHUm1OLQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_rmSbwU7MEfGnD9oHUm1OLQ" name="delete types of bread" type="_h-z9cE7HEfGnD9oHUm1OLQ" association="_rmR0sE7MEfGnD9oHUm1OLQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_rmSbwk7MEfGnD9oHUm1OLQ" name="staff" type="_kQ9AME68EfGnD9oHUm1OLQ" association="_rmR0sE7MEfGnD9oHUm1OLQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sizHUE7MEfGnD9oHUm1OLQ" memberEnd="_sizuYk7MEfGnD9oHUm1OLQ _sizuY07MEfGnD9oHUm1OLQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sizuYE7MEfGnD9oHUm1OLQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sizuYU7MEfGnD9oHUm1OLQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_sizuYk7MEfGnD9oHUm1OLQ" name="edit ingredients in menu" type="_keRCcE7HEfGnD9oHUm1OLQ" association="_sizHUE7MEfGnD9oHUm1OLQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_sizuY07MEfGnD9oHUm1OLQ" name="staff" type="_kQ9AME68EfGnD9oHUm1OLQ" association="_sizHUE7MEfGnD9oHUm1OLQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_tO1G4E7MEfGnD9oHUm1OLQ" memberEnd="_tO2VAU7MEfGnD9oHUm1OLQ _tO2VAk7MEfGnD9oHUm1OLQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tO1t8E7MEfGnD9oHUm1OLQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tO2VAE7MEfGnD9oHUm1OLQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_tO2VAU7MEfGnD9oHUm1OLQ" name="delete ingredients in menu" type="_mM2rME7HEfGnD9oHUm1OLQ" association="_tO1G4E7MEfGnD9oHUm1OLQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_tO2VAk7MEfGnD9oHUm1OLQ" name="staff" type="_kQ9AME68EfGnD9oHUm1OLQ" association="_tO1G4E7MEfGnD9oHUm1OLQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_uWNlsE7MEfGnD9oHUm1OLQ" memberEnd="_uWPa4E7MEfGnD9oHUm1OLQ _uWPa4U7MEfGnD9oHUm1OLQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uWOz0E7MEfGnD9oHUm1OLQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uWOz0U7MEfGnD9oHUm1OLQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_uWPa4E7MEfGnD9oHUm1OLQ" name="create an account" type="_Jr1FQE7IEfGnD9oHUm1OLQ" association="_uWNlsE7MEfGnD9oHUm1OLQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_uWPa4U7MEfGnD9oHUm1OLQ" name="staff" type="_kQ9AME68EfGnD9oHUm1OLQ" association="_uWNlsE7MEfGnD9oHUm1OLQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_TAsMwE7REfGnD9oHUm1OLQ" memberEnd="_TAta4k7REfGnD9oHUm1OLQ _TAta407REfGnD9oHUm1OLQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TAta4E7REfGnD9oHUm1OLQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TAta4U7REfGnD9oHUm1OLQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_TAta4k7REfGnD9oHUm1OLQ" name="edit order entered" type="_-d_U0E68EfGnD9oHUm1OLQ" association="_TAsMwE7REfGnD9oHUm1OLQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_TAta407REfGnD9oHUm1OLQ" name="customer" type="_i19o4E68EfGnD9oHUm1OLQ" association="_TAsMwE7REfGnD9oHUm1OLQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_T5W6IE7REfGnD9oHUm1OLQ" memberEnd="_T5YIQk7REfGnD9oHUm1OLQ _T5YvUE7REfGnD9oHUm1OLQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T5YIQE7REfGnD9oHUm1OLQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T5YIQU7REfGnD9oHUm1OLQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_T5YIQk7REfGnD9oHUm1OLQ" name="delete order entered" type="_Aq0YwE69EfGnD9oHUm1OLQ" association="_T5W6IE7REfGnD9oHUm1OLQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_T5YvUE7REfGnD9oHUm1OLQ" name="customer" type="_i19o4E68EfGnD9oHUm1OLQ" association="_T5W6IE7REfGnD9oHUm1OLQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ZeZQAE7REfGnD9oHUm1OLQ" memberEnd="_ZeZ3Ek7REfGnD9oHUm1OLQ _ZeZ3E07REfGnD9oHUm1OLQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZeZ3EE7REfGnD9oHUm1OLQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZeZ3EU7REfGnD9oHUm1OLQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ZeZ3Ek7REfGnD9oHUm1OLQ" name="create a customer account" type="_Md_gUE7HEfGnD9oHUm1OLQ" association="_ZeZQAE7REfGnD9oHUm1OLQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ZeZ3E07REfGnD9oHUm1OLQ" name="customer" type="_i19o4E68EfGnD9oHUm1OLQ" association="_ZeZQAE7REfGnD9oHUm1OLQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_H1CXME7SEfGnD9oHUm1OLQ" memberEnd="_H1DlUk7SEfGnD9oHUm1OLQ _H1DlU07SEfGnD9oHUm1OLQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_H1DlUE7SEfGnD9oHUm1OLQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_H1DlUU7SEfGnD9oHUm1OLQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_H1DlUk7SEfGnD9oHUm1OLQ" name="confirm/save order" type="_NOulQE69EfGnD9oHUm1OLQ" association="_H1CXME7SEfGnD9oHUm1OLQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_H1DlU07SEfGnD9oHUm1OLQ" name="customer" type="_i19o4E68EfGnD9oHUm1OLQ" association="_H1CXME7SEfGnD9oHUm1OLQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_LaYGME7SEfGnD9oHUm1OLQ" memberEnd="_LaZUUU7SEfGnD9oHUm1OLQ _LaZ7YE7SEfGnD9oHUm1OLQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LaYtQE7SEfGnD9oHUm1OLQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LaZUUE7SEfGnD9oHUm1OLQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_LaZUUU7SEfGnD9oHUm1OLQ" name="place order of sandwich" type="_s6__ME68EfGnD9oHUm1OLQ" association="_LaYGME7SEfGnD9oHUm1OLQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_LaZ7YE7SEfGnD9oHUm1OLQ" name="customer" type="_i19o4E68EfGnD9oHUm1OLQ" association="_LaYGME7SEfGnD9oHUm1OLQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_GcXpME7UEfGnD9oHUm1OLQ" memberEnd="_GcY3UU7UEfGnD9oHUm1OLQ _GcY3Uk7UEfGnD9oHUm1OLQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GcYQQE7UEfGnD9oHUm1OLQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GcY3UE7UEfGnD9oHUm1OLQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_GcY3UU7UEfGnD9oHUm1OLQ" name="confirm/save created item and their details" type="_lXNnME7IEfGnD9oHUm1OLQ" association="_GcXpME7UEfGnD9oHUm1OLQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_GcY3Uk7UEfGnD9oHUm1OLQ" name="staff" type="_kQ9AME68EfGnD9oHUm1OLQ" association="_GcXpME7UEfGnD9oHUm1OLQ"/>
+  </packagedElement>
 </uml:Model>
