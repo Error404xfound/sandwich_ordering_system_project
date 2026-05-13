@@ -23,7 +23,6 @@
     <packagedElement xmi:type="uml:UseCase" xmi:id="_NOulQE69EfGnD9oHUm1OLQ" name="Confirm/save order">
       <include xmi:type="uml:Include" xmi:id="_R0bYgE7SEfGnD9oHUm1OLQ" addition="_OxhpME7HEfGnD9oHUm1OLQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_Md_gUE7HEfGnD9oHUm1OLQ" name="Create a customer account"/>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_OxhpME7HEfGnD9oHUm1OLQ" name="Login an customer account"/>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_ZcZ3gE7HEfGnD9oHUm1OLQ" name="Create types of bread">
       <include xmi:type="uml:Include" xmi:id="_zMgmQE7MEfGnD9oHUm1OLQ" addition="_ULrIQE7IEfGnD9oHUm1OLQ"/>
@@ -43,7 +42,6 @@
     <packagedElement xmi:type="uml:UseCase" xmi:id="_mM2rME7HEfGnD9oHUm1OLQ" name="Delete ingredients in menu">
       <include xmi:type="uml:Include" xmi:id="_3tzAIE7MEfGnD9oHUm1OLQ" addition="_ULrIQE7IEfGnD9oHUm1OLQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_Jr1FQE7IEfGnD9oHUm1OLQ" name="Create a staff account"/>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_ULrIQE7IEfGnD9oHUm1OLQ" name="Login a staff account"/>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_lXNnME7IEfGnD9oHUm1OLQ" name="Confirm/save created item and their details">
       <include xmi:type="uml:Include" xmi:id="_SnIn0E7SEfGnD9oHUm1OLQ" addition="_ULrIQE7IEfGnD9oHUm1OLQ"/>
@@ -93,13 +91,6 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_tO2VAU7MEfGnD9oHUm1OLQ" name="delete ingredients in menu" type="_mM2rME7HEfGnD9oHUm1OLQ" association="_tO1G4E7MEfGnD9oHUm1OLQ"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_tO2VAk7MEfGnD9oHUm1OLQ" name="staff" type="_kQ9AME68EfGnD9oHUm1OLQ" association="_tO1G4E7MEfGnD9oHUm1OLQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_uWNlsE7MEfGnD9oHUm1OLQ" memberEnd="_uWPa4E7MEfGnD9oHUm1OLQ _uWPa4U7MEfGnD9oHUm1OLQ">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uWOz0E7MEfGnD9oHUm1OLQ" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uWOz0U7MEfGnD9oHUm1OLQ" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_uWPa4E7MEfGnD9oHUm1OLQ" name="create an account" type="_Jr1FQE7IEfGnD9oHUm1OLQ" association="_uWNlsE7MEfGnD9oHUm1OLQ"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_uWPa4U7MEfGnD9oHUm1OLQ" name="staff" type="_kQ9AME68EfGnD9oHUm1OLQ" association="_uWNlsE7MEfGnD9oHUm1OLQ"/>
-  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_TAsMwE7REfGnD9oHUm1OLQ" memberEnd="_TAta4k7REfGnD9oHUm1OLQ _TAta407REfGnD9oHUm1OLQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TAta4E7REfGnD9oHUm1OLQ" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TAta4U7REfGnD9oHUm1OLQ" key="nature" value="UML_Nature"/>
@@ -113,13 +104,6 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_T5YIQk7REfGnD9oHUm1OLQ" name="delete order entered" type="_Aq0YwE69EfGnD9oHUm1OLQ" association="_T5W6IE7REfGnD9oHUm1OLQ"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_T5YvUE7REfGnD9oHUm1OLQ" name="customer" type="_i19o4E68EfGnD9oHUm1OLQ" association="_T5W6IE7REfGnD9oHUm1OLQ"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_ZeZQAE7REfGnD9oHUm1OLQ" memberEnd="_ZeZ3Ek7REfGnD9oHUm1OLQ _ZeZ3E07REfGnD9oHUm1OLQ">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZeZ3EE7REfGnD9oHUm1OLQ" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZeZ3EU7REfGnD9oHUm1OLQ" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_ZeZ3Ek7REfGnD9oHUm1OLQ" name="create a customer account" type="_Md_gUE7HEfGnD9oHUm1OLQ" association="_ZeZQAE7REfGnD9oHUm1OLQ"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_ZeZ3E07REfGnD9oHUm1OLQ" name="customer" type="_i19o4E68EfGnD9oHUm1OLQ" association="_ZeZQAE7REfGnD9oHUm1OLQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_H1CXME7SEfGnD9oHUm1OLQ" memberEnd="_H1DlUk7SEfGnD9oHUm1OLQ _H1DlU07SEfGnD9oHUm1OLQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_H1DlUE7SEfGnD9oHUm1OLQ" source="org.eclipse.papyrus">
