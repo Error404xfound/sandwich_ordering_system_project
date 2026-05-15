@@ -7,10 +7,11 @@
     <packagedElement xmi:type="uml:UseCase" xmi:id="_s6__ME68EfGnD9oHUm1OLQ" name="Place order of sandwich">
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_z_czsFAMEfGEWKxy94sYGQ" name="ExtensionPoint2"/>
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_0k308FAMEfGEWKxy94sYGQ" name="ExtensionPoint3"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_N7FkYVAPEfGEWKxy94sYGQ" name="ExtensionPoint4"/>
       <include xmi:type="uml:Include" xmi:id="_zcpBkFAMEfGEWKxy94sYGQ" addition="_OxhpME7HEfGnD9oHUm1OLQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_2LHfsE68EfGnD9oHUm1OLQ" name="Select sandwich ingredients">
-      <extend xmi:type="uml:Extend" xmi:id="_z_cMoFAMEfGEWKxy94sYGQ" extendedCase="_s6__ME68EfGnD9oHUm1OLQ" extensionLocation="_z_czsFAMEfGEWKxy94sYGQ"/>
+      <extend xmi:type="uml:Extend" xmi:id="_N7FkYFAPEfGEWKxy94sYGQ" extendedCase="_s6__ME68EfGnD9oHUm1OLQ" extensionLocation="_N7FkYVAPEfGEWKxy94sYGQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_8ZSSIE68EfGnD9oHUm1OLQ" name="Select sandwich bread type">
       <extend xmi:type="uml:Extend" xmi:id="_0k2m0FAMEfGEWKxy94sYGQ" extendedCase="_s6__ME68EfGnD9oHUm1OLQ" extensionLocation="_0k308FAMEfGEWKxy94sYGQ"/>
@@ -46,6 +47,18 @@
     <packagedElement xmi:type="uml:UseCase" xmi:id="_ULrIQE7IEfGnD9oHUm1OLQ" name="Login to a staff account"/>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_lXNnME7IEfGnD9oHUm1OLQ" name="Confirm/save created items and their details">
       <include xmi:type="uml:Include" xmi:id="_DaNa8E8wEfGomfFOPaXOLQ" addition="_ULrIQE7IEfGnD9oHUm1OLQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_rb2wEFAOEfGEWKxy94sYGQ" name="View details of each order">
+      <include xmi:type="uml:Include" xmi:id="_EctlcFAPEfGEWKxy94sYGQ" addition="_ULrIQE7IEfGnD9oHUm1OLQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_rxYUIFAOEfGEWKxy94sYGQ" name="Calculate total sales">
+      <include xmi:type="uml:Include" xmi:id="_FAwGoFAPEfGEWKxy94sYGQ" addition="_ULrIQE7IEfGnD9oHUm1OLQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_rorEEFAOEfGEWKxy94sYGQ" name="Keep track of items in inventory">
+      <include xmi:type="uml:Include" xmi:id="_FvnXwFAPEfGEWKxy94sYGQ" addition="_ULrIQE7IEfGnD9oHUm1OLQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_sG87gFAOEfGEWKxy94sYGQ" name="View summary of orders">
+      <include xmi:type="uml:Include" xmi:id="_GaDb4FAPEfGEWKxy94sYGQ" addition="_ULrIQE7IEfGnD9oHUm1OLQ"/>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_i19o4E68EfGnD9oHUm1OLQ" name="Customer">
@@ -132,4 +145,32 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_gA_Dk08vEfGomfFOPaXOLQ" name="staff" type="_kQ9AME68EfGnD9oHUm1OLQ" association="_gA91cE8vEfGomfFOPaXOLQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_xSF_AE8vEfGomfFOPaXOLQ" name="User"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7L8ksFAOEfGEWKxy94sYGQ" memberEnd="_7MA2IFAOEfGEWKxy94sYGQ _7MBdMFAOEfGEWKxy94sYGQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7L-Z4FAOEfGEWKxy94sYGQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7L-Z4VAOEfGEWKxy94sYGQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_7MA2IFAOEfGEWKxy94sYGQ" name="view details of each order" type="_rb2wEFAOEfGEWKxy94sYGQ" association="_7L8ksFAOEfGEWKxy94sYGQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_7MBdMFAOEfGEWKxy94sYGQ" name="staff" type="_kQ9AME68EfGnD9oHUm1OLQ" association="_7L8ksFAOEfGEWKxy94sYGQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_-QMY0FAOEfGEWKxy94sYGQ" memberEnd="_-QNm8lAOEfGEWKxy94sYGQ _-QNm81AOEfGEWKxy94sYGQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-QNm8FAOEfGEWKxy94sYGQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-QNm8VAOEfGEWKxy94sYGQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_-QNm8lAOEfGEWKxy94sYGQ" name="calculate total sales" type="_rxYUIFAOEfGEWKxy94sYGQ" association="_-QMY0FAOEfGEWKxy94sYGQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_-QNm81AOEfGEWKxy94sYGQ" name="staff" type="_kQ9AME68EfGnD9oHUm1OLQ" association="_-QMY0FAOEfGEWKxy94sYGQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="__ux2sFAOEfGEWKxy94sYGQ" memberEnd="__uzE0VAOEfGEWKxy94sYGQ __uzE0lAOEfGEWKxy94sYGQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__uydwFAOEfGEWKxy94sYGQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__uzE0FAOEfGEWKxy94sYGQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="__uzE0VAOEfGEWKxy94sYGQ" name="view summary of orders" type="_sG87gFAOEfGEWKxy94sYGQ" association="__ux2sFAOEfGEWKxy94sYGQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="__uzE0lAOEfGEWKxy94sYGQ" name="staff" type="_kQ9AME68EfGnD9oHUm1OLQ" association="__ux2sFAOEfGEWKxy94sYGQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_A22SAFAPEfGEWKxy94sYGQ" memberEnd="_A225ElAPEfGEWKxy94sYGQ _A23gIFAPEfGEWKxy94sYGQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_A225EFAPEfGEWKxy94sYGQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_A225EVAPEfGEWKxy94sYGQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_A225ElAPEfGEWKxy94sYGQ" name="keep track of items in inventory" type="_rorEEFAOEfGEWKxy94sYGQ" association="_A22SAFAPEfGEWKxy94sYGQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_A23gIFAPEfGEWKxy94sYGQ" name="staff" type="_kQ9AME68EfGnD9oHUm1OLQ" association="_A22SAFAPEfGEWKxy94sYGQ"/>
+  </packagedElement>
 </uml:Model>
