@@ -5,14 +5,15 @@
   </packageImport>
   <packagedElement xmi:type="uml:Package" xmi:id="_dQzXME68EfGnD9oHUm1OLQ" name="Sandwich Order System">
     <packagedElement xmi:type="uml:UseCase" xmi:id="_s6__ME68EfGnD9oHUm1OLQ" name="Place order of sandwich">
-      <include xmi:type="uml:Include" xmi:id="_TNpOME7SEfGnD9oHUm1OLQ" addition="_2LHfsE68EfGnD9oHUm1OLQ"/>
-      <include xmi:type="uml:Include" xmi:id="_T9L0wE7SEfGnD9oHUm1OLQ" addition="_8ZSSIE68EfGnD9oHUm1OLQ"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_z_czsFAMEfGEWKxy94sYGQ" name="ExtensionPoint2"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_0k308FAMEfGEWKxy94sYGQ" name="ExtensionPoint3"/>
+      <include xmi:type="uml:Include" xmi:id="_zcpBkFAMEfGEWKxy94sYGQ" addition="_OxhpME7HEfGnD9oHUm1OLQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_2LHfsE68EfGnD9oHUm1OLQ" name="Select sandwich ingredients">
-      <include xmi:type="uml:Include" xmi:id="_UhrB4E7SEfGnD9oHUm1OLQ" addition="_OxhpME7HEfGnD9oHUm1OLQ"/>
+      <extend xmi:type="uml:Extend" xmi:id="_z_cMoFAMEfGEWKxy94sYGQ" extendedCase="_s6__ME68EfGnD9oHUm1OLQ" extensionLocation="_z_czsFAMEfGEWKxy94sYGQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_8ZSSIE68EfGnD9oHUm1OLQ" name="Select sandwich bread type">
-      <include xmi:type="uml:Include" xmi:id="_VEpMEE7SEfGnD9oHUm1OLQ" addition="_OxhpME7HEfGnD9oHUm1OLQ"/>
+      <extend xmi:type="uml:Extend" xmi:id="_0k2m0FAMEfGEWKxy94sYGQ" extendedCase="_s6__ME68EfGnD9oHUm1OLQ" extensionLocation="_0k308FAMEfGEWKxy94sYGQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_-d_U0E68EfGnD9oHUm1OLQ" name="Edit orders entered">
       <include xmi:type="uml:Include" xmi:id="_QQBmgE7SEfGnD9oHUm1OLQ" addition="_OxhpME7HEfGnD9oHUm1OLQ"/>
