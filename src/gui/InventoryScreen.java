@@ -1,23 +1,26 @@
 package gui;
 
+import javax.swing.JPanel;
+
+import controller.MainFrame;
 import data.ItemStock;
 
-public class InventoryScreen {
+public class InventoryScreen extends JPanel {
 
-	/**
-	 * 
-	 */
-	public void showAddInventory() { 
-		// TODO Auto-generated method
-	 }
+	private static final long serialVersionUID = 1L;
 
-	/**
-	 * 
-	 * @param idx 
-	 * @param itemStock 
-	 */
-	public void showEditInventory(int idx, ItemStock itemStock) { 
+	private MainFrame main;
+
+	public InventoryScreen(MainFrame main) {
+		this.main = main;
+	}
+
+	public void showAddInventory() {
 		// TODO Auto-generated method
-	 } 
+	}
+
+	public void showEditInventory(int idx, ItemStock itemStock) {
+		// TODO Auto-generated method
+	}
 
 }

@@ -1,46 +1,42 @@
 package gui;
 
+import javax.swing.JPanel;
+
+import controller.MainFrame;
 import data.BreadType;
 
-public class EditBreadTypeScreen {
+public class EditBreadTypeScreen extends JPanel {
 
-	/**
-	 * 
-	 */
+	private static final long serialVersionUID = 1L;
+
+	private MainFrame main;
 	private BreadType breadType;
-	/**
-	 * 
-	 */
 	private int breadTypeIndex;
-	/**
-	 * Getter of breadType
-	 */
+
+	public EditBreadTypeScreen(MainFrame main, int breadTypeIndex, BreadType breadType) {
+		this.main = main;
+		this.breadTypeIndex = breadTypeIndex;
+		this.breadType = breadType;
+	}
+
 	public BreadType getBreadType() {
-	 	 return breadType; 
+		return breadType;
 	}
-	/**
-	 * Setter of breadType
-	 */
-	public void setBreadType(BreadType breadType) { 
-		 this.breadType = breadType; 
+
+	public void setBreadType(BreadType breadType) {
+		this.breadType = breadType;
 	}
-	/**
-	 * Getter of breadTypeIndex
-	 */
+
 	public int getBreadTypeIndex() {
-	 	 return breadTypeIndex; 
+		return breadTypeIndex;
 	}
-	/**
-	 * Setter of breadTypeIndex
-	 */
-	public void setBreadTypeIndex(int breadTypeIndex) { 
-		 this.breadTypeIndex = breadTypeIndex; 
+
+	public void setBreadTypeIndex(int breadTypeIndex) {
+		this.breadTypeIndex = breadTypeIndex;
 	}
-	/**
-	 * 
-	 */
-	public void showMenu() { 
+
+	public void showMenu() {
 		// TODO Auto-generated method
-	 } 
+	}
 
 }

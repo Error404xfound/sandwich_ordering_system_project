@@ -40,27 +40,13 @@ public class InventoryController {
 	public void deleteItemStock(int ID) { 
 		// TODO Auto-generated method
 	 }
-	/**
-	 * 
-	 * @param itemStock 
-	 * @param ID 
-	 */
-	public void editItemStock(ItemStock itemStock, int ID) { 
-		// TODO Auto-generated method
-	 }
-	/**
-	 * 
-	 * @return 
-	 */
+	
+	
 	public ItemStock getAllItemStock() { 
 		// TODO Auto-generated method
 		return null;
 	 }
-	/**
-	 * 
-	 * @param ID 
-	 * @param itemStock 
-	 */
+	
 	public void editItemStock(int ID, ItemStock itemStock) { 
 		// TODO Auto-generated method
 	 } 

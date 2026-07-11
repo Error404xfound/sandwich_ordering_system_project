@@ -1,12 +1,21 @@
 package gui;
 
-public class StaffAccountScreen {
+import javax.swing.JPanel;
 
-	/**
-	 * 
-	 */
-	public void showLogin() { 
+import controller.MainFrame;
+
+public class StaffAccountScreen extends JPanel {
+
+	private static final long serialVersionUID = 1L;
+
+	private MainFrame main;
+
+	public StaffAccountScreen(MainFrame main) {
+		this.main = main;
+	}
+
+	public void showLogin() {
 		// TODO Auto-generated method
-	 } 
+	}
 
 }

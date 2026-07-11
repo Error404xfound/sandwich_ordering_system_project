@@ -1,43 +1,42 @@
 package gui;
 
+import javax.swing.JPanel;
+
+import controller.MainFrame;
 import data.ItemStock;
 
-public class EditInventoryScreen {
+public class EditInventoryScreen extends JPanel {
 
-	/**
-	 * 
-	 */
+	private static final long serialVersionUID = 1L;
+
+	private MainFrame main;
 	private int itemStockIndex;
 	private ItemStock itemStock;
-	/**
-	 * Getter of itemStockIndex
-	 */
+
+	public EditInventoryScreen(MainFrame main, ItemStock itemStock, int itemStockIndex) {
+		this.main = main;
+		this.itemStock = itemStock;
+		this.itemStockIndex = itemStockIndex;
+	}
+
 	public int getItemStockIndex() {
-	 	 return itemStockIndex; 
+		return itemStockIndex;
 	}
-	/**
-	 * Setter of itemStockIndex
-	 */
-	public void setItemStockIndex(int itemStockIndex) { 
-		 this.itemStockIndex = itemStockIndex; 
+
+	public void setItemStockIndex(int itemStockIndex) {
+		this.itemStockIndex = itemStockIndex;
 	}
-	/**
-	 * Getter of itemStock
-	 */
+
 	public ItemStock getItemStock() {
-	 	 return itemStock; 
+		return itemStock;
 	}
-	/**
-	 * Setter of itemStock
-	 */
-	public void setItemStock(ItemStock itemStock) { 
-		 this.itemStock = itemStock; 
+
+	public void setItemStock(ItemStock itemStock) {
+		this.itemStock = itemStock;
 	}
-	/**
-	 * 
-	 */
-	public void showInventory() { 
+
+	public void showInventory() {
 		// TODO Auto-generated method
-	 } 
+	}
 
 }

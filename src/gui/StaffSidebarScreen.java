@@ -1,47 +1,41 @@
 package gui;
 
-public class StaffSidebarScreen {
+import javax.swing.JPanel;
 
-	/**
-	 * 
-	 */
-	public void showStaffAccount() { 
-		// TODO Auto-generated method
-	 }
+import controller.MainFrame;
 
-	/**
-	 * 
-	 */
-	public void showMenu() { 
-		// TODO Auto-generated method
-	 }
+public class StaffSidebarScreen extends JPanel {
 
-	/**
-	 * 
-	 */
-	public void showInventory() { 
-		// TODO Auto-generated method
-	 }
+	private static final long serialVersionUID = 1L;
 
-	/**
-	 * 
-	 */
-	public void showOrders() { 
-		// TODO Auto-generated method
-	 }
+	private MainFrame main;
 
-	/**
-	 * 
-	 */
-	public void showAnalytics() { 
-		// TODO Auto-generated method
-	 }
+	public StaffSidebarScreen(MainFrame main) {
+		this.main = main;
+	}
 
-	/**
-	 * 
-	 */
-	public void showLoyaltyDiscountMng() { 
+	public void showStaffAccount() {
 		// TODO Auto-generated method
-	 } 
+	}
+
+	public void showMenu() {
+		// TODO Auto-generated method
+	}
+
+	public void showInventory() {
+		// TODO Auto-generated method
+	}
+
+	public void showOrders() {
+		// TODO Auto-generated method
+	}
+
+	public void showAnalytics() {
+		// TODO Auto-generated method
+	}
+
+	public void showLoyaltyDiscountMng() {
+		// TODO Auto-generated method
+	}
 
 }

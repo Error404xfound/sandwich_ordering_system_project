@@ -1,46 +1,42 @@
 package gui;
 
+import javax.swing.JPanel;
+
+import controller.MainFrame;
 import data.LoyaltyDiscountTier;
 
-public class EditLoyaltyDiscountTierScreen {
+public class EditLoyaltyDiscountTierScreen extends JPanel {
 
-	/**
-	 * 
-	 */
+	private static final long serialVersionUID = 1L;
+
+	private MainFrame main;
 	private int index;
-	/**
-	 * 
-	 */
 	private LoyaltyDiscountTier loyaltyDiscountTier;
-	/**
-	 * Getter of index
-	 */
+
+	public EditLoyaltyDiscountTierScreen(MainFrame main, int index, LoyaltyDiscountTier loyaltyDiscountTier) {
+		this.main = main;
+		this.index = index;
+		this.loyaltyDiscountTier = loyaltyDiscountTier;
+	}
+
 	public int getIndex() {
-	 	 return index; 
+		return index;
 	}
-	/**
-	 * Setter of index
-	 */
-	public void setIndex(int index) { 
-		 this.index = index; 
+
+	public void setIndex(int index) {
+		this.index = index;
 	}
-	/**
-	 * Getter of loyaltyDiscountTier
-	 */
+
 	public LoyaltyDiscountTier getLoyaltyDiscountTier() {
-	 	 return loyaltyDiscountTier; 
+		return loyaltyDiscountTier;
 	}
-	/**
-	 * Setter of loyaltyDiscountTier
-	 */
-	public void setLoyaltyDiscountTier(LoyaltyDiscountTier loyaltyDiscountTier) { 
-		 this.loyaltyDiscountTier = loyaltyDiscountTier; 
+
+	public void setLoyaltyDiscountTier(LoyaltyDiscountTier loyaltyDiscountTier) {
+		this.loyaltyDiscountTier = loyaltyDiscountTier;
 	}
-	/**
-	 * 
-	 */
-	public void showLoyaltyDiscountMng() { 
+
+	public void showLoyaltyDiscountMng() {
 		// TODO Auto-generated method
-	 } 
+	}
 
 }

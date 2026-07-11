@@ -1,40 +1,37 @@
 package gui;
 
-public class CustomerSidebarScreen {
+import javax.swing.JPanel;
 
-	/**
-	 * 
-	 */
-	public void showCurrentOrders() { 
-		// TODO Auto-generated method
-	 }
+import controller.MainFrame;
 
-	/**
-	 * 
-	 */
-	public void showCustomerAccount() { 
-		// TODO Auto-generated method
-	 }
+public class CustomerSidebarScreen extends JPanel {
 
-	/**
-	 * 
-	 */
-	public void showLoyalty() { 
-		// TODO Auto-generated method
-	 }
+	private static final long serialVersionUID = 1L;
 
-	/**
-	 * 
-	 */
-	public void showOrderAgain() { 
-		// TODO Auto-generated method
-	 }
+	private MainFrame main;
 
-	/**
-	 * 
-	 */
-	public void showMenuOrder() { 
+	public CustomerSidebarScreen(MainFrame main) {
+		this.main = main;
+	}
+
+	public void showCurrentOrders() {
 		// TODO Auto-generated method
-	 } 
+	}
+
+	public void showCustomerAccount() {
+		// TODO Auto-generated method
+	}
+
+	public void showLoyalty() {
+		// TODO Auto-generated method
+	}
+
+	public void showOrderAgain() {
+		// TODO Auto-generated method
+	}
+
+	public void showMenuOrder() {
+		// TODO Auto-generated method
+	}
 
 }

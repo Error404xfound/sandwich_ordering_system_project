@@ -1,12 +1,21 @@
 package gui;
 
-public class OrdersSummaryScreen {
+import javax.swing.JPanel;
 
-	/**
-	 * 
-	 */
-	public void showOrders() { 
+import controller.MainFrame;
+
+public class OrdersSummaryScreen extends JPanel {
+
+	private static final long serialVersionUID = 1L;
+
+	private MainFrame main;
+
+	public OrdersSummaryScreen(MainFrame main) {
+		this.main = main;
+	}
+
+	public void showOrders() {
 		// TODO Auto-generated method
-	 } 
+	}
 
 }

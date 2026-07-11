@@ -1,25 +1,26 @@
 package gui;
 
+import javax.swing.JPanel;
+
+import controller.MainFrame;
 import data.Order;
 
-public class CurrentOrdersScreen {
+public class CurrentOrdersScreen extends JPanel {
 
-	/**
-	 * 
-	 * @param order 
-	 * @param idx 
-	 */
-	public void showEditOrder(Order order, int idx) { 
-		// TODO Auto-generated method
-	 }
+	private static final long serialVersionUID = 1L;
 
-	/**
-	 * 
-	 * @param idx 
-	 * @param order 
-	 */
-	public void showEditOrder(int idx, Order order) { 
+	private MainFrame main;
+
+	public CurrentOrdersScreen(MainFrame main) {
+		this.main = main;
+	}
+
+	public void showEditOrder(Order order, int idx) {
 		// TODO Auto-generated method
-	 } 
+	}
+
+	public void showEditOrder(int idx, Order order) {
+		// TODO Auto-generated method
+	}
 
 }

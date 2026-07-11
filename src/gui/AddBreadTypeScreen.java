@@ -1,12 +1,21 @@
 package gui;
 
-public class AddBreadTypeScreen {
+import javax.swing.JPanel;
 
-	/**
-	 * 
-	 */
-	public void showMenu() { 
+import controller.MainFrame;
+
+public class AddBreadTypeScreen extends JPanel {
+
+	private static final long serialVersionUID = 1L;
+
+	private MainFrame main;
+
+	public AddBreadTypeScreen(MainFrame main) {
+		this.main = main;
+	}
+
+	public void showMenu() {
 		// TODO Auto-generated method
-	 } 
+	}
 
 }

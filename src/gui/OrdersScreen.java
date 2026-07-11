@@ -1,19 +1,25 @@
 package gui;
 
-public class OrdersScreen {
+import javax.swing.JPanel;
 
-	/**
-	 * 
-	 */
-	public void showOrdersSummary() { 
-		// TODO Auto-generated method
-	 }
+import controller.MainFrame;
 
-	/**
-	 * 
-	 */
-	public void showOrderDetails() { 
+public class OrdersScreen extends JPanel {
+
+	private static final long serialVersionUID = 1L;
+
+	private MainFrame main;
+
+	public OrdersScreen(MainFrame main) {
+		this.main = main;
+	}
+
+	public void showOrdersSummary() {
 		// TODO Auto-generated method
-	 } 
+	}
+
+	public void showOrderDetails() {
+		// TODO Auto-generated method
+	}
 
 }

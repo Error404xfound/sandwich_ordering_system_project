@@ -12,19 +12,7 @@ public class AccountController {
 	 */
 	private DataStorage dataStorage;
 
-	/**
-	 * Getter of dataStorage
-	 */
-	public DataStorage getDataStorage() {
-	 	 return dataStorage; 
-	}
-
-	/**
-	 * Setter of dataStorage
-	 */
-	public void setDataStorage(DataStorage dataStorage) { 
-		 this.dataStorage = dataStorage; 
-	}
+	
 
 	/**
 	 * 
@@ -106,7 +94,7 @@ public class AccountController {
 	 * @param customer 
 	 * @param ID 
 	 */
-	public void editCustomer(Customer customer, int ID) { 
+	public void editCustomer(int ID, Customer customer) { 
 		// TODO Auto-generated method
 	 } 
 

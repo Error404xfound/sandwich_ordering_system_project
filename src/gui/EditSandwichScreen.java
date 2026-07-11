@@ -1,87 +1,69 @@
 package gui;
 
-import data.BreadType;
 import java.util.List;
+
+import javax.swing.JPanel;
+
+import controller.MainFrame;
+import data.BreadType;
 import data.Ingredient;
-import data.Sandwich;
 import data.Order;
+import data.Sandwich;
 
-public class EditSandwichScreen {
+public class EditSandwichScreen extends JPanel {
 
-	/**
-	 * 
-	 */
+	private static final long serialVersionUID = 1L;
+
+	private MainFrame main;
 	private List<BreadType> displayedBreadTypes;
-	/**
-	 * 
-	 */
 	private int sandwichIndex;
-	/**
-	 * 
-	 */
 	private List<Ingredient> displayedIngredients;
 	private Sandwich sandwich;
-	/**
-	 * Getter of displayedBreadTypes
-	 */
+
+	public EditSandwichScreen(MainFrame main, int sandwichIndex, Sandwich sandwich) {
+		this.main = main;
+		this.sandwichIndex = sandwichIndex;
+		this.sandwich = sandwich;
+	}
+
 	public List<BreadType> getDisplayedBreadTypes() {
-	 	 return displayedBreadTypes; 
+		return displayedBreadTypes;
 	}
-	/**
-	 * Setter of displayedBreadTypes
-	 */
-	public void setDisplayedBreadTypes(List<BreadType> displayedBreadTypes) { 
-		 this.displayedBreadTypes = displayedBreadTypes; 
+
+	public void setDisplayedBreadTypes(List<BreadType> displayedBreadTypes) {
+		this.displayedBreadTypes = displayedBreadTypes;
 	}
-	/**
-	 * Getter of sandwichIndex
-	 */
+
 	public int getSandwichIndex() {
-	 	 return sandwichIndex; 
+		return sandwichIndex;
 	}
-	/**
-	 * Setter of sandwichIndex
-	 */
-	public void setSandwichIndex(int sandwichIndex) { 
-		 this.sandwichIndex = sandwichIndex; 
+
+	public void setSandwichIndex(int sandwichIndex) {
+		this.sandwichIndex = sandwichIndex;
 	}
-	/**
-	 * Getter of displayedIngredients
-	 */
+
 	public List<Ingredient> getDisplayedIngredients() {
-	 	 return displayedIngredients; 
+		return displayedIngredients;
 	}
-	/**
-	 * Setter of displayedIngredients
-	 */
-	public void setDisplayedIngredients(List<Ingredient> displayedIngredients) { 
-		 this.displayedIngredients = displayedIngredients; 
+
+	public void setDisplayedIngredients(List<Ingredient> displayedIngredients) {
+		this.displayedIngredients = displayedIngredients;
 	}
-	/**
-	 * Getter of sandwich
-	 */
+
 	public Sandwich getSandwich() {
-	 	 return sandwich; 
+		return sandwich;
 	}
-	/**
-	 * Setter of sandwich
-	 */
-	public void setSandwich(Sandwich sandwich) { 
-		 this.sandwich = sandwich; 
+
+	public void setSandwich(Sandwich sandwich) {
+		this.sandwich = sandwich;
 	}
-	/**
-	 * 
-	 * @param order 
-	 * @param idx 
-	 */
-	public void showEditOrder(Order order, int idx) { 
+
+	public void showEditOrder(Order order, int idx) {
 		// TODO Auto-generated method
-	 }
-	/**
-	 * 
-	 */
-	public void showCart() { 
+	}
+
+	public void showCart() {
 		// TODO Auto-generated method
-	 } 
+	}
 
 }

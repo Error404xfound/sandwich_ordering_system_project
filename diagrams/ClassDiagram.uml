@@ -697,8 +697,8 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_SH5YkXs8EfGrVPvUHoTvuw" name="inventorycontroller" type="_7Vv2oHjvEfGo9KPFpORGXA" aggregation="shared" association="_SH3jYHs8EfGrVPvUHoTvuw"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_UI3x0Hs8EfGrVPvUHoTvuw" name="discountcontroller" type="_IF7gsHoFEfGphexfQdctHw" aggregation="shared" association="_UI0HcHs8EfGrVPvUHoTvuw"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_V1nAcns8EfGrVPvUHoTvuw" name="ordercontroller" type="_61OjgHjvEfGo9KPFpORGXA" aggregation="shared" association="_V1j9IHs8EfGrVPvUHoTvuw"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_7AbQoHuREfGNIvLfvL9nvw" name="breadTypeController" visibility="private" type="_Y-rZwFypEfG5MafHy1tCUg"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_DklqEHuSEfGNIvLfvL9nvw" name="loyaltyDiscountTierController" visibility="private" type="_MlAFIHnmEfGphexfQdctHw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_7AbQoHuREfGNIvLfvL9nvw" name="breadTypeController" visibility="private" type="_jg-AYHtAEfGrVPvUHoTvuw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_DklqEHuSEfGNIvLfvL9nvw" name="loyaltyDiscountTierController" visibility="private" type="_xTZZAHtBEfGrVPvUHoTvuw"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_NRaUsHuSEfGNIvLfvL9nvw" name="customerController" visibility="private" type="_jDEjcHtAEfGrVPvUHoTvuw"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_argiUHuSEfGNIvLfvL9nvw" name="menuController" visibility="private" type="_xfBPoHtAEfGrVPvUHoTvuw"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_fxiHUXuaEfGNIvLfvL9nvw" name="ingredientcontroller" type="_6hQeoHjvEfGo9KPFpORGXA" aggregation="shared" association="_fxg5MHuaEfGNIvLfvL9nvw"/>

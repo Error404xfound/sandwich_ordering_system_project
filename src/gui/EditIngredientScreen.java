@@ -1,46 +1,42 @@
 package gui;
 
+import javax.swing.JPanel;
+
+import controller.MainFrame;
 import data.Ingredient;
 
-public class EditIngredientScreen {
+public class EditIngredientScreen extends JPanel {
 
-	/**
-	 * 
-	 */
+	private static final long serialVersionUID = 1L;
+
+	private MainFrame main;
 	private Ingredient ingredient;
-	/**
-	 * 
-	 */
 	private int ingredientIndex;
-	/**
-	 * Getter of ingredient
-	 */
+
+	public EditIngredientScreen(MainFrame main, int ingredientIndex, Ingredient ingredient) {
+		this.main = main;
+		this.ingredientIndex = ingredientIndex;
+		this.ingredient = ingredient;
+	}
+
 	public Ingredient getIngredient() {
-	 	 return ingredient; 
+		return ingredient;
 	}
-	/**
-	 * Setter of ingredient
-	 */
-	public void setIngredient(Ingredient ingredient) { 
-		 this.ingredient = ingredient; 
+
+	public void setIngredient(Ingredient ingredient) {
+		this.ingredient = ingredient;
 	}
-	/**
-	 * Getter of ingredientIndex
-	 */
+
 	public int getIngredientIndex() {
-	 	 return ingredientIndex; 
+		return ingredientIndex;
 	}
-	/**
-	 * Setter of ingredientIndex
-	 */
-	public void setIngredientIndex(int ingredientIndex) { 
-		 this.ingredientIndex = ingredientIndex; 
+
+	public void setIngredientIndex(int ingredientIndex) {
+		this.ingredientIndex = ingredientIndex;
 	}
-	/**
-	 * 
-	 */
-	public void showMenu() { 
+
+	public void showMenu() {
 		// TODO Auto-generated method
-	 } 
+	}
 
 }

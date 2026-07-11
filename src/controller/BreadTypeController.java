@@ -65,13 +65,5 @@ public class BreadTypeController {
 	public void editBreadType(int ID, BreadType breadType) { 
 		// TODO Auto-generated method
 	 }
-	/**
-	 * 
-	 * @param breadType 
-	 * @param ID 
-	 */
-	public void editBreadType(BreadType breadType, int ID) { 
-		// TODO Auto-generated method
-	 } 
-
+	
 }

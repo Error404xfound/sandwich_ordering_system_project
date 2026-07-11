@@ -521,11 +521,7 @@ public class DataStorage {
 	public void editIngredient(int ID, Ingredient ingredient) { 
 		// TODO Auto-generated method
 	 }
-	/**
-	 * 
-	 * @param ID 
-	 * @param itemStock 
-	 */
+	
 	public void editItemStock(int ID, ItemStock itemStock) { 
 		// TODO Auto-generated method
 	 } 
