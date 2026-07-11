@@ -1,23 +1,26 @@
 package gui;
 
+import javax.swing.JPanel;
+
+import controller.MainFrame;
 import data.LoyaltyDiscountTier;
 
-public class LoyaltyDiscountMngScreen {
+public class LoyaltyDiscountMngScreen extends JPanel {
 
-	/**
-	 * 
-	 * @param loyaltyDiscountTier 
-	 * @param idx 
-	 */
-	public void showEditLoyaltyDiscountTier(LoyaltyDiscountTier loyaltyDiscountTier, int idx) { 
-		// TODO Auto-generated method
-	 }
+	private static final long serialVersionUID = 1L;
 
-	/**
-	 * 
-	 */
-	public void showAddLoyaltyDiscountTier() { 
+	private MainFrame main;
+
+	public LoyaltyDiscountMngScreen(MainFrame main) {
+		this.main = main;
+	}
+
+	public void showEditLoyaltyDiscountTier(LoyaltyDiscountTier loyaltyDiscountTier, int idx) {
 		// TODO Auto-generated method
-	 } 
+	}
+
+	public void showAddLoyaltyDiscountTier() {
+		// TODO Auto-generated method
+	}
 
 }

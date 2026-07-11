@@ -88,7 +88,6 @@ public class MainFrame extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		this.card = new CardLayout();
 		getContentPane().setLayout(this.card);
@@ -158,139 +157,139 @@ public class MainFrame extends JFrame {
 
 	public void showLogin() {
 		LoginScreen loginScreen = new LoginScreen(this);
-		this.add(loginScreen, "Login");
+		getContentPane().add(loginScreen, "Login");
 		this.card.show(this.getContentPane(), "Login");
 	}
 
 	public void showMenu() {
 		MenuScreen menuScreen = new MenuScreen(this);
-		this.add(menuScreen, "Menu");
+		getContentPane().add(menuScreen, "Menu");
 		this.card.show(this.getContentPane(), "Menu");
 	}
 
 	public void showMenuOrder() {
 		MenuOrderScreen menuOrderScreen = new MenuOrderScreen(this);
-		this.add(menuOrderScreen, "MenuOrder");
+		getContentPane().add(menuOrderScreen, "MenuOrder");
 		this.card.show(this.getContentPane(), "MenuOrder");
 	}
 
 	public void showGuestMenuOrder() {
 		GuestMenuOrderScreen guestMenuOrderScreen = new GuestMenuOrderScreen(this);
-		this.add(guestMenuOrderScreen, "GuestMenuOrder");
+		getContentPane().add(guestMenuOrderScreen, "GuestMenuOrder");
 		this.card.show(this.getContentPane(), "GuestMenuOrder");
 	}
 
 	public void showCart() {
 		CartScreen cartScreen = new CartScreen(this);
-		this.add(cartScreen, "Cart");
+		getContentPane().add(cartScreen, "Cart");
 		this.card.show(this.getContentPane(), "Cart");
 	}
 
 	public void showCustomerSignUp() {
 		CustomerSignUpScreen customerSignUpScreen = new CustomerSignUpScreen(this);
-		this.add(customerSignUpScreen, "CustomerSignUp");
+		getContentPane().add(customerSignUpScreen, "CustomerSignUp");
 		this.card.show(this.getContentPane(), "CustomerSignUp");
 	}
 
 	public void showCustomerAccount() {
 		CustomerAccountScreen customerAccountScreen = new CustomerAccountScreen(this);
-		this.add(customerAccountScreen, "CustomerAccount");
+		getContentPane().add(customerAccountScreen, "CustomerAccount");
 		this.card.show(this.getContentPane(), "CustomerAccount");
 	}
 
 	public void showCustomerSidebar() {
 		CustomerSidebarScreen customerSidebarScreen = new CustomerSidebarScreen(this);
-		this.add(customerSidebarScreen, "CustomerSidebar");
+		getContentPane().add(customerSidebarScreen, "CustomerSidebar");
 		this.card.show(this.getContentPane(), "CustomerSidebar");
 	}
 
 	public void showCurrentOrders() {
 		CurrentOrdersScreen currentOrdersScreen = new CurrentOrdersScreen(this);
-		this.add(currentOrdersScreen, "CurrentOrders");
+		getContentPane().add(currentOrdersScreen, "CurrentOrders");
 		this.card.show(this.getContentPane(), "CurrentOrders");
 	}
 
 	public void showOrderDetails() {
 		OrderDetailsScreen orderDetailsScreen = new OrderDetailsScreen(this);
-		this.add(orderDetailsScreen, "OrderDetails");
+		getContentPane().add(orderDetailsScreen, "OrderDetails");
 		this.card.show(this.getContentPane(), "OrderDetails");
 	}
 
 	public void showEditOrder(Order order, int idx) {
 		EditOrderScreen editOrderScreen = new EditOrderScreen(this, idx, order);
-		this.add(editOrderScreen, "EditOrder");
+		getContentPane().add(editOrderScreen, "EditOrder");
 		this.card.show(this.getContentPane(), "EditOrder");
 	}
 
 	public void showOrderAgain() {
 		OrderAgainScreen orderAgainScreen = new OrderAgainScreen(this);
-		this.add(orderAgainScreen, "OrderAgain");
+		getContentPane().add(orderAgainScreen, "OrderAgain");
 		this.card.show(this.getContentPane(), "OrderAgain");
 	}
 
 	public void showOrders() {
 		OrdersScreen ordersScreen = new OrdersScreen(this);
-		this.add(ordersScreen, "Orders");
+		getContentPane().add(ordersScreen, "Orders");
 		this.card.show(this.getContentPane(), "Orders");
 	}
 
 	public void showOrdersSummary() {
 		OrdersSummaryScreen ordersSummaryScreen = new OrdersSummaryScreen(this);
-		this.add(ordersSummaryScreen, "OrdersSummary");
+		getContentPane().add(ordersSummaryScreen, "OrdersSummary");
 		this.card.show(this.getContentPane(), "OrdersSummary");
 	}
 
 	public void showAddIngredient() {
 		AddIngredientScreen addIngredientScreen = new AddIngredientScreen(this);
-		this.add(addIngredientScreen, "AddIngredient");
+		getContentPane().add(addIngredientScreen, "AddIngredient");
 		this.card.show(this.getContentPane(), "AddIngredient");
 	}
 
 	public void showEditIngredient(int idx, Ingredient ingredient) {
 		EditIngredientScreen editIngredientScreen = new EditIngredientScreen(this, idx, ingredient);
-		this.add(editIngredientScreen, "EditIngredient");
+		getContentPane().add(editIngredientScreen, "EditIngredient");
 		this.card.show(this.getContentPane(), "EditIngredient");
 	}
 
 	public void showAddBreadType() {
 		AddBreadTypeScreen addBreadTypeScreen = new AddBreadTypeScreen(this);
-		this.add(addBreadTypeScreen, "AddBreadType");
+		getContentPane().add(addBreadTypeScreen, "AddBreadType");
 		this.card.show(this.getContentPane(), "AddBreadType");
 	}
 
 	public void showEditBreadType(int idx, BreadType breadType) {
 		EditBreadTypeScreen editBreadTypeScreen = new EditBreadTypeScreen(this, idx, breadType);
-		this.add(editBreadTypeScreen, "EditBreadType");
+		getContentPane().add(editBreadTypeScreen, "EditBreadType");
 		this.card.show(this.getContentPane(), "EditBreadType");
 	}
 
 	public void showEditSandwich(int idx, Sandwich sandwich) {
 		EditSandwichScreen editSandwichScreen = new EditSandwichScreen(this, idx, sandwich);
-		this.add(editSandwichScreen, "EditSandwich");
+		getContentPane().add(editSandwichScreen, "EditSandwich");
 		this.card.show(this.getContentPane(), "EditSandwich");
 	}
 
 	public void showInventory() {
 		InventoryScreen inventoryScreen = new InventoryScreen(this);
-		this.add(inventoryScreen, "Inventory");
+		getContentPane().add(inventoryScreen, "Inventory");
 		this.card.show(this.getContentPane(), "Inventory");
 	}
 
 	public void showAddInventory() {
 		AddInventoryScreen addInventoryScreen = new AddInventoryScreen(this);
-		this.add(addInventoryScreen, "AddInventory");
+		getContentPane().add(addInventoryScreen, "AddInventory");
 		this.card.show(this.getContentPane(), "AddInventory");
 	}
 
 	public void showEditInventory(ItemStock itemStock, int idx) {
 		EditInventoryScreen editInventoryScreen = new EditInventoryScreen(this, itemStock, idx);
-		this.add(editInventoryScreen, "EditInventory");
+		getContentPane().add(editInventoryScreen, "EditInventory");
 		this.card.show(this.getContentPane(), "EditInventory");
 	}
 
 	public void showLoyalty() {
 		LoyaltyScreen loyaltyScreen = new LoyaltyScreen(this);
-		this.add(loyaltyScreen, "Loyalty");
+		getContentPane().add(loyaltyScreen, "Loyalty");
 		this.card.show(this.getContentPane(), "Loyalty");
 	}
 
@@ -300,37 +299,37 @@ public class MainFrame extends JFrame {
 
 	public void showAddLoyaltyDiscountTier() {
 		AddLoyaltyDiscountTierScreen addLoyaltyDiscountTierScreen = new AddLoyaltyDiscountTierScreen(this);
-		this.add(addLoyaltyDiscountTierScreen, "AddLoyaltyDiscountTier");
+		getContentPane().add(addLoyaltyDiscountTierScreen, "AddLoyaltyDiscountTier");
 		this.card.show(this.getContentPane(), "AddLoyaltyDiscountTier");
 	}
 
 	public void showEditLoyaltyDiscountTier(int idx, LoyaltyDiscountTier loyaltyDiscountTier) {
 		EditLoyaltyDiscountTierScreen editLoyaltyDiscountTierScreen = new EditLoyaltyDiscountTierScreen(this, idx, loyaltyDiscountTier);
-		this.add(editLoyaltyDiscountTierScreen, "EditLoyaltyDiscountTier");
+		getContentPane().add(editLoyaltyDiscountTierScreen, "EditLoyaltyDiscountTier");
 		this.card.show(this.getContentPane(), "EditLoyaltyDiscountTier");
 	}
 
 	public void showStaffSignUp() {
 		StaffSignUpScreen staffSignUpScreen = new StaffSignUpScreen(this);
-		this.add(staffSignUpScreen, "StaffSignUp");
+		getContentPane().add(staffSignUpScreen, "StaffSignUp");
 		this.card.show(this.getContentPane(), "StaffSignUp");
 	}
 
 	public void showStaffAccount() {
 		StaffAccountScreen staffAccountScreen = new StaffAccountScreen(this);
-		this.add(staffAccountScreen, "StaffAccount");
+		getContentPane().add(staffAccountScreen, "StaffAccount");
 		this.card.show(this.getContentPane(), "StaffAccount");
 	}
 
 	public void showStaffSidebar() {
 		StaffSidebarScreen staffSidebarScreen = new StaffSidebarScreen(this);
-		this.add(staffSidebarScreen, "StaffSidebar");
+		getContentPane().add(staffSidebarScreen, "StaffSidebar");
 		this.card.show(this.getContentPane(), "StaffSidebar");
 	}
 
 	public void showAnalytics() {
 		AnalyticsScreen analyticsScreen = new AnalyticsScreen(this);
-		this.add(analyticsScreen, "Analytics");
+		getContentPane().add(analyticsScreen, "Analytics");
 		this.card.show(this.getContentPane(), "Analytics");
 	}
 
