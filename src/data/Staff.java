@@ -21,13 +21,6 @@ public class Staff extends User {
 		 this.role = role; 
 	}
 
-	/**
-	 * 
-	 * @return 
-	 */
-	public Staff getAllStaff() { 
-		// TODO Auto-generated method
-		return null;
-	 } 
+	
 
 }

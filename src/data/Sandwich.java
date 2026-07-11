@@ -7,18 +7,12 @@ public class Sandwich {
 	/**
 	 * 
 	 */
-	public Vector<Ingredient> ingredient;
-	/**
-	 * 
-	 */
+	
 	private BreadType breadType;
 	/**
 	 * 
 	 */
-	public BreadType breadtype;
-	/**
-	 * 
-	 */
+	
 	private boolean isComplete;
 	/**
 	 * 
@@ -31,15 +25,7 @@ public class Sandwich {
 	/**
 	 * Getter of ingredient
 	 */
-	public Vector<Ingredient> getIngredient() {
-	 	 return ingredient; 
-	}
-	/**
-	 * Setter of ingredient
-	 */
-	public void setIngredient(Vector<Ingredient> ingredient) { 
-		 this.ingredient = ingredient; 
-	}
+	
 	/**
 	 * Getter of breadType
 	 */
@@ -55,15 +41,7 @@ public class Sandwich {
 	/**
 	 * Getter of breadtype
 	 */
-	public BreadType getBreadtype() {
-	 	 return breadtype; 
-	}
-	/**
-	 * Setter of breadtype
-	 */
-	public void setBreadtype(BreadType breadtype) { 
-		 this.breadtype = breadtype; 
-	}
+	
 	/**
 	 * Getter of isComplete
 	 */
@@ -116,13 +94,6 @@ public class Sandwich {
 		// TODO Auto-generated method
 		return 0;
 	 }
-	/**
-	 * 
-	 * @return 
-	 */
-	public Sandwich getAllSandwiches() { 
-		// TODO Auto-generated method
-		return null;
-	 } 
+	
 
 }

@@ -97,13 +97,6 @@ public class ItemStock {
 	public void setCost(float cost) { 
 		 this.cost = cost; 
 	}
-	/**
-	 * 
-	 * @return 
-	 */
-	public ItemStock getAllItemStocks() { 
-		// TODO Auto-generated method
-		return null;
-	 } 
-
+	
+	
 }

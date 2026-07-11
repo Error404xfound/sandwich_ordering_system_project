@@ -19,14 +19,7 @@ public class DataStorage {
 	/**
 	 * 
 	 */
-	public Vector<Ingredient> ingredient;
-	/**
-	 * 
-	 */
-	public Vector<BreadType> breadtype;
-	/**
-	 * 
-	 */
+	
 	private int nextMenuItemID;
 	/**
 	 * 
@@ -95,27 +88,8 @@ public class DataStorage {
 	/**
 	 * Getter of ingredient
 	 */
-	public Vector<Ingredient> getIngredient() {
-	 	 return ingredient; 
-	}
-	/**
-	 * Setter of ingredient
-	 */
-	public void setIngredient(Vector<Ingredient> ingredient) { 
-		 this.ingredient = ingredient; 
-	}
-	/**
-	 * Getter of breadtype
-	 */
-	public Vector<BreadType> getBreadtype() {
-	 	 return breadtype; 
-	}
-	/**
-	 * Setter of breadtype
-	 */
-	public void setBreadtype(Vector<BreadType> breadtype) { 
-		 this.breadtype = breadtype; 
-	}
+	
+	
 	/**
 	 * Getter of nextMenuItemID
 	 */

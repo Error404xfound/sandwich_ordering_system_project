@@ -7,14 +7,8 @@ public class Order {
 	/**
 	 * 
 	 */
-	public Customer customer;
-	/**
-	 * 
-	 */
-	public Vector<Sandwich> sandwich;
-	/**
-	 * 
-	 */
+	
+	
 	private Vector<Sandwich> sandwiches;
 	/**
 	 * 
@@ -31,30 +25,8 @@ public class Order {
 	/**
 	 * Getter of customer
 	 */
-	public Customer getCustomer() {
-	 	 return customer; 
-	}
-	/**
-	 * Setter of customer
-	 */
-	public void setCustomer(Customer customer) { 
-		 this.customer = customer; 
-	}
-	/**
-	 * Getter of sandwich
-	 */
-	public Vector<Sandwich> getSandwich() {
-	 	 return sandwich; 
-	}
-	/**
-	 * Setter of sandwich
-	 */
-	public void setSandwich(Vector<Sandwich> sandwich) { 
-		 this.sandwich = sandwich; 
-	}
-	/**
-	 * Getter of sandwiches
-	 */
+	
+	
 	public Vector<Sandwich> getSandwiches() {
 	 	 return sandwiches; 
 	}
@@ -108,18 +80,8 @@ public class Order {
 	public void setForCustomerID(int forCustomerID) { 
 		 this.forCustomerID = forCustomerID; 
 	}
-	/**
-	 * 
-	 * @return 
-	 */
-	public Order getAllOrders() { 
-		// TODO Auto-generated method
-		return null;
-	 }
-	/**
-	 * 
-	 * @return 
-	 */
+	
+	
 	public boolean isComplete() { 
 		// TODO Auto-generated method
 		return false;

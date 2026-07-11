@@ -9,10 +9,7 @@ public class LoyaltyDiscount {
 	/**
 	 * 
 	 */
-	public LoyaltyDiscountTier loyaltydiscounttier;
-	/**
-	 * 
-	 */
+	
 	private int discountPercentage;
 	/**
 	 * 
@@ -37,15 +34,7 @@ public class LoyaltyDiscount {
 	/**
 	 * Getter of loyaltydiscounttier
 	 */
-	public LoyaltyDiscountTier getLoyaltydiscounttier() {
-	 	 return loyaltydiscounttier; 
-	}
-	/**
-	 * Setter of loyaltydiscounttier
-	 */
-	public void setLoyaltydiscounttier(LoyaltyDiscountTier loyaltydiscounttier) { 
-		 this.loyaltydiscounttier = loyaltydiscounttier; 
-	}
+	
 	/**
 	 * Getter of discountPercentage
 	 */
@@ -86,9 +75,6 @@ public class LoyaltyDiscount {
 	 * 
 	 * @return 
 	 */
-	public LoyaltyDiscount getAllLoyaltyDiscounts() { 
-		// TODO Auto-generated method
-		return null;
-	 } 
+	
 
 }

@@ -636,18 +636,6 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_q9hHcHeQEfGAp4MOrod9mA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_q9hHcXeQEfGAp4MOrod9mA" value="1"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_AKznQHtEEfGrVPvUHoTvuw" name="protein" visibility="private">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_AhOjMHtEEfGrVPvUHoTvuw" name="fat" visibility="private">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_A1fjAHtEEfGrVPvUHoTvuw" name="carbohydrates" visibility="private">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_XGI6kHtEEfGrVPvUHoTvuw" name="calories" visibility="private">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
-        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_pEsxMFygEfG5MafHy1tCUg" name="User">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_mdBu4FyhEfG5MafHy1tCUg" name="username" visibility="private">
@@ -1731,10 +1719,6 @@
   <java:JavaProperty xmi:id="_XS7O0HtDEfGrVPvUHoTvuw" base_Property="_9RlpUHtBEfGrVPvUHoTvuw"/>
   <java:JavaProperty xmi:id="_gkqf8HtDEfGrVPvUHoTvuw" base_Property="_7RZ6QHtBEfGrVPvUHoTvuw"/>
   <java:JavaProperty xmi:id="_rC29IHtDEfGrVPvUHoTvuw" base_Property="_6nyVgHtBEfGrVPvUHoTvuw"/>
-  <java:JavaProperty xmi:id="_F0HZIHtEEfGrVPvUHoTvuw" base_Property="_AKznQHtEEfGrVPvUHoTvuw"/>
-  <java:JavaProperty xmi:id="_GojGwHtEEfGrVPvUHoTvuw" base_Property="_AhOjMHtEEfGrVPvUHoTvuw"/>
-  <java:JavaProperty xmi:id="_HVpdUHtEEfGrVPvUHoTvuw" base_Property="_A1fjAHtEEfGrVPvUHoTvuw"/>
-  <java:JavaProperty xmi:id="_arIrUHtEEfGrVPvUHoTvuw" base_Property="_XGI6kHtEEfGrVPvUHoTvuw"/>
   <java:JavaClass xmi:id="_DTiVIHt4EfGNIvLfvL9nvw" base_Classifier="_-tDXMHtAEfGrVPvUHoTvuw"/>
   <java:JavaMethod xmi:id="_GhPAMHt4EfGNIvLfvL9nvw" base_Operation="_D4NvgHt4EfGNIvLfvL9nvw"/>
   <java:JavaProperty xmi:id="_-MHJgHuREfGNIvLfvL9nvw" base_Property="_7AbQoHuREfGNIvLfvL9nvw"/>

@@ -35,26 +35,8 @@ public class MenuItem {
 	/**
 	 * 
 	 */
-	public ItemStock itemstock;
-	/**
-	 * 
-	 */
-	private float calories;
-	/**
-	 * 
-	 */
-	private float fat;
-	/**
-	 * 
-	 */
-	private float protein;
-	/**
-	 * 
-	 */
-	private float carbohydrates;
-	/**
-	 * Getter of menuItemID
-	 */
+	
+	
 	public int getMenuItemID() {
 	 	 return menuItemID; 
 	}
@@ -136,65 +118,6 @@ public class MenuItem {
 	public void setDietaryTags(Vector<String> dietaryTags) { 
 		 this.dietaryTags = dietaryTags; 
 	}
-	/**
-	 * Getter of itemstock
-	 */
-	public ItemStock getItemstock() {
-	 	 return itemstock; 
-	}
-	/**
-	 * Setter of itemstock
-	 */
-	public void setItemstock(ItemStock itemstock) { 
-		 this.itemstock = itemstock; 
-	}
-	/**
-	 * Getter of calories
-	 */
-	public float getCalories() {
-	 	 return calories; 
-	}
-	/**
-	 * Setter of calories
-	 */
-	public void setCalories(float calories) { 
-		 this.calories = calories; 
-	}
-	/**
-	 * Getter of fat
-	 */
-	public float getFat() {
-	 	 return fat; 
-	}
-	/**
-	 * Setter of fat
-	 */
-	public void setFat(float fat) { 
-		 this.fat = fat; 
-	}
-	/**
-	 * Getter of protein
-	 */
-	public float getProtein() {
-	 	 return protein; 
-	}
-	/**
-	 * Setter of protein
-	 */
-	public void setProtein(float protein) { 
-		 this.protein = protein; 
-	}
-	/**
-	 * Getter of carbohydrates
-	 */
-	public float getCarbohydrates() {
-	 	 return carbohydrates; 
-	}
-	/**
-	 * Setter of carbohydrates
-	 */
-	public void setCarbohydrates(float carbohydrates) { 
-		 this.carbohydrates = carbohydrates; 
-	} 
-
+	
+	
 }

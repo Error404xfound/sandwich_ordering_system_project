@@ -66,13 +66,7 @@ public class LoyaltyDiscountTier {
 	public void setName(String name) { 
 		 this.name = name; 
 	}
-	/**
-	 * 
-	 * @return 
-	 */
-	public LoyaltyDiscountTier getAllLoyaltyDiscountTiers() { 
-		// TODO Auto-generated method
-		return null;
-	 } 
+	
+	
 
 }
