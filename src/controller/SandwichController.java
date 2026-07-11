@@ -12,10 +12,7 @@ public class SandwichController {
 	/**
 	 * 
 	 */
-	public DataStorage datastorage;
-	/**
-	 * Getter of dataStorage
-	 */
+	
 	public DataStorage getDataStorage() {
 	 	 return dataStorage; 
 	}
@@ -28,20 +25,11 @@ public class SandwichController {
 	/**
 	 * Getter of datastorage
 	 */
-	public DataStorage getDatastorage() {
-	 	 return datastorage; 
-	}
+	
 	/**
 	 * Setter of datastorage
 	 */
-	public void setDatastorage(DataStorage datastorage) { 
-		 this.datastorage = datastorage; 
-	}
-	/**
-	 * 
-	 * @param ID 
-	 * @return 
-	 */
+	
 	public boolean markSandwichComplete(int ID) { 
 		// TODO Auto-generated method
 		return false;

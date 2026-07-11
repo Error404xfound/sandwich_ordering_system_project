@@ -9,13 +9,7 @@ public class IngredientController {
 	 * 
 	 */
 	private DataStorage dataStorage;
-	/**
-	 * 
-	 */
-	public DataStorage datastorage;
-	/**
-	 * Getter of dataStorage
-	 */
+	
 	public DataStorage getDataStorage() {
 	 	 return dataStorage; 
 	}
@@ -28,19 +22,7 @@ public class IngredientController {
 	/**
 	 * Getter of datastorage
 	 */
-	public DataStorage getDatastorage() {
-	 	 return datastorage; 
-	}
-	/**
-	 * Setter of datastorage
-	 */
-	public void setDatastorage(DataStorage datastorage) { 
-		 this.datastorage = datastorage; 
-	}
-	/**
-	 * 
-	 * @param ID 
-	 */
+	
 	public void deleteIngredient(int ID) { 
 		// TODO Auto-generated method
 	 }

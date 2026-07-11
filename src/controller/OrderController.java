@@ -12,10 +12,7 @@ public class OrderController {
 	/**
 	 * 
 	 */
-	public DataStorage datastorage;
-	/**
-	 * Getter of dataStorage
-	 */
+	
 	public DataStorage getDataStorage() {
 	 	 return dataStorage; 
 	}
@@ -25,22 +22,7 @@ public class OrderController {
 	public void setDataStorage(DataStorage dataStorage) { 
 		 this.dataStorage = dataStorage; 
 	}
-	/**
-	 * Getter of datastorage
-	 */
-	public DataStorage getDatastorage() {
-	 	 return datastorage; 
-	}
-	/**
-	 * Setter of datastorage
-	 */
-	public void setDatastorage(DataStorage datastorage) { 
-		 this.datastorage = datastorage; 
-	}
-	/**
-	 * 
-	 * @param order 
-	 */
+	
 	public void addOrder(Order order) { 
 		// TODO Auto-generated method
 	 }
