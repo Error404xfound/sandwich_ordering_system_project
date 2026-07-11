@@ -246,26 +246,8 @@ public class DataStorage {
 	public void setIngredients(Vector<Ingredient> ingredients) { 
 		 this.ingredients = ingredients; 
 	}
-	/**
-	 * 
-	 * @param itemStock 
-	 * @param ID 
-	 */
-	public void editItemStock(ItemStock itemStock, int ID) { 
-		// TODO Auto-generated method
-	 }
-	/**
-	 * 
-	 * @param staff 
-	 * @param ID 
-	 */
-	public void editStaff(Staff staff, int ID) { 
-		// TODO Auto-generated method
-	 }
-	/**
-	 * 
-	 * @param ID 
-	 */
+	
+	
 	public void deleteLoyaltyDiscount(int ID) { 
 		// TODO Auto-generated method
 	 }
@@ -366,9 +348,7 @@ public class DataStorage {
 	 * @param loyaltyDiscount 
 	 * @param ID 
 	 */
-	public void editLoyaltyDiscount(LoyaltyDiscount loyaltyDiscount, int ID) { 
-		// TODO Auto-generated method
-	 }
+	
 	/**
 	 * 
 	 * @param ingredient 
@@ -410,9 +390,7 @@ public class DataStorage {
 	 * @param ingredient 
 	 * @param ID 
 	 */
-	public void editIngredient(Ingredient ingredient, int ID) { 
-		// TODO Auto-generated method
-	 }
+	
 	/**
 	 * 
 	 * @return 
@@ -519,13 +497,8 @@ public class DataStorage {
 	 * @param breadType 
 	 * @param ID 
 	 */
-	public void editBreadType(BreadType breadType, int ID) { 
-		// TODO Auto-generated method
-	 }
-	/**
-	 * 
-	 * @param ID 
-	 */
+	 
+	
 	public void deleteSandwich(int ID) { 
 		// TODO Auto-generated method
 	 }
@@ -544,27 +517,7 @@ public class DataStorage {
 	public void addSandwich(Sandwich sandwich) { 
 		// TODO Auto-generated method
 	 }
-	/**
-	 * 
-	 * @param order 
-	 * @param ID 
-	 */
-	public void editOrder(Order order, int ID) { 
-		// TODO Auto-generated method
-	 }
-	/**
-	 * 
-	 * @param sandwich 
-	 * @param ID 
-	 */
-	public void editSandwich(Sandwich sandwich, int ID) { 
-		// TODO Auto-generated method
-	 }
-	/**
-	 * 
-	 * @param ID 
-	 * @param ingredient 
-	 */
+	
 	public void editIngredient(int ID, Ingredient ingredient) { 
 		// TODO Auto-generated method
 	 }
@@ -576,5 +529,9 @@ public class DataStorage {
 	public void editItemStock(int ID, ItemStock itemStock) { 
 		// TODO Auto-generated method
 	 } 
+	
+	public void editLoyaltyDiscount(int ID, LoyaltyDiscount loyaltyDiscount) {
+		
+	}
 
 }
