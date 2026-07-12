@@ -12,7 +12,7 @@ public class DataStorage {
 	private Vector<LoyaltyDiscountTier> loyaltyDiscountTiers;
 	private Vector<ItemStock> itemStock;
 	private Vector<BreadType> breadTypes;
-	private Vector<Staff> staff;
+	private Vector<Staff> staffPlural;
 	private Vector<LoyaltyDiscount> loyaltyDiscounts;
 	private Vector<Order> orders;
 	private Vector<Ingredient> ingredients;
@@ -27,7 +27,7 @@ public class DataStorage {
 
 	private DataStorage() {
 		customers = new Vector<Customer>();
-		staff = new Vector<Staff>();
+		staffPlural = new Vector<Staff>();
 		orders = new Vector<Order>();
 		itemStock = new Vector<ItemStock>();
 		ingredients = new Vector<Ingredient>();
@@ -70,8 +70,8 @@ public class DataStorage {
 
 	// ===== Staff =====
 	public Staff getStaff(int ID) {
-		for (int i = 0; i < staff.size(); i++) {
-			Staff staffObj = staff.get(i);
+		for (int i = 0; i < staffPlural.size(); i++) {
+			Staff staffObj = staffPlural.get(i);
 			if (staffObj.getUserID() == ID) {
 				return staffObj;
 			}
@@ -79,17 +79,29 @@ public class DataStorage {
 		return null;
 	}
 	public Vector<Staff> getAllStaff() {
-	 	 return staff; 
+	 	 return staffPlural; 
 	}
 	public void setStaff(Vector<Staff> staff) { 
-		 this.staff = staff; 
+		 this.staffPlural = staff; 
 	}
 	public void addStaff(Staff staff) { 
+		nextUserID++;
+		staff.setUserID(nextUserID);
+		staffPlural.add(staff);
 	 }
 	public void editStaff(int ID, Staff staff) { 
 	 }
 	public void deleteStaff(int ID) { 
 	 }
+	public Staff getStaffbyEmail(String email) {
+		for (int i = 0; i < staffPlural.size(); i++) {
+			Staff temp = staffPlural.get(i);
+			if (temp.getEmail() == email) {
+				return temp;
+			}
+		}
+		return null;
+	}
 
 
 	// ===== Shared User ID counter (Customer / Staff) =====
@@ -297,5 +309,7 @@ public class DataStorage {
 	public void setNextTierID(int nextTierID) { 
 		 this.nextTierID = nextTierID; 
 	}
+
+	
 
 }

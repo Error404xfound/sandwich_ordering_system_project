@@ -4,14 +4,20 @@ import javax.swing.JPanel;
 
 import controller.MainFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.SwingConstants;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JCheckBoxMenuItem;
+import javax.swing.JRadioButtonMenuItem;
+import javax.swing.JRadioButton;
 
 public class SignUpScreen extends JPanel {
 
@@ -20,11 +26,18 @@ public class SignUpScreen extends JPanel {
 	private MainFrame main;
 	private JTextField txtFldUsername;
 	private JTextField txtFldEmail;
-	private JPasswordField passwordField;
+	private JPasswordField pwdFldPassword;
+	private ButtonGroup roleGroup;
+
+	private JRadioButton rdCustomer;
+
+	private JRadioButton rdStaff;
 
 	public SignUpScreen(MainFrame main) {
 		this.main = main;
 		setLayout(null);
+		
+		roleGroup = new ButtonGroup();
 		
 		JLabel lblNewLabel = new JLabel("Let's get started");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -39,40 +52,64 @@ public class SignUpScreen extends JPanel {
 		
 		JLabel lblNewLabel_1 = new JLabel("Username");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_1.setBounds(360, 240, 320, 32);
+		lblNewLabel_1.setBounds(360, 328, 320, 32);
 		add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Email");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_2.setBounds(360, 328, 120, 32);
+		lblNewLabel_2.setBounds(360, 416, 120, 32);
 		add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Password");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_3.setBounds(360, 416, 120, 32);
+		lblNewLabel_3.setBounds(360, 504, 120, 32);
 		add(lblNewLabel_3);
 		
 		JButton btnSignUp = new JButton("Sign up");
+		btnSignUp.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String username = String.valueOf(txtFldUsername.getText());
+				String email = String.valueOf(txtFldEmail.getText());
+				String password = String.valueOf(pwdFldPassword.getPassword());
+				String rolePlaceholder = "";
+				int fillerID = 0;
+				boolean isAdded;
+				if (rdStaff.isSelected()) {
+					isAdded = main.getStaffController().addStaff(username, email, rolePlaceholder, fillerID, password);
+					if (isAdded) {
+						String msg = "Login successful\nWelcome to the crew, " + username;
+						JOptionPane.showMessageDialog(null, msg, "Notification", JOptionPane.INFORMATION_MESSAGE);
+					}
+					else {
+						String msg = "Login unsuccessful\nPlease use your company email address.";
+						JOptionPane.showMessageDialog(null, msg, "Notification", JOptionPane.INFORMATION_MESSAGE);
+					}
+				}
+				else if (rdCustomer.isSelected()) {
+					// TO-DO
+				}
+			}
+		});
 		btnSignUp.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnSignUp.setBounds(360, 600, 600, 56);
+		btnSignUp.setBounds(360, 640, 600, 56);
 		add(btnSignUp);
 		
 		txtFldUsername = new JTextField();
 		txtFldUsername.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		txtFldUsername.setBounds(360, 280, 600, 32);
+		txtFldUsername.setBounds(360, 368, 600, 32);
 		add(txtFldUsername);
 		txtFldUsername.setColumns(10);
 		
 		txtFldEmail = new JTextField();
 		txtFldEmail.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		txtFldEmail.setBounds(360, 368, 600, 32);
+		txtFldEmail.setBounds(360, 456, 600, 32);
 		add(txtFldEmail);
 		txtFldEmail.setColumns(10);
 		
-		passwordField = new JPasswordField();
-		passwordField.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		passwordField.setBounds(360, 448, 600, 32);
-		add(passwordField);
+		pwdFldPassword = new JPasswordField();
+		pwdFldPassword.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		pwdFldPassword.setBounds(360, 544, 600, 32);
+		add(pwdFldPassword);
 		
 		JButton btnNewButton = new JButton("Back");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -84,8 +121,23 @@ public class SignUpScreen extends JPanel {
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnNewButton.setBounds(40, 40, 160, 48);
 		add(btnNewButton);
+		
+		JLabel lblNewLabel_1_1 = new JLabel("Account type");
+		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_1_1.setBounds(360, 240, 320, 32);
+		add(lblNewLabel_1_1);
+		
+		rdCustomer = new JRadioButton("Customer");
+		rdCustomer.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		rdCustomer.setBounds(360, 280, 104, 32);
+		roleGroup.add(rdCustomer);
+		add(rdCustomer);
+		
+		rdStaff = new JRadioButton("Staff");
+		rdStaff.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		rdStaff.setBounds(464, 280, 111, 32);
+		roleGroup.add(rdStaff);
+		add(rdStaff);
+		
 	}
-
-	
-
 }

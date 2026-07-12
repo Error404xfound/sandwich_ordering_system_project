@@ -71,18 +71,18 @@ public class LoginScreen extends JPanel {
 		
 		JButton btnSignUp = new JButton("Log in");
 		btnSignUp.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnSignUp.setBounds(360, 480, 600, 56);
+		btnSignUp.setBounds(360, 520, 600, 56);
 		add(btnSignUp);
 		
 		JLabel lblNewLabel_5 = new JLabel("or");
 		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_5.setBounds(500, 560, 320, 20);
+		lblNewLabel_5.setBounds(500, 600, 320, 20);
 		add(lblNewLabel_5);
 		
 		JButton btnGuest = new JButton("Continue as Guest");
 		btnGuest.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnGuest.setBounds(360, 600, 600, 56);
+		btnGuest.setBounds(360, 640, 600, 56);
 		add(btnGuest);
 	}
 
