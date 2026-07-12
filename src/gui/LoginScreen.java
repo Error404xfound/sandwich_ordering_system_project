@@ -50,36 +50,31 @@ public class LoginScreen extends JPanel {
 		btnBack.setBounds(40, 40, 160, 48);
 		add(btnBack);
 		
-		JLabel lblNewLabel = new JLabel("Welcome Back");
+		JLabel lblNewLabel = new JLabel("Log In");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 32));
 		lblNewLabel.setBounds(500, 80, 320, 48);
 		add(lblNewLabel);
 		
-		JLabel lblNewLabel_4 = new JLabel("Log In");
-		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		lblNewLabel_4.setBounds(360, 160, 280, 40);
-		add(lblNewLabel_4);
-		
 		JLabel lblNewLabel_2 = new JLabel("Email");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_2.setBounds(360, 328, 120, 32);
+		lblNewLabel_2.setBounds(360, 288, 120, 32);
 		add(lblNewLabel_2);
 		
 		txtFldEmail = new JTextField();
 		txtFldEmail.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		txtFldEmail.setColumns(10);
-		txtFldEmail.setBounds(360, 368, 600, 32);
+		txtFldEmail.setBounds(360, 328, 600, 32);
 		add(txtFldEmail);
 		
 		JLabel lblNewLabel_3 = new JLabel("Password");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_3.setBounds(360, 416, 120, 32);
+		lblNewLabel_3.setBounds(360, 376, 120, 32);
 		add(lblNewLabel_3);
 		
 		pwdFldPassword = new JPasswordField();
 		pwdFldPassword.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		pwdFldPassword.setBounds(360, 456, 600, 32);
+		pwdFldPassword.setBounds(360, 416, 600, 32);
 		add(pwdFldPassword);
 		
 		JButton btnLogin = new JButton("Log in");
@@ -111,35 +106,35 @@ public class LoginScreen extends JPanel {
 			}
 		});
 		btnLogin.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnLogin.setBounds(360, 540, 600, 56);
+		btnLogin.setBounds(360, 500, 600, 56);
 		add(btnLogin);
 		
 		JLabel lblNewLabel_5 = new JLabel("or");
 		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_5.setBounds(500, 608, 320, 20);
+		lblNewLabel_5.setBounds(500, 568, 320, 20);
 		add(lblNewLabel_5);
 		
 		JButton btnGuest = new JButton("Continue as Guest");
 		btnGuest.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnGuest.setBounds(360, 640, 600, 56);
+		btnGuest.setBounds(360, 600, 600, 56);
 		add(btnGuest);
 		
 		rdCustomer = new JRadioButton("Customer");
 		rdCustomer.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		rdCustomer.setBounds(360, 280, 104, 32);
+		rdCustomer.setBounds(360, 240, 104, 32);
 		roleGroup.add(rdCustomer);
 		add(rdCustomer);
 		
 		rdStaff = new JRadioButton("Staff");
 		rdStaff.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		rdStaff.setBounds(464, 280, 111, 32);
+		rdStaff.setBounds(464, 240, 111, 32);
 		roleGroup.add(rdStaff);
 		add(rdStaff);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("Account type");
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_1_1.setBounds(360, 240, 320, 32);
+		lblNewLabel_1_1.setBounds(360, 200, 320, 32);
 		add(lblNewLabel_1_1);
 	}
 
