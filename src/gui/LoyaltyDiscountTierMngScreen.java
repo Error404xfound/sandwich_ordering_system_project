@@ -5,13 +5,13 @@ import javax.swing.JPanel;
 import controller.MainFrame;
 import data.LoyaltyDiscountTier;
 
-public class LoyaltyDiscountMngScreen extends JPanel {
+public class LoyaltyDiscountTierMngScreen extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 
 	private MainFrame main;
 
-	public LoyaltyDiscountMngScreen(MainFrame main) {
+	public LoyaltyDiscountTierMngScreen(MainFrame main) {
 		this.main = main;
 	}
 

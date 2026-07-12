@@ -13,7 +13,7 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class CustomerSignUpScreen extends JPanel {
+public class SignUpScreen extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 
@@ -22,7 +22,7 @@ public class CustomerSignUpScreen extends JPanel {
 	private JTextField txtFldEmail;
 	private JPasswordField passwordField;
 
-	public CustomerSignUpScreen(MainFrame main) {
+	public SignUpScreen(MainFrame main) {
 		this.main = main;
 		setLayout(null);
 		
@@ -32,7 +32,7 @@ public class CustomerSignUpScreen extends JPanel {
 		lblNewLabel.setBounds(500, 80, 320, 48);
 		add(lblNewLabel);
 		
-		JLabel lblNewLabel_4 = new JLabel("Sign Up as a Customer");
+		JLabel lblNewLabel_4 = new JLabel("Sign Up ");
 		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		lblNewLabel_4.setBounds(360, 160, 600, 40);
 		add(lblNewLabel_4);
@@ -49,12 +49,12 @@ public class CustomerSignUpScreen extends JPanel {
 		
 		JLabel lblNewLabel_3 = new JLabel("Password");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_3.setBounds(360, 408, 120, 32);
+		lblNewLabel_3.setBounds(360, 416, 120, 32);
 		add(lblNewLabel_3);
 		
 		JButton btnSignUp = new JButton("Sign up");
 		btnSignUp.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnSignUp.setBounds(360, 536, 600, 56);
+		btnSignUp.setBounds(360, 600, 600, 56);
 		add(btnSignUp);
 		
 		txtFldUsername = new JTextField();
@@ -74,10 +74,10 @@ public class CustomerSignUpScreen extends JPanel {
 		passwordField.setBounds(360, 448, 600, 32);
 		add(passwordField);
 		
-		JButton btnNewButton = new JButton("Back to login");
+		JButton btnNewButton = new JButton("Back");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				main.showLogin();
+				main.showWelcome();
 			}
 		});
 		btnNewButton.setBackground(new Color(192, 192, 192));
@@ -86,8 +86,6 @@ public class CustomerSignUpScreen extends JPanel {
 		add(btnNewButton);
 	}
 
-	public void showLogin() {
-		// TODO Auto-generated method
-	}
+	
 
 }

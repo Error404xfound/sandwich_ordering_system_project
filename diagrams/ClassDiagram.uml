@@ -8,9 +8,12 @@
       <importedPackage xmi:type="uml:Profile" href="pathmap://Papyrus_JAVA_PROFILES/java.profile.uml#_6TYLMN0yEd6P1qtlpBOZyg"/>
     </packageImport>
     <packagedElement xmi:type="uml:Package" xmi:id="_tp3lgFygEfG5MafHy1tCUg" name="gui">
-      <packagedElement xmi:type="uml:Class" xmi:id="_5b8m4HdDEfGAp4MOrod9mA" name="LoginScreen"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_9v5IUHdDEfGAp4MOrod9mA" name="CustomerSignUpScreen">
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_YozBUHjtEfGo9KPFpORGXA" name="showLogin"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_5b8m4HdDEfGAp4MOrod9mA" name="WelcomeScreen">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_WJ7DYH2IEfGxEKmShxnizw" name="showLogin"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_W3fUAH2IEfGxEKmShxnizw" name="showSignUp"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_9v5IUHdDEfGAp4MOrod9mA" name="SignUpScreen">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_YozBUHjtEfGo9KPFpORGXA" name="showWelcome"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_AIVmYHdEEfGAp4MOrod9mA" name="MenuOrderScreen">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_meNBQHhFEfGgtf9jhYlDRw" name="displayedBreadTypes" visibility="private" type="_Y-rZwFypEfG5MafHy1tCUg">
@@ -24,8 +27,8 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_6vLKoHhGEfGgtf9jhYlDRw" name="showCart"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_GnIOwHdEEfGAp4MOrod9mA" name="LoyaltyScreen"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_6rr7AHdEEfGAp4MOrod9mA" name="StaffSignUpScreen">
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_a9N7AHjtEfGo9KPFpORGXA" name="showLogin"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_6rr7AHdEEfGAp4MOrod9mA" name="LoginScreen">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_a9N7AHjtEfGo9KPFpORGXA" name="showWelcome"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_mC38kHdHEfGAp4MOrod9mA" name="MenuScreen">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_s7bdQHoPEfGphexfQdctHw" name="displayedBreadType" visibility="private" type="_Y-rZwFypEfG5MafHy1tCUg">
@@ -172,7 +175,7 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_GhNmUHjsEfGo9KPFpORGXA" name="showOrders"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_pqx-wHdEEfGAp4MOrod9mA" name="OrderAgainScreen"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_Yels0HnnEfGphexfQdctHw" name="LoyaltyDiscountMngScreen">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Yels0HnnEfGphexfQdctHw" name="LoyaltyDiscountTierMngScreen">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_vKFRsHoFEfGphexfQdctHw" name="showAddLoyaltyDiscountTier"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_vekT8HoFEfGphexfQdctHw" name="showEditLoyaltyDiscountTier">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_CTXPsHoGEfGphexfQdctHw" name="idx">
@@ -182,14 +185,14 @@
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_6Uns8HoEEfGphexfQdctHw" name="AddLoyaltyDiscountTierScreen">
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_3rX9UHoFEfGphexfQdctHw" name="showLoyaltyDiscountMng"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_3rX9UHoFEfGphexfQdctHw" name="showLoyaltyDiscountTierMng"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_6lMfkHoEEfGphexfQdctHw" name="EditLoyaltyDiscountTierScreen">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_9_85wHoFEfGphexfQdctHw" name="index" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_-MIUkHoFEfGphexfQdctHw" name="loyaltyDiscountTier" visibility="private" type="_MlAFIHnmEfGphexfQdctHw"/>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_1896wHoFEfGphexfQdctHw" name="showLoyaltyDiscountMng"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_1896wHoFEfGphexfQdctHw" name="showLoyaltyDiscountTierMng"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_-tDXMHtAEfGrVPvUHoTvuw" name="GuestMenuOrderScreen">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_D4NvgHt4EfGNIvLfvL9nvw" name="showLogin"/>
@@ -720,9 +723,9 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_tSlmoXucEfGNIvLfvL9nvw" name="addbreadtypescreen" type="_yFk5cHdHEfGAp4MOrod9mA" association="_tSjKYHucEfGNIvLfvL9nvw"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_y7tLQnucEfGNIvLfvL9nvw" name="editbreadtypescreen" type="_1P_nAHdHEfGAp4MOrod9mA" association="_y7r9IHucEfGNIvLfvL9nvw"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_0SLO8nucEfGNIvLfvL9nvw" name="editingredientscreen" type="_AgqC8HdIEfGAp4MOrod9mA" association="_0SKA0HucEfGNIvLfvL9nvw"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_SGsAkHudEfGNIvLfvL9nvw" name="loginscreen" type="_5b8m4HdDEfGAp4MOrod9mA" association="_SGqycHudEfGNIvLfvL9nvw"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_pGQBsXufEfGNIvLfvL9nvw" name="staffsignupscreen" type="_6rr7AHdEEfGAp4MOrod9mA" association="_pGOMgHufEfGNIvLfvL9nvw"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_CXFz0nugEfGNIvLfvL9nvw" name="customersignupscreen" type="_9v5IUHdDEfGAp4MOrod9mA" association="_CXDXkHugEfGNIvLfvL9nvw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_SGsAkHudEfGNIvLfvL9nvw" name="welcomescreen" type="_5b8m4HdDEfGAp4MOrod9mA" association="_SGqycHudEfGNIvLfvL9nvw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_pGQBsXufEfGNIvLfvL9nvw" name="loginscreen" type="_6rr7AHdEEfGAp4MOrod9mA" association="_pGOMgHufEfGNIvLfvL9nvw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_CXFz0nugEfGNIvLfvL9nvw" name="signupscreen" type="_9v5IUHdDEfGAp4MOrod9mA" association="_CXDXkHugEfGNIvLfvL9nvw"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_Wd_QoHugEfGNIvLfvL9nvw" name="guestmenuorderscreen" type="_-tDXMHtAEfGrVPvUHoTvuw" association="_Wd8NUHugEfGNIvLfvL9nvw"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_lOwWQnugEfGNIvLfvL9nvw" name="loyaltyscreen" type="_GnIOwHdEEfGAp4MOrod9mA" association="_lOvIIHugEfGNIvLfvL9nvw"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_n6De4XugEfGNIvLfvL9nvw" name="orderagainscreen" type="_pqx-wHdEEfGAp4MOrod9mA" association="_n6BpsHugEfGNIvLfvL9nvw"/>
@@ -740,8 +743,8 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_m3-EAHe0EfGAp4MOrod9mA" name="showLogin"/>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_0dSDIHe0EfGAp4MOrod9mA" name="showCustomerSignUp"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_m3-EAHe0EfGAp4MOrod9mA" name="showWelcome"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_0dSDIHe0EfGAp4MOrod9mA" name="showSignUp"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_0u6lsHe0EfGAp4MOrod9mA" name="showCustomerAccount"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_09nwEHe0EfGAp4MOrod9mA" name="showCustomerSidebar"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_1QXs8He0EfGAp4MOrod9mA" name="showMenuOrder"/>
@@ -761,7 +764,7 @@
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_5EL80He0EfGAp4MOrod9mA" name="showOrderAgain"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_5QAyUHe0EfGAp4MOrod9mA" name="showLoyalty"/>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_5cZogHe0EfGAp4MOrod9mA" name="showStaffSignUp"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_5cZogHe0EfGAp4MOrod9mA" name="showLogin"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_5oJlgHe0EfGAp4MOrod9mA" name="showStaffAccount"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_54GtEHe0EfGAp4MOrod9mA" name="showStaffSidebar"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_6FoLsHe0EfGAp4MOrod9mA" name="showMenu"/>
@@ -791,7 +794,7 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_jxbSwHgVEfGgtf9jhYlDRw" name="showOrderDetails"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_Bvt2AHgXEfGgtf9jhYlDRw" name="showOrdersSummary"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_EXkTIHhFEfGgtf9jhYlDRw" name="showOrders"/>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_5NtOYHnnEfGphexfQdctHw" name="showLoyaltyDiscountMng"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_5NtOYHnnEfGphexfQdctHw" name="showLoyaltyDiscountTierMng"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_18NXsHoDEfGphexfQdctHw" name="showAddLoyaltyDiscountTier"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_Eyl9IHoEEfGphexfQdctHw" name="showEditLoyaltyDiscountTier">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_qjldIHoEEfGphexfQdctHw" name="idx">
@@ -1746,4 +1749,6 @@
   <java:JavaMethod xmi:id="_ZJOngHujEfGNIvLfvL9nvw" base_Operation="_GRPN0HujEfGNIvLfvL9nvw"/>
   <java:JavaMethod xmi:id="_fkNt8HujEfGNIvLfvL9nvw" base_Operation="_GpKloHujEfGNIvLfvL9nvw"/>
   <java:JavaMethod xmi:id="_R7QIcHukEfGNIvLfvL9nvw" base_Operation="_HB7q8HujEfGNIvLfvL9nvw"/>
+  <java:JavaMethod xmi:id="_ai4nsH2IEfGxEKmShxnizw" base_Operation="_WJ7DYH2IEfGxEKmShxnizw"/>
+  <java:JavaMethod xmi:id="_bYG_gH2IEfGxEKmShxnizw" base_Operation="_W3fUAH2IEfGxEKmShxnizw"/>
 </xmi:XMI>

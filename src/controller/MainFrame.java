@@ -22,16 +22,17 @@ import gui.OrderAgainScreen;
 import gui.CustomerSidebarScreen;
 import gui.CurrentOrdersScreen;
 import gui.CustomerAccountScreen;
-import gui.CustomerSignUpScreen;
+import gui.SignUpScreen;
 import gui.MenuOrderScreen;
-import gui.LoginScreen;
+import gui.WelcomeScreen;
 import gui.EditLoyaltyDiscountTierScreen;
 import gui.MenuScreen;
 import gui.EditBreadTypeScreen;
 import gui.EditSandwichScreen;
 import gui.OrderDetailsScreen;
 import gui.AddBreadTypeScreen;
-import gui.StaffSignUpScreen;
+import gui.LoginScreen;
+import gui.LoyaltyDiscountTierMngScreen;
 import gui.OrdersSummaryScreen;
 import gui.AddInventoryScreen;
 import gui.CartScreen;
@@ -104,7 +105,7 @@ public class MainFrame extends JFrame {
 		this.breadTypeController = new BreadTypeController();
 		this.menuController = new MenuController();
 
-		this.showLogin();
+		this.showWelcome();
 	}
 
 	// --- Controller getters ---
@@ -155,10 +156,10 @@ public class MainFrame extends JFrame {
 
 	// --- Navigation methods ---
 
-	public void showLogin() {
-		LoginScreen loginScreen = new LoginScreen(this);
-		getContentPane().add(loginScreen, "Login");
-		this.card.show(this.getContentPane(), "Login");
+	public void showWelcome() {
+		WelcomeScreen welcomeScreen = new WelcomeScreen(this);
+		getContentPane().add(welcomeScreen, "Welcome");
+		this.card.show(this.getContentPane(), "Welcome");
 	}
 
 	public void showMenu() {
@@ -185,10 +186,10 @@ public class MainFrame extends JFrame {
 		this.card.show(this.getContentPane(), "Cart");
 	}
 
-	public void showCustomerSignUp() {
-		CustomerSignUpScreen customerSignUpScreen = new CustomerSignUpScreen(this);
-		getContentPane().add(customerSignUpScreen, "CustomerSignUp");
-		this.card.show(this.getContentPane(), "CustomerSignUp");
+	public void showSignUp() {
+		SignUpScreen signUpScreen = new SignUpScreen(this);
+		getContentPane().add(signUpScreen, "SignUp");
+		this.card.show(this.getContentPane(), "SignUp");
 	}
 
 	public void showCustomerAccount() {
@@ -293,8 +294,10 @@ public class MainFrame extends JFrame {
 		this.card.show(this.getContentPane(), "Loyalty");
 	}
 
-	public void showLoyaltyDiscountMng() {
-		// TODO Auto-generated method
+	public void showLoyaltyDiscountTierMng() {
+		LoyaltyDiscountTierMngScreen loyaltyDiscountTierMngScreen = new LoyaltyDiscountTierMngScreen(this);
+		getContentPane().add(loyaltyDiscountTierMngScreen, "loyaltyDiscountTierMng");
+		this.card.show(this.getContentPane(), "loyaltyDiscountTierMng");
 	}
 
 	public void showAddLoyaltyDiscountTier() {
@@ -309,10 +312,10 @@ public class MainFrame extends JFrame {
 		this.card.show(this.getContentPane(), "EditLoyaltyDiscountTier");
 	}
 
-	public void showStaffSignUp() {
-		StaffSignUpScreen staffSignUpScreen = new StaffSignUpScreen(this);
-		getContentPane().add(staffSignUpScreen, "StaffSignUp");
-		this.card.show(this.getContentPane(), "StaffSignUp");
+	public void showLogin() {
+		LoginScreen loginScreen = new LoginScreen(this);
+		getContentPane().add(loginScreen, "Login");
+		this.card.show(this.getContentPane(), "Login");
 	}
 
 	public void showStaffAccount() {
@@ -332,7 +335,8 @@ public class MainFrame extends JFrame {
 		getContentPane().add(analyticsScreen, "Analytics");
 		this.card.show(this.getContentPane(), "Analytics");
 	}
-
+	
+	
 	// --- State getters/setters ---
 
 	public Order getCurrentOrder() {
@@ -350,4 +354,6 @@ public class MainFrame extends JFrame {
 	public void setCurrentUser(User currentUser) {
 		this.currentUser = currentUser;
 	}
+
+	
 }
