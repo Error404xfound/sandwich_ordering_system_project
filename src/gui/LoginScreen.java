@@ -87,6 +87,7 @@ public class LoginScreen extends JPanel {
 					isVerified = main.getStaffController().verifyStaff(email, password);
 					if (isVerified) {
 						main.setCurrentUser(main.getStaffController().getStaffbyEmail(email));
+						main.showMenu();
 						String msg = "Login successful.\nWelcome back, " + main.getStaffController().getStaffbyEmail(email).getUsername() + " !";
 						JOptionPane.showMessageDialog(null, msg, "Notification", JOptionPane.INFORMATION_MESSAGE);
 					}
@@ -98,6 +99,7 @@ public class LoginScreen extends JPanel {
 					isVerified = main.getCustomerController().verifyCustomer(email, password);
 					 if (isVerified) {
 						 main.setCurrentUser(main.getCustomerController().getCustomerbyEmail(email));
+						 main.showMenuOrder();
 						 String msg = "Login successful.\nWelcome back, " + main.getCustomerController().getCustomerbyEmail(email).getUsername() + " !";
 						 JOptionPane.showMessageDialog(null, msg, "Notification", JOptionPane.INFORMATION_MESSAGE);
 					 }

@@ -7,6 +7,9 @@ import javax.swing.JPanel;
 import controller.MainFrame;
 import data.BreadType;
 import data.Ingredient;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
 
 public class MenuScreen extends JPanel {
 
@@ -18,6 +21,13 @@ public class MenuScreen extends JPanel {
 
 	public MenuScreen(MainFrame main) {
 		this.main = main;
+		setLayout(null);
+		
+		JLabel lblMenu = new JLabel("Menu");
+		lblMenu.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMenu.setFont(new Font("Tahoma", Font.PLAIN, 32));
+		lblMenu.setBounds(500, 80, 320, 48);
+		add(lblMenu);
 	}
 
 	public List<BreadType> getDisplayedBreadType() {
