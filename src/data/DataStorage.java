@@ -60,12 +60,24 @@ public class DataStorage {
 	public void setCustomers(Vector<Customer> customers) { 
 		 this.customers = customers; 
 	}
-	public void addCustomer(Customer customer) { 
+	public void addCustomer(Customer customer) {
+		nextUserID++;
+		customer.setUserID(nextUserID);
+		customers.add(customer);
 	 }
 	public void editCustomer(int ID, Customer customer) { 
 	 }
 	public void deleteCustomer(int ID) { 
 	 }
+	public Customer getCustomerbyEmail(String email) {
+		for (int i = 0; i < customers.size(); i++) {
+			Customer temp = customers.get(i);
+			if (temp.getEmail() == email) {
+				return temp;
+			}
+		}
+		return null;
+	}
 
 
 	// ===== Staff =====
