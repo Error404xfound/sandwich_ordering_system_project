@@ -53,7 +53,7 @@ public class StaffSidebarScreen extends JPanel {
 		JButton btnStaff = new JButton("My Account");
 		btnStaff.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnStaff.setBackground(Color.LIGHT_GRAY);
-		btnStaff.setBounds(0, 640, 240, 80);
+		btnStaff.setBounds(0, 648, 240, 80);
 		add(btnStaff);
 	}
 

@@ -46,7 +46,7 @@ public class CustomerSidebarScreen extends JPanel {
 		JButton btnAccount = new JButton("My Account");
 		btnAccount.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnAccount.setBackground(Color.LIGHT_GRAY);
-		btnAccount.setBounds(0, 640, 240, 80);
+		btnAccount.setBounds(0, 648, 240, 80);
 		add(btnAccount);
 	}
 
