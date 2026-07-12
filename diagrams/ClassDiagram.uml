@@ -119,7 +119,7 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_qZMFkHhEEfGgtf9jhYlDRw" name="showInventory"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_OJQ2sHhFEfGgtf9jhYlDRw" name="showOrders"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_QKHUIHhFEfGgtf9jhYlDRw" name="showAnalytics"/>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_-xMsIHnnEfGphexfQdctHw" name="showLoyaltyDiscountMng"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_-xMsIHnnEfGphexfQdctHw" name="showLoyaltyDiscountTierMng"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_ltD0QHetEfGAp4MOrod9mA" name="EditSandwichScreen">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_hL2hYHhGEfGgtf9jhYlDRw" name="displayedBreadTypes" visibility="private" type="_Y-rZwFypEfG5MafHy1tCUg">
