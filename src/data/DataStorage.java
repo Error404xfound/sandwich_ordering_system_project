@@ -4,6 +4,8 @@ import java.util.Vector;
 
 
 public class DataStorage {
+	
+	private static DataStorage instance;
 
 	
 	private Vector<Customer> customers;
@@ -22,6 +24,24 @@ public class DataStorage {
 	private int nextTierID;
 	private int nextUserID;
 	private int nextSandwichID;
+
+	private DataStorage() {
+		customers = new Vector<Customer>();
+		staff = new Vector<Staff>();
+		orders = new Vector<Order>();
+		itemStock = new Vector<ItemStock>();
+		ingredients = new Vector<Ingredient>();
+		breadTypes = new Vector<BreadType>();
+		loyaltyDiscounts = new Vector<LoyaltyDiscount>();
+		loyaltyDiscountTiers = new Vector<LoyaltyDiscountTier>();
+	}
+
+	public static DataStorage getInstance() {
+		if (instance == null) {
+			instance = new DataStorage();
+		}
+		return instance;
+	}
 
 
 	// ===== Customer =====
