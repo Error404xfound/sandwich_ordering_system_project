@@ -5,7 +5,7 @@ import data.LoyaltyDiscount;
 
 public class LoyaltyDiscountController {
 
-	private DataStorage dataStorage = DataStorage.getInstance();
+	private DataStorage ds = DataStorage.getInstance();
 
 	public void addLoyaltyDiscount(LoyaltyDiscount loyaltyDiscount) { 
 	 }

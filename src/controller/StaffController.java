@@ -5,7 +5,7 @@ import data.Staff;
 
 public class StaffController {
 
-	private DataStorage dataStorage = DataStorage.getInstance();
+	private DataStorage ds = DataStorage.getInstance();
 
 	public boolean verifyStaff(String password, String email) { 
 		return false;
@@ -15,6 +15,7 @@ public class StaffController {
 	 }
 
 	public void addStaff(Staff staff) { 
+		
 	 }
 
 	public Staff getAllStaff() { 

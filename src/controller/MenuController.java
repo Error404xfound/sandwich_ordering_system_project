@@ -5,7 +5,7 @@ import data.MenuItem;
 
 public class MenuController {
 
-	private DataStorage dataStorage = DataStorage.getInstance();
+	private DataStorage ds = DataStorage.getInstance();
 
 	public MenuItem getAllMenuItems() { 
 		return null;

@@ -5,7 +5,7 @@ import data.Order;
 
 public class OrderController {
 
-	private DataStorage dataStorage = DataStorage.getInstance();
+	private DataStorage ds = DataStorage.getInstance();
 	
 	public void addOrder(Order order) { 
 	 }

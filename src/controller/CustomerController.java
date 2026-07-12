@@ -5,7 +5,7 @@ import data.Customer;
 
 public class CustomerController {
 
-	private DataStorage dataStorage = DataStorage.getInstance();
+	private DataStorage ds = DataStorage.getInstance();
 
 	public void deleteCustomer(int ID) { 
 	 }

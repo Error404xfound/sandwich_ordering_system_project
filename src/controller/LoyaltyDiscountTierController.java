@@ -5,7 +5,7 @@ import data.LoyaltyDiscountTier;
 
 public class LoyaltyDiscountTierController {
 
-	private DataStorage dataStorage = DataStorage.getInstance();
+	private DataStorage ds = DataStorage.getInstance();
 
 	public void addLoyaltyDiscountTier(LoyaltyDiscountTier loyaltyDiscountTier) { 
 	 }

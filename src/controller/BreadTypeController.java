@@ -5,7 +5,7 @@ import data.BreadType;
 
 public class BreadTypeController {
 
-	private DataStorage dataStorage = DataStorage.getInstance();
+	private DataStorage ds = DataStorage.getInstance();
 
 	public BreadType getAllBreadTypes() { 
 		return null;

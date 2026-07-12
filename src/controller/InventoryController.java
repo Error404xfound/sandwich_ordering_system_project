@@ -5,7 +5,7 @@ import data.ItemStock;
 
 public class InventoryController {
 
-	private DataStorage dataStorage = DataStorage.getInstance();
+	private DataStorage ds = DataStorage.getInstance();
 
 	public void addItemStock(ItemStock itemStock) { 
 	 }

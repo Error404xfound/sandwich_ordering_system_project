@@ -5,7 +5,7 @@ import data.Sandwich;
 
 public class SandwichController {
 
-	private DataStorage dataStorage = DataStorage.getInstance();
+	private DataStorage ds = DataStorage.getInstance();
 	
 	public boolean markSandwichComplete(int ID) { 
 		return false;

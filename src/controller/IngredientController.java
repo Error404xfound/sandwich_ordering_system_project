@@ -5,7 +5,7 @@ import data.Ingredient;
 
 public class IngredientController {
 
-	private DataStorage dataStorage = DataStorage.getInstance();
+	private DataStorage ds = DataStorage.getInstance();
 
 	public void deleteIngredient(int ID) { 
 	 }

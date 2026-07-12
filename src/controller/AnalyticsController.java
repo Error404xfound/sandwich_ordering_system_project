@@ -4,7 +4,7 @@ import data.DataStorage;
 
 public class AnalyticsController {
 
-	private DataStorage dataStorage = DataStorage.getInstance();
+	private DataStorage ds = DataStorage.getInstance();
 
 	public float calculateTotalCosts() { 
 		return 0;
