@@ -26,7 +26,7 @@ public class MenuScreen extends JPanel {
 		JLabel lblMenu = new JLabel("Menu");
 		lblMenu.setHorizontalAlignment(SwingConstants.CENTER);
 		lblMenu.setFont(new Font("Tahoma", Font.PLAIN, 32));
-		lblMenu.setBounds(500, 80, 320, 48);
+		lblMenu.setBounds(380, 80, 320, 48);
 		add(lblMenu);
 	}
 

@@ -16,6 +16,7 @@ public class StaffSidebarScreen extends JPanel {
 
 	public StaffSidebarScreen(MainFrame main) {
 		setBackground(new Color(192, 192, 192));
+		setPreferredSize(new java.awt.Dimension(240, 720));
 		this.main = main;
 		setLayout(null);
 		

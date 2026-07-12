@@ -26,7 +26,7 @@ public class MenuOrderScreen extends JPanel {
 		JLabel lblNewLabel = new JLabel("Menu Order");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 32));
-		lblNewLabel.setBounds(500, 80, 320, 48);
+		lblNewLabel.setBounds(380, 80, 320, 48);
 		add(lblNewLabel);
 	}
 
