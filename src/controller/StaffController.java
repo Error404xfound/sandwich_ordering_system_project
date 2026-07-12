@@ -7,8 +7,8 @@ public class StaffController {
 
 	private DataStorage ds = DataStorage.getInstance();
 
-	public boolean verifyStaff(String password, String email) {
-	    Staff t = ds.getStaffbyEmail(email);
+	public boolean verifyStaff(String email, String password) {
+	    Staff t = this.ds.getStaffbyEmail(email);
 	    if (t == null) {
 	        return false;
 	    }
@@ -23,7 +23,7 @@ public class StaffController {
 			return false;
 		}
 		Staff staff = new Staff(username, email, pwd, userID, role);
-		ds.addStaff(staff);
+		this.ds.addStaff(staff);
 		return true;
 	 }
 
@@ -33,5 +33,8 @@ public class StaffController {
 
 	public void editStaff(Staff staff, int ID) { 
 	 } 
+	public Staff getStaffbyEmail(String email) {
+		return this.ds.getStaffbyEmail(email);
+	}
 
 }

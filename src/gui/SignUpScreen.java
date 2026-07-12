@@ -75,13 +75,13 @@ public class SignUpScreen extends JPanel {
 				int fillerID = 0;
 				boolean isAdded;
 				if (rdStaff.isSelected()) {
-					isAdded = main.getStaffController().addStaff(username, email, rolePlaceholder, fillerID, password);
+					isAdded = main.getStaffController().addStaff(username, email, password, fillerID, rolePlaceholder);
 					if (isAdded) {
-						String msg = "Login successful\nWelcome to the crew, " + username + " !";
+						String msg = "Sign up successful\nWelcome to the crew, " + username + " !";
 						JOptionPane.showMessageDialog(null, msg, "Notification", JOptionPane.INFORMATION_MESSAGE);
 					}
 					else {
-						String msg = "Login unsuccessful\nPlease use your company email address.";
+						String msg = "Sign up unsuccessful\nPlease use your company email address.";
 						JOptionPane.showMessageDialog(null, msg, "Notification", JOptionPane.INFORMATION_MESSAGE);
 					}
 				}

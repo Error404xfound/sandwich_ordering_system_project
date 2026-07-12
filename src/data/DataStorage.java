@@ -72,7 +72,7 @@ public class DataStorage {
 	public Customer getCustomerbyEmail(String email) {
 		for (int i = 0; i < customers.size(); i++) {
 			Customer temp = customers.get(i);
-			if (temp.getEmail() == email) {
+			if (temp.getEmail().equals(email)) {
 				return temp;
 			}
 		}
@@ -108,7 +108,7 @@ public class DataStorage {
 	public Staff getStaffbyEmail(String email) {
 		for (int i = 0; i < staffPlural.size(); i++) {
 			Staff temp = staffPlural.get(i);
-			if (temp.getEmail() == email) {
+			if (temp.getEmail().equals(email)) {
 				return temp;
 			}
 		}

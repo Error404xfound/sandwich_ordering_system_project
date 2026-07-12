@@ -24,12 +24,12 @@ public class CustomerController {
 			return false;
 		}
 		Customer customer = new Customer(username, email, pwd, userID);
-		ds.addCustomer(customer);
+		this.ds.addCustomer(customer);
 		return true;
 	 }
 
-	public boolean verifyCustomer(String password, String email) {
-	    Customer t = ds.getCustomerbyEmail(email);
+	public boolean verifyCustomer(String email, String password) {
+	    Customer t = this.ds.getCustomerbyEmail(email);
 	    if (t == null) {
 	        return false;
 	    }
@@ -38,5 +38,9 @@ public class CustomerController {
 
 	public void editCustomer(int ID, Customer customer) { 
 	 } 
+	
+	public Customer getCustomerbyEmail(String email) {
+		return this.ds.getCustomerbyEmail(email);
+	}
 
 }
