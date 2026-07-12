@@ -12,18 +12,11 @@ import data.BreadType;
 
 public class DataStorage {
 
-	/**
-	 * 
-	 */
+	
 	private Vector<Customer> customers;
-	/**
-	 * 
-	 */
 	
 	private int nextMenuItemID;
-	/**
-	 * 
-	 */
+	
 	private int nextOrderID;
 	/**
 	 * 

@@ -2,31 +2,22 @@ package data;
 
 public class User {
 
-	/**
-	 * 
-	 */
-	private String email;
-	/**
-	 * 
-	 */
-	private int userID;
-	/**
-	 * 
-	 */
 	private String username;
-	/**
-	 * 
-	 */
+	private String email;
 	private String password;
-	/**
-	 * Getter of email
-	 */
+	private int userID;
+	
+	public User(String username, String email, String pwd, int userID ) {
+		this.username = username;
+		this.email = email;
+		this.password = pwd;
+		this.userID = userID;
+	}
+	
 	public String getEmail() {
 	 	 return email; 
 	}
-	/**
-	 * Setter of email
-	 */
+	
 	public void setEmail(String email) { 
 		 this.email = email; 
 	}
