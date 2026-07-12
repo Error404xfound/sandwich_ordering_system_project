@@ -5,37 +5,9 @@ import data.MenuItem;
 
 public class MenuController {
 
-	/**
-	 * 
-	 */
-	private DataStorage dataStorage;
-	/**
-	 * 
-	 */
-	
-	public DataStorage getDataStorage() {
-	 	 return dataStorage; 
-	}
-	/**
-	 * Setter of dataStorage
-	 */
-	public void setDataStorage(DataStorage dataStorage) { 
-		 this.dataStorage = dataStorage; 
-	}
-	/**
-	 * Getter of datastorage
-	 */
-	
-	/**
-	 * Setter of datastorage
-	 */
-	
-	/**
-	 * 
-	 * @return 
-	 */
+	private DataStorage dataStorage = DataStorage.getInstance();
+
 	public MenuItem getAllMenuItems() { 
-		// TODO Auto-generated method
 		return null;
 	 } 
 

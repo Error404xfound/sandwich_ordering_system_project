@@ -3,99 +3,41 @@ package controller;
 import data.DataStorage;
 import data.Staff;
 import data.Customer;
-import java.util.List;
+import java.util.Vector;
 
 public class AccountController {
 
-	/**
-	 * 
-	 */
-	private DataStorage dataStorage;
+	private DataStorage dataStorage = DataStorage.getInstance();
 
-	
-
-	/**
-	 * 
-	 */
 	public void getAllStaff() { 
-		// TODO Auto-generated method
 	 }
 
-	/**
-	 * 
-	 * @param ID 
-	 */
 	public void deleteStaff(int ID) { 
-		// TODO Auto-generated method
 	 }
 
-	/**
-	 * 
-	 * @param email 
-	 * @param password 
-	 */
 	public void verifyCustomer(String email, String password) { 
-		// TODO Auto-generated method
 	 }
 
-	/**
-	 * 
-	 * @param ID 
-	 * @param staff 
-	 */
 	public void editStaff(int ID, Staff staff) { 
-		// TODO Auto-generated method
 	 }
 
-	/**
-	 * 
-	 * @param ID 
-	 */
 	public void deleteCustomer(int ID) { 
-		// TODO Auto-generated method
 	 }
 
-	/**
-	 * 
-	 * @param customer 
-	 */
 	public void addCustomer(Customer customer) { 
-		// TODO Auto-generated method
 	 }
 
-	/**
-	 * 
-	 * @param staff 
-	 */
 	public void addStaff(Staff staff) { 
-		// TODO Auto-generated method
 	 }
 
-	/**
-	 * 
-	 * @return 
-	 */
-	public List<Customer> getAllCustomers() { 
-		// TODO Auto-generated method
+	public Vector<Customer> getAllCustomers() { 
 		return null;
 	 }
 
-	/**
-	 * 
-	 * @param email 
-	 * @param password 
-	 */
 	public void verifyStaff(String email, String password) { 
-		// TODO Auto-generated method
 	 }
 
-	/**
-	 * 
-	 * @param customer 
-	 * @param ID 
-	 */
 	public void editCustomer(int ID, Customer customer) { 
-		// TODO Auto-generated method
 	 } 
 
 }
