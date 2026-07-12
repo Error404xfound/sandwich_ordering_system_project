@@ -77,7 +77,7 @@ public class SignUpScreen extends JPanel {
 				if (rdStaff.isSelected()) {
 					isAdded = main.getStaffController().addStaff(username, email, rolePlaceholder, fillerID, password);
 					if (isAdded) {
-						String msg = "Login successful\nWelcome to the crew, " + username;
+						String msg = "Login successful\nWelcome to the crew, " + username + " !";
 						JOptionPane.showMessageDialog(null, msg, "Notification", JOptionPane.INFORMATION_MESSAGE);
 					}
 					else {
@@ -86,7 +86,15 @@ public class SignUpScreen extends JPanel {
 					}
 				}
 				else if (rdCustomer.isSelected()) {
-					// TO-DO
+					isAdded = main.getCustomerController().addCustomer(username, email, password, fillerID);
+					if (isAdded) {
+						String msg = "Login successful\nLet's get munching, " + username + " !";
+						JOptionPane.showMessageDialog(null, msg, "Notification", JOptionPane.INFORMATION_MESSAGE);
+					}
+					else {
+						String msg = "Login unsuccessful\nPlease use a valid email address.";
+						JOptionPane.showMessageDialog(null, msg, "Notification", JOptionPane.INFORMATION_MESSAGE);
+					}
 				}
 			}
 		});

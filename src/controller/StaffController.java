@@ -7,15 +7,13 @@ public class StaffController {
 
 	private DataStorage ds = DataStorage.getInstance();
 
-	public boolean verifyStaff(String password, String email) { 
-		Staff t = ds.getStaffbyEmail(email);
-		for (int i = 0; i < ds.getAllStaff().size(); i++) {
-			if (t == ds.getAllStaff().get(i)) {
-				return true;
-			}
-		}
-		return false;
-	 }
+	public boolean verifyStaff(String password, String email) {
+	    Staff t = ds.getStaffbyEmail(email);
+	    if (t == null) {
+	        return false;
+	    }
+	    return t.getPassword().equals(password);
+	}
 
 	public void deleteStaff(int ID) { 
 	 }
