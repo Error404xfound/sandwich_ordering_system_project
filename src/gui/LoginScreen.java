@@ -103,6 +103,9 @@ public class LoginScreen extends JPanel {
 						 JOptionPane.showMessageDialog(null, unsuccessfulMsg, "Notification", JOptionPane.INFORMATION_MESSAGE);
 					 }
 				}
+				else {
+					JOptionPane.showMessageDialog(null, "Please select an account type.", "Notification", JOptionPane.INFORMATION_MESSAGE);
+				}
 			}
 		});
 		btnLogin.setFont(new Font("Tahoma", Font.PLAIN, 20));

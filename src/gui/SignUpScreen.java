@@ -91,6 +91,9 @@ public class SignUpScreen extends JPanel {
 						JOptionPane.showMessageDialog(null, msg, "Notification", JOptionPane.INFORMATION_MESSAGE);
 					}
 				}
+				else {
+					JOptionPane.showMessageDialog(null, "Please select an account type.", "Notification", JOptionPane.INFORMATION_MESSAGE);
+				}
 			}
 		});
 		btnSignUp.setFont(new Font("Tahoma", Font.PLAIN, 20));
