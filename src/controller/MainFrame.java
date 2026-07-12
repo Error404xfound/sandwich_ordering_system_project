@@ -105,7 +105,7 @@ public class MainFrame extends JFrame {
 		this.breadTypeController = new BreadTypeController();
 		this.menuController = new MenuController();
 
-		this.showWelcome();
+		showWelcome();
 	}
 
 	// --- Controller getters ---

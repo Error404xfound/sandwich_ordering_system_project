@@ -83,11 +83,11 @@ public class SignUpScreen extends JPanel {
 				else if (rdCustomer.isSelected()) {
 					isAdded = main.getCustomerController().addCustomer(username, email, password, fillerID);
 					if (isAdded) {
-						String msg = "Login successful\nLet's get munching, " + username + " !";
+						String msg = "Sign up successful\nLet's get munching, " + username + " !";
 						JOptionPane.showMessageDialog(null, msg, "Notification", JOptionPane.INFORMATION_MESSAGE);
 					}
 					else {
-						String msg = "Login unsuccessful\nPlease use a valid email address.";
+						String msg = "Sign up unsuccessful\nPlease use a valid email address.";
 						JOptionPane.showMessageDialog(null, msg, "Notification", JOptionPane.INFORMATION_MESSAGE);
 					}
 				}

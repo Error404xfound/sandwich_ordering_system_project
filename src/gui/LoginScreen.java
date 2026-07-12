@@ -86,6 +86,7 @@ public class LoginScreen extends JPanel {
 				if (rdStaff.isSelected()) {
 					isVerified = main.getStaffController().verifyStaff(email, password);
 					if (isVerified) {
+						main.setCurrentUser(main.getStaffController().getStaffbyEmail(email));
 						String msg = "Login successful.\nWelcome back, " + main.getStaffController().getStaffbyEmail(email).getUsername() + " !";
 						JOptionPane.showMessageDialog(null, msg, "Notification", JOptionPane.INFORMATION_MESSAGE);
 					}
@@ -96,6 +97,7 @@ public class LoginScreen extends JPanel {
 				else if (rdCustomer.isSelected()) {
 					isVerified = main.getCustomerController().verifyCustomer(email, password);
 					 if (isVerified) {
+						 main.setCurrentUser(main.getCustomerController().getCustomerbyEmail(email));
 						 String msg = "Login successful.\nWelcome back, " + main.getCustomerController().getCustomerbyEmail(email).getUsername() + " !";
 						 JOptionPane.showMessageDialog(null, msg, "Notification", JOptionPane.INFORMATION_MESSAGE);
 					 }
@@ -119,6 +121,11 @@ public class LoginScreen extends JPanel {
 		add(lblNewLabel_5);
 		
 		JButton btnGuest = new JButton("Continue as Guest");
+		btnGuest.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				main.showGuestMenuOrder();
+			}
+		});
 		btnGuest.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnGuest.setBounds(360, 600, 600, 56);
 		add(btnGuest);
