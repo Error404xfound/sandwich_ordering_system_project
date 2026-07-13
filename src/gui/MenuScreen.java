@@ -1,6 +1,7 @@
 package gui;
 
 import java.util.List;
+import java.util.Vector;
 
 import javax.swing.JPanel;
 
@@ -13,6 +14,7 @@ import java.awt.Dimension;
 import javax.swing.SwingConstants;
 import javax.swing.JScrollPane;
 import javax.swing.JCheckBox;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JList;
 
@@ -21,8 +23,8 @@ public class MenuScreen extends JPanel {
 	private static final long serialVersionUID = 1L;
 
 	private MainFrame main;
-	private List<BreadType> displayedBreadType;
-	private List<Ingredient> displayedIngredient;
+	private Vector<BreadType> displayedBreadType;
+	private Vector<Ingredient> displayedIngredient;
 	private JPanel panel; 
 
 	public MenuScreen(MainFrame main) {
@@ -220,8 +222,8 @@ public class MenuScreen extends JPanel {
 		scrollPane_1.setBounds(240, 348, 600, 240);
 		panel.add(scrollPane_1);
 		
-		JList list = new JList();
-		scrollPane_1.setViewportView(list);
+		JList breadTypeList = new JList();
+		scrollPane_1.setViewportView(breadTypeList);
 		
 		JScrollPane scrollPane_2 = new JScrollPane();
 		scrollPane_2.setBounds(240, 1120, 600, 240);
@@ -230,44 +232,25 @@ public class MenuScreen extends JPanel {
 		JList list_1 = new JList();
 		scrollPane_2.setViewportView(list_1);
 	}
-
-	public List<BreadType> getDisplayedBreadType() {
+	public void populateBreadTypeList() {
+		//TODO
+ 	}
+	
+	
+	public Vector<BreadType> getDisplayedBreadType() {
 		return displayedBreadType;
 	}
 
-	public void setDisplayedBreadType(List<BreadType> displayedBreadType) {
+	public void setDisplayedBreadType(Vector<BreadType> displayedBreadType) {
 		this.displayedBreadType = displayedBreadType;
 	}
 
-	public List<Ingredient> getDisplayedIngredient() {
+	public Vector<Ingredient> getDisplayedIngredient() {
 		return displayedIngredient;
 	}
 
-	public void setDisplayedIngredient(List<Ingredient> displayedIngredient) {
+	public void setDisplayedIngredient(Vector<Ingredient> displayedIngredient) {
 		this.displayedIngredient = displayedIngredient;
 	}
 
-	public void showEditIngredient(int idx, Ingredient ingredient) {
-		// TODO Auto-generated method
-	}
-
-	public void showEditBreadType(BreadType breadType, int idx) {
-		// TODO Auto-generated method
-	}
-
-	public void showAddBreadType() {
-		// TODO Auto-generated method
-	}
-
-	public void showAddIngredient() {
-		// TODO Auto-generated method
-	}
-
-	public void showEditBreadType(int idx, BreadType breadType) {
-		// TODO Auto-generated method
-	}
-
-	public void showEditIngredient(Ingredient ingredient, int idx) {
-		// TODO Auto-generated method
-	}
 }

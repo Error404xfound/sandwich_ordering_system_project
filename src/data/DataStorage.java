@@ -242,6 +242,9 @@ public class DataStorage {
 		 this.breadTypes = breadTypes; 
 	}
 	public void addBreadType(BreadType breadType) { 
+		breadType.setMenuItemID(nextMenuItemID);
+		breadTypes.add(breadType);
+		nextMenuItemID++;
 	 }
 	public void editBreadType(int ID, BreadType breadType) { 
 	 }

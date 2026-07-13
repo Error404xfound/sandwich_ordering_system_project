@@ -36,6 +36,25 @@ public class MenuItem {
 	 * 
 	 */
 	
+	public MenuItem
+	(
+			String name,
+			int price,
+			Vector<String> dietaryTags,
+			float preparationTimeMins,
+			boolean isVisible,
+			String imagePath,
+			int menuItemID
+	) 
+	{
+		this.name = name;
+		this.price = price;
+		this.dietaryTags = dietaryTags;
+		this.isVisible = isVisible;
+		this.imagePath = imagePath;
+		this.menuItemID = menuItemID;
+	}
+	
 	
 	public int getMenuItemID() {
 	 	 return menuItemID; 
