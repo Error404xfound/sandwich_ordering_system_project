@@ -45,7 +45,9 @@ public class BreadTypeController {
 	    return filteredBreadTypes;
 	}
 
-	public void editBreadType(int ID, BreadType breadType) { 
-	 }
+	public boolean editBreadType(int ID, BreadType breadType)
+		{
+		    return this.ds.editBreadType(ID, breadType);
+		}
 	
 }

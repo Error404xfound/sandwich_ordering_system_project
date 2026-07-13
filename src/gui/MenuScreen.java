@@ -262,7 +262,10 @@ public class MenuScreen extends JPanel {
 		JButton btnBrdEdit = new JButton("Edit bread type");
 		btnBrdEdit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//main.showEditBreadType();
+				if (selectedIndex == -1) {
+					return;
+				}
+				main.showEditBreadType(selectedIndex, displayedBreadType.get(selectedIndex));
 			}
 		});
 		btnBrdEdit.setFont(new Font("Tahoma", Font.PLAIN, 16));
