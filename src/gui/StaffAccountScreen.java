@@ -24,7 +24,7 @@ public class StaffAccountScreen extends JPanel {
 	private MainFrame main;
 	private JTextField txtFldUsername;
 	private JTextField txtFldEmail;
-	private JTextField txtFldPassword;
+	private JPasswordField pwdFldPassword;
 	private JLabel lblRole;
 	private Staff staffUser;
 	private String role;
@@ -82,18 +82,18 @@ public class StaffAccountScreen extends JPanel {
 		lblNewLabel_3.setBounds(240, 464, 120, 32);
 		add(lblNewLabel_3);
 		
-		txtFldPassword = new JTextField();
-		txtFldPassword.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		txtFldPassword.setColumns(10);
-		txtFldPassword.setBounds(240, 504, 600, 32);
-		add(txtFldPassword);
+		pwdFldPassword = new JPasswordField();
+		pwdFldPassword.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		pwdFldPassword.setColumns(10);
+		pwdFldPassword.setBounds(240, 504, 600, 32);
+		add(pwdFldPassword);
 		
 		JButton btnUpdate = new JButton("Update details");
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				staffUser.setUsername(String.valueOf(txtFldUsername.getText()));
 				staffUser.setEmail(String.valueOf(txtFldEmail.getText()));
-				staffUser.setPassword(String.valueOf(txtFldPassword.getText()));
+				staffUser.setPassword(String.valueOf(pwdFldPassword.getPassword()));
 				main.getStaffController().editStaff(main.getCurrentUser().getUserID(), staffUser);
 			}
 		});
@@ -145,7 +145,7 @@ public class StaffAccountScreen extends JPanel {
 		lblRole.setText(role);
 		txtFldUsername.setText(main.getCurrentUser().getUsername());
 		txtFldEmail.setText(main.getCurrentUser().getEmail());
-		txtFldPassword.setText(main.getCurrentUser().getPassword());
+		pwdFldPassword.setText(main.getCurrentUser().getPassword());
 	}
 
 
