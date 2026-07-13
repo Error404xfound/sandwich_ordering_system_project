@@ -49,7 +49,7 @@ public class MenuItem {
 	{
 		this.name = name;
 		this.price = price;
-		this.dietaryTags = dietaryTags;
+		this.dietaryTags = new Vector<String>(dietaryTags);
 		this.isVisible = isVisible;
 		this.imagePath = imagePath;
 		this.menuItemID = menuItemID;
