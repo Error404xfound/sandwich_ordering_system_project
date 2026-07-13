@@ -59,7 +59,7 @@ public class MenuScreen extends JPanel {
 		setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(0, 0, 1040, 728); 
+		scrollPane.setBounds(0, 0, 1040, 720); 
 		scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 		scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER); 
 		add(scrollPane);
@@ -216,47 +216,47 @@ public class MenuScreen extends JPanel {
 		
 		JLabel lblNewLabel_2 = new JLabel("Dietary tags:");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_2.setBounds(240, 668, 120, 32);
+		lblNewLabel_2.setBounds(240, 660, 120, 32);
 		panel.add(lblNewLabel_2);
 		
 		lblBrdDietaryTags = new JLabel("");
 		lblBrdDietaryTags.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblBrdDietaryTags.setBounds(359, 668, 483, 32);
+		lblBrdDietaryTags.setBounds(359, 660, 483, 32);
 		panel.add(lblBrdDietaryTags);
 		
 		JLabel lblNewLabel_2_1 = new JLabel("Base preparation time (mins):");
 		lblNewLabel_2_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_2_1.setBounds(240, 708, 240, 32);
+		lblNewLabel_2_1.setBounds(240, 700, 240, 32);
 		panel.add(lblNewLabel_2_1);
 		
 		lblBrdPrpTime = new JLabel("");
 		lblBrdPrpTime.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblBrdPrpTime.setBounds(480, 708, 362, 32);
+		lblBrdPrpTime.setBounds(480, 700, 362, 32);
 		panel.add(lblBrdPrpTime);
 		
 		lblIngName = new JLabel("");
 		lblIngName.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblIngName.setBounds(240, 1383, 400, 32);
+		lblIngName.setBounds(240, 1384, 400, 32);
 		panel.add(lblIngName);
 		
 		JLabel lblNewLabel_2_2 = new JLabel("Dietary tags:");
 		lblNewLabel_2_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_2_2.setBounds(240, 1439, 120, 32);
+		lblNewLabel_2_2.setBounds(240, 1432, 120, 32);
 		panel.add(lblNewLabel_2_2);
 		
 		JLabel lblNewLabel_2_1_1 = new JLabel("Base preparation time (mins):");
 		lblNewLabel_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_2_1_1.setBounds(240, 1482, 240, 32);
+		lblNewLabel_2_1_1.setBounds(240, 1474, 240, 32);
 		panel.add(lblNewLabel_2_1_1);
 		
 		lblIngPrpTime = new JLabel("");
 		lblIngPrpTime.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblIngPrpTime.setBounds(490, 1482, 352, 32);
+		lblIngPrpTime.setBounds(490, 1474, 352, 32);
 		panel.add(lblIngPrpTime);
 		
 		lblIngDietaryTags = new JLabel("");
 		lblIngDietaryTags.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblIngDietaryTags.setBounds(359, 1439, 483, 32);
+		lblIngDietaryTags.setBounds(359, 1432, 483, 32);
 		panel.add(lblIngDietaryTags);
 		
 		JButton btnBrdEdit = new JButton("Edit bread type");
@@ -266,7 +266,7 @@ public class MenuScreen extends JPanel {
 			}
 		});
 		btnBrdEdit.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		btnBrdEdit.setBounds(240, 806, 288, 48);
+		btnBrdEdit.setBounds(240, 798, 288, 48);
 		panel.add(btnBrdEdit);
 		
 		JButton btnBrdDelete = new JButton("Delete bread type");
@@ -275,7 +275,7 @@ public class MenuScreen extends JPanel {
 			}
 		});
 		btnBrdDelete.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		btnBrdDelete.setBounds(554, 806, 288, 48);
+		btnBrdDelete.setBounds(554, 798, 288, 48);
 		panel.add(btnBrdDelete);
 		
 		JButton btnBrdAdd = new JButton("Add new bread type");
@@ -285,22 +285,22 @@ public class MenuScreen extends JPanel {
 			}
 		});
 		btnBrdAdd.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnBrdAdd.setBounds(240, 880, 600, 56);
+		btnBrdAdd.setBounds(240, 872, 600, 56);
 		panel.add(btnBrdAdd);
 		
 		JButton btnIngEdit = new JButton("Edit ingredient"); 
 		btnIngEdit.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		btnIngEdit.setBounds(240, 1541, 288, 48);
+		btnIngEdit.setBounds(240, 1534, 288, 48);
 		panel.add(btnIngEdit);
 		
 		JButton btnIngAdd = new JButton("Add new ingredient"); 
 		btnIngAdd.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnIngAdd.setBounds(240, 1615, 600, 56);
+		btnIngAdd.setBounds(240, 1608, 600, 56);
 		panel.add(btnIngAdd);
 		
 		JButton btnIngDelete = new JButton("Delete ingredient"); 
 		btnIngDelete.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		btnIngDelete.setBounds(554, 1541, 288, 48);
+		btnIngDelete.setBounds(554, 1534, 288, 48);
 		panel.add(btnIngDelete);
 		
 		JLabel lblMenu = new JLabel("Menu");
@@ -316,11 +316,12 @@ public class MenuScreen extends JPanel {
 		breadTypeList = new JList();
 		breadTypeList.addListSelectionListener(new ListSelectionListener() {
 			public void valueChanged(ListSelectionEvent e) {
-				selectedIndex = breadTypeList.getSelectedIndex();
 				if (e.getValueIsAdjusting()) {
-					if (selectedIndex == -1) {
-						return;
-					}
+					return;
+				}
+				selectedIndex = breadTypeList.getSelectedIndex();
+				if (selectedIndex == -1) {
+					return;
 				}
 				BreadType selectedBreadType = displayedBreadType.get(selectedIndex);
 				lblBrdName.setText(selectedBreadType.getName());
@@ -352,12 +353,12 @@ public class MenuScreen extends JPanel {
 		
 		JLabel lblNewLabel_2_1_2 = new JLabel("Time taken to toast (mins):");
 		lblNewLabel_2_1_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_2_1_2.setBounds(240, 748, 224, 32);
+		lblNewLabel_2_1_2.setBounds(240, 740, 224, 32);
 		panel.add(lblNewLabel_2_1_2);
 		
 		lblBrdTstTime = new JLabel("");
 		lblBrdTstTime.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblBrdTstTime.setBounds(464, 748, 378, 32);
+		lblBrdTstTime.setBounds(464, 740, 378, 32);
 		panel.add(lblBrdTstTime);
 		
 		lblBrdPrice = new JLabel("");
@@ -369,7 +370,7 @@ public class MenuScreen extends JPanel {
 		lblIngPrice = new JLabel("");
 		lblIngPrice.setHorizontalAlignment(SwingConstants.TRAILING);
 		lblIngPrice.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblIngPrice.setBounds(682, 1383, 160, 32);
+		lblIngPrice.setBounds(682, 1384, 160, 32);
 		panel.add(lblIngPrice);
 		
 		updateDisplayedBreadTypes();
@@ -383,13 +384,11 @@ public class MenuScreen extends JPanel {
 	}
 	public void populateBreadTypeList() {
 		DefaultListModel model = new DefaultListModel();
-			if (displayedBreadType.size() > 0) {
-			for (int i = 0; i < displayedBreadType.size(); i++) {
-				BreadType breadType = displayedBreadType.get(i);
-				model.addElement(breadType.getName() + "   " + "SGD$" + breadType.getPrice());
-			}
-			this.breadTypeList.setModel(model);
+		for (int i = 0; i < displayedBreadType.size(); i++) {
+			BreadType breadType = displayedBreadType.get(i);
+			model.addElement(breadType.getName());
 		}
+		this.breadTypeList.setModel(model);
  	}
 	
 	
