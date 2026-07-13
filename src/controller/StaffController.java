@@ -32,8 +32,8 @@ public class StaffController {
 		return null;
 	 }
 
-	public void editStaff(int ID, Staff staff) { 
-		this.ds.editStaff(ID, staff);
+	public boolean editStaff(int ID, Staff staff) { 
+		return this.ds.editStaff(ID, staff);
 	 } 
 	public Staff getStaffbyEmail(String email) {
 		return this.ds.getStaffbyEmail(email);
