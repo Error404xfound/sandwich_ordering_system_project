@@ -94,7 +94,13 @@ public class StaffAccountScreen extends JPanel {
 				staffUser.setUsername(String.valueOf(txtFldUsername.getText()));
 				staffUser.setEmail(String.valueOf(txtFldEmail.getText()));
 				staffUser.setPassword(String.valueOf(pwdFldPassword.getPassword()));
-				main.getStaffController().editStaff(main.getCurrentUser().getUserID(), staffUser);
+				boolean isEditted = main.getStaffController().editStaff(main.getCurrentUser().getUserID(), staffUser);
+				if (isEditted) {
+					JOptionPane.showMessageDialog(null, "Your account has been editted successfully", "Notification", JOptionPane.INFORMATION_MESSAGE);
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "Your account could not be editted. Please try again.","Notification", JOptionPane.INFORMATION_MESSAGE);
+				}
 			}
 		});
 		btnUpdate.setFont(new Font("Tahoma", Font.PLAIN, 20));
