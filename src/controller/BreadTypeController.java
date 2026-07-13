@@ -14,7 +14,8 @@ public class BreadTypeController {
 		return this.ds.getAllBreadTypes();
 	 }
 
-	public void deleteBreadType(int ID) { 
+	public boolean deleteBreadType(int ID) {
+		return this.ds.deleteBreadType(ID);
 	 }
 
 	public void addBreadType

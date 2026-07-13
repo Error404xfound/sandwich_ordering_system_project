@@ -272,6 +272,8 @@ public class MenuScreen extends JPanel {
 		JButton btnBrdDelete = new JButton("Delete bread type");
 		btnBrdDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				main.getBreadTypeController().deleteBreadType(selectedIndex);
+				updateDisplayedBreadTypes();
 			}
 		});
 		btnBrdDelete.setFont(new Font("Tahoma", Font.PLAIN, 16));
@@ -321,28 +323,11 @@ public class MenuScreen extends JPanel {
 				}
 				selectedIndex = breadTypeList.getSelectedIndex();
 				if (selectedIndex == -1) {
+					clearBreadTypeDetails();
 					return;
 				}
 				BreadType selectedBreadType = displayedBreadType.get(selectedIndex);
-				lblBrdName.setText(selectedBreadType.getName());
-				lblBrdPrice.setText("SGD$ " + String.format("%.2f", selectedBreadType.getPrice()));
-				
-				Vector<String> tags = selectedBreadType.getDietaryTags();
-				if (tags.size() <= 0) {
-					lblBrdDietaryTags.setText("None");
-				}
-				else {
-					String tagText = "";
-					for (int i = 0; i < tags.size(); i++) {
-					    tagText += tags.get(i);
-					    if (i < tags.size() - 1) {
-					        tagText += ", ";
-					    }
-					}
-					lblBrdDietaryTags.setText(tagText);
-				}
-				lblBrdPrpTime.setText(String.format("%.2f", selectedBreadType.getPreparationTimeMins()));
-				lblBrdTstTime.setText(String.format("%.2f",selectedBreadType.getToastPreparationTime()));
+				displayBreadTypeDetails(selectedBreadType);
 			}
 		});
 		breadTypeList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -388,6 +373,7 @@ public class MenuScreen extends JPanel {
 	    populateBreadTypeList();
 	}
 	public void populateBreadTypeList() {
+		breadTypeList.clearSelection();
 		DefaultListModel model = new DefaultListModel();
 		for (int i = 0; i < displayedBreadType.size(); i++) {
 			BreadType breadType = displayedBreadType.get(i);
@@ -395,7 +381,34 @@ public class MenuScreen extends JPanel {
 		}
 		this.breadTypeList.setModel(model);
  	}
-	
+	private void clearBreadTypeDetails() {
+	    lblBrdName.setText("[Bread type name]");
+	    lblBrdPrice.setText("SGD$ [Price]");
+	    lblBrdDietaryTags.setText("[Dietary tags]");
+	    lblBrdPrpTime.setText("[Estimate base preparation time]");
+	    lblBrdTstTime.setText("[Estimate time taken to toast]");
+	}
+	private void displayBreadTypeDetails(BreadType selectedBreadType) {
+		lblBrdName.setText(selectedBreadType.getName());
+		lblBrdPrice.setText("SGD$ " + String.format("%.2f", selectedBreadType.getPrice()));
+		
+		Vector<String> tags = selectedBreadType.getDietaryTags();
+		if (tags.size() <= 0) {
+			lblBrdDietaryTags.setText("None");
+		}
+		else {
+			String tagText = "";
+			for (int i = 0; i < tags.size(); i++) {
+			    tagText += tags.get(i);
+			    if (i < tags.size() - 1) {
+			        tagText += ", ";
+			    }
+			}
+			lblBrdDietaryTags.setText(tagText);
+		}
+		lblBrdPrpTime.setText(String.format("%.2f", selectedBreadType.getPreparationTimeMins()));
+		lblBrdTstTime.setText(String.format("%.2f",selectedBreadType.getToastPreparationTime()));
+	}
 	
 	public Vector<BreadType> getDisplayedBreadType() {
 		return displayedBreadType;

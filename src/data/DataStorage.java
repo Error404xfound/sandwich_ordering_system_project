@@ -246,9 +246,25 @@ public class DataStorage {
 		breadTypes.add(breadType);
 		nextMenuItemID++;
 	 }
-	public void editBreadType(int ID, BreadType breadType) { 
+	public boolean editBreadType(int ID, BreadType breadType) { 
+		for (int i = 0; i < breadTypes.size(); i++) {
+	        BreadType b = breadTypes.get(i);
+	        if (ID == b.getMenuItemID()) {
+	            breadTypes.set(i, breadType);
+	            return true;
+	        }
+	    }
+	    return false;
 	 }
-	public void deleteBreadType(int ID) { 
+	public boolean deleteBreadType(int ID) { 
+		for (int i = 0; i < breadTypes.size(); i++) {
+			BreadType b = breadTypes.get(i);
+			if (ID == b.getMenuItemID()) {
+				breadTypes.remove(i);
+				return true;
+			}
+		}
+		return false;
 	 }
 
 
