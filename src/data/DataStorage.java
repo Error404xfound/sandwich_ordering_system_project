@@ -17,13 +17,13 @@ public class DataStorage {
 	private Vector<Order> orders;
 	private Vector<Ingredient> ingredients;
 
-	private int nextMenuItemID;
-	private int nextOrderID;
-	private int nextDiscountID;
-	private int nextItemStockID;
-	private int nextTierID;
-	private int nextUserID;
-	private int nextSandwichID;
+	private int nextMenuItemID = 0;
+	private int nextOrderID = 0;
+	private int nextDiscountID = 0;
+	private int nextItemStockID = 0;
+	private int nextTierID = 0;
+	private int nextUserID = 0;
+	private int nextSandwichID = 0;
 
 	private DataStorage() {
 		customers = new Vector<Customer>();
@@ -61,9 +61,9 @@ public class DataStorage {
 		 this.customers = customers; 
 	}
 	public void addCustomer(Customer customer) {
-		nextUserID++;
 		customer.setUserID(nextUserID);
 		customers.add(customer);
+		nextUserID++;
 	 }
 	public void editCustomer(int ID, Customer customer) { 
 	 }
@@ -97,13 +97,28 @@ public class DataStorage {
 		 this.staffPlural = staff; 
 	}
 	public void addStaff(Staff staff) { 
-		nextUserID++;
 		staff.setUserID(nextUserID);
 		staffPlural.add(staff);
+		nextUserID++;
 	 }
-	public void editStaff(int ID, Staff staff) { 
+	public void editStaff(int ID, Staff staff) {
+		for (int i = 0; i < staffPlural.size(); i++) {
+			Staff t = staffPlural.get(i);
+			if (ID == t.getUserID()) {
+				staffPlural.set(ID, staff);
+			}
+		}
+		staffPlural.set(ID, staff);
 	 }
-	public void deleteStaff(int ID) { 
+	public boolean deleteStaff(int ID) { 
+		for (int i = 0; i < staffPlural.size(); i++) {
+			Staff t = staffPlural.get(i);
+			if (ID == t.getUserID()) {
+				staffPlural.remove(i);
+				return true;
+			}
+		}
+		return false;
 	 }
 	public Staff getStaffbyEmail(String email) {
 		for (int i = 0; i < staffPlural.size(); i++) {

@@ -66,7 +66,7 @@ public class SignUpScreen extends JPanel {
 				String username = String.valueOf(txtFldUsername.getText());
 				String email = String.valueOf(txtFldEmail.getText());
 				String password = String.valueOf(pwdFldPassword.getPassword());
-				String rolePlaceholder = "";
+				String rolePlaceholder = "staff";
 				int fillerID = 0;
 				boolean isAdded;
 				if (rdStaff.isSelected()) {

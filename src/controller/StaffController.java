@@ -15,7 +15,8 @@ public class StaffController {
 	    return t.getPassword().equals(password);
 	}
 
-	public void deleteStaff(int ID) { 
+	public boolean deleteStaff(int ID) { 
+		return this.ds.deleteStaff(ID);
 	 }
 
 	public boolean addStaff(String username, String email, String pwd, int userID, String role) { 
@@ -31,7 +32,8 @@ public class StaffController {
 		return null;
 	 }
 
-	public void editStaff(Staff staff, int ID) { 
+	public void editStaff(int ID, Staff staff) { 
+		this.ds.editStaff(ID, staff);
 	 } 
 	public Staff getStaffbyEmail(String email) {
 		return this.ds.getStaffbyEmail(email);
