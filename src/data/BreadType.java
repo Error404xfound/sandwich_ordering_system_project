@@ -1,29 +1,32 @@
 package data;
 
-public class BreadType extends MenuItem {
+import java.util.Vector;
 
-	/**
-	 * 
-	 */
-	private boolean isToasted;
-	/**
-	 * 
-	 */
+public class BreadType extends MenuItem {
+	
 	private float toastPreparationTime;
+	
+	public BreadType
+	(
+		String name,
+		int price,
+		Vector<String> dietaryTags,
+		float preparationTimeMins,
+		boolean isVisible,
+		String imagePath,
+		int menuItemID,
+		float toastPreparationTime
+	)
+	{
+		super(name, price, dietaryTags, preparationTimeMins, isVisible, imagePath, menuItemID);
+		this.toastPreparationTime = toastPreparationTime;
+		
+	}
 
 	/**
 	 * Getter of isToasted
 	 */
-	public boolean getIsToasted() {
-	 	 return isToasted; 
-	}
-
-	/**
-	 * Setter of isToasted
-	 */
-	public void setIsToasted(boolean isToasted) { 
-		 this.isToasted = isToasted; 
-	}
+	
 
 	/**
 	 * Getter of toastPreparationTime
@@ -39,13 +42,6 @@ public class BreadType extends MenuItem {
 		 this.toastPreparationTime = toastPreparationTime; 
 	}
 
-	/**
-	 * 
-	 * @return 
-	 */
-	public BreadType getAllBreadTypes() { 
-		// TODO Auto-generated method
-		return null;
-	 } 
+	
 
 }
