@@ -53,6 +53,7 @@ public class MenuItem {
 		this.isVisible = isVisible;
 		this.imagePath = imagePath;
 		this.menuItemID = menuItemID;
+		this.preparationTimeMins = preparationTimeMins;
 	}
 	
 	
