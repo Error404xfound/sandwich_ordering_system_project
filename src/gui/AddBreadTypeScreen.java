@@ -1,5 +1,7 @@
 package gui;
 
+import java.util.Vector;
+
 import javax.swing.JPanel;
 
 import controller.MainFrame;
@@ -11,6 +13,7 @@ import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JCheckBox;
 
 public class AddBreadTypeScreen extends JPanel {
 
@@ -18,9 +21,10 @@ public class AddBreadTypeScreen extends JPanel {
 
 	private MainFrame main;
 	private JTextField txtFldName;
-	private JTextField textField;
-	private JTextField txtDietaryTags;
+	private JTextField txtFldPrice;
 	private JTextField txtFldEstPrpTime;
+	private Vector<String> selectedTags = new Vector<String>();
+	private JTextField txtFldTstTime;
 
 	public AddBreadTypeScreen(MainFrame main) {
 		this.main = main;
@@ -44,31 +48,24 @@ public class AddBreadTypeScreen extends JPanel {
 		txtFldName.setBounds(240, 240, 400, 32);
 		add(txtFldName);
 		
-		JLabel lblNewLabel_1_1_1 = new JLabel("Price");
+		JLabel lblNewLabel_1_1_1 = new JLabel("Price (SGD$)");
 		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblNewLabel_1_1_1.setBounds(680, 200, 160, 32);
 		add(lblNewLabel_1_1_1);
 		
-		textField = new JTextField();
-		textField.setText((String) null);
-		textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		textField.setColumns(10);
-		textField.setBounds(680, 240, 160, 32);
-		add(textField);
+		txtFldPrice = new JTextField();
+		txtFldPrice.setText((String) null);
+		txtFldPrice.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		txtFldPrice.setColumns(10);
+		txtFldPrice.setBounds(680, 240, 160, 32);
+		add(txtFldPrice);
 		
 		JLabel lblNewLabel = new JLabel("Dietary tags");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblNewLabel.setBounds(240, 288, 320, 32);
 		add(lblNewLabel);
 		
-		txtDietaryTags = new JTextField();
-		txtDietaryTags.setText((String) null);
-		txtDietaryTags.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		txtDietaryTags.setColumns(10);
-		txtDietaryTags.setBounds(240, 328, 600, 32);
-		add(txtDietaryTags);
-		
-		JLabel lblEstimatedPrepationTime = new JLabel("Estimated Prepation Time");
+		JLabel lblEstimatedPrepationTime = new JLabel("Base preparation time (mins)");
 		lblEstimatedPrepationTime.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblEstimatedPrepationTime.setBounds(240, 376, 320, 32);
 		add(lblEstimatedPrepationTime);
@@ -81,8 +78,18 @@ public class AddBreadTypeScreen extends JPanel {
 		add(txtFldEstPrpTime);
 		
 		JButton btnConfirm = new JButton("Confirm addition");
+		btnConfirm.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String name = String.valueOf(txtFldName.getText());
+				float price = Float.valueOf(txtFldPrice.getText());
+				float prepTime = Float.valueOf(txtFldEstPrpTime.getText());
+				float toastTime = Float.valueOf(txtFldTstTime.getText());
+				int fillerID = 0;
+				main.getBreadTypeController().addBreadType(name, price,  selectedTags, prepTime, true, null, fillerID, toastTime);
+			}
+		});
 		btnConfirm.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnConfirm.setBounds(240, 500, 600, 56);
+		btnConfirm.setBounds(240, 600, 600, 56);
 		add(btnConfirm);
 		
 		JButton btnNewButton = new JButton("Back");
@@ -95,5 +102,101 @@ public class AddBreadTypeScreen extends JPanel {
 		btnNewButton.setBackground(Color.LIGHT_GRAY);
 		btnNewButton.setBounds(40, 40, 160, 48);
 		add(btnNewButton);
+		
+		JCheckBox chckbxBrdHalal = new JCheckBox("Halal");
+		chckbxBrdHalal.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		chckbxBrdHalal.setBounds(240, 328, 80, 32);
+		chckbxBrdHalal.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (chckbxBrdHalal.isSelected()) {
+					selectedTags.add("Halal");
+				} else {
+					selectedTags.remove("Halal");
+				}
+			}
+		});
+		add(chckbxBrdHalal);
+		
+		JCheckBox chckbxBrdVegan = new JCheckBox("Vegan");
+		chckbxBrdVegan.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		chckbxBrdVegan.setBounds(322, 328, 80, 32);
+		chckbxBrdVegan.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (chckbxBrdVegan.isSelected()) {
+					selectedTags.add("Vegan");
+				} else {
+					selectedTags.remove("Vegan");
+				}
+			}
+		});
+		add(chckbxBrdVegan);
+		
+		JCheckBox chckbxBrdVegeterian = new JCheckBox("Vegeterian");
+		chckbxBrdVegeterian.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		chckbxBrdVegeterian.setBounds(404, 328, 112, 32);
+		chckbxBrdVegeterian.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (chckbxBrdVegeterian.isSelected()) {
+					selectedTags.add("Vegeterian");
+				} else {
+					selectedTags.remove("Vegeterian");
+				}
+			}
+		});
+		add(chckbxBrdVegeterian);
+		
+		JCheckBox chckbxBrdNutFree = new JCheckBox("Nut-free");
+		chckbxBrdNutFree.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		chckbxBrdNutFree.setBounds(518, 328, 96, 32);
+		chckbxBrdNutFree.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (chckbxBrdNutFree.isSelected()) {
+					selectedTags.add("Nut-free");
+				} else {
+					selectedTags.remove("Nut-free");
+				}
+			}
+		});
+		add(chckbxBrdNutFree);
+		
+		JCheckBox chckbxBrdBeefFree = new JCheckBox("Beef-free");
+		chckbxBrdBeefFree.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		chckbxBrdBeefFree.setBounds(616, 328, 104, 32);
+		chckbxBrdBeefFree.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (chckbxBrdBeefFree.isSelected()) {
+					selectedTags.add("Beef-free");
+				} else {
+					selectedTags.remove("Beef-free");
+				}
+			}
+		});
+		add(chckbxBrdBeefFree);
+		
+		JCheckBox chckbxBrdDairyfree = new JCheckBox("Dairy-free");
+		chckbxBrdDairyfree.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		chckbxBrdDairyfree.setBounds(722, 328, 120, 32);
+		chckbxBrdDairyfree.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (chckbxBrdDairyfree.isSelected()) {
+					selectedTags.add("Dairy-free");
+				} else {
+					selectedTags.remove("Dairy-free");
+				}
+			}
+		});
+		add(chckbxBrdDairyfree);
+		
+		JLabel lblToastTime = new JLabel("Time taken to toast (mins)");
+		lblToastTime.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblToastTime.setBounds(240, 464, 320, 32);
+		add(lblToastTime);
+		
+		txtFldTstTime = new JTextField();
+		txtFldTstTime.setText((String) null);
+		txtFldTstTime.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		txtFldTstTime.setColumns(10);
+		txtFldTstTime.setBounds(240, 504, 600, 32);
+		add(txtFldTstTime);
 	}
 }

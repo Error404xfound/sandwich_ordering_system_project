@@ -9,7 +9,7 @@ public class BreadType extends MenuItem {
 	public BreadType
 	(
 		String name,
-		int price,
+		float price,
 		Vector<String> dietaryTags,
 		float preparationTimeMins,
 		boolean isVisible,

@@ -13,6 +13,7 @@ import javax.swing.SwingConstants;
 
 import controller.MainFrame;
 import data.BreadType;
+import javax.swing.JCheckBox;
 
 public class EditBreadTypeScreen extends JPanel {
 
@@ -23,8 +24,8 @@ public class EditBreadTypeScreen extends JPanel {
 	private int breadTypeIndex;
 	private JTextField txtFldName;
 	private JTextField textField;
-	private JTextField txtDietaryTags;
 	private JTextField txtFldEstPrpTime;
+	private JTextField txtFldTstTime;
 
 	public EditBreadTypeScreen(MainFrame main, int breadTypeIndex, BreadType breadType) {
 		this.main = main;
@@ -50,7 +51,7 @@ public class EditBreadTypeScreen extends JPanel {
 		txtFldName.setBounds(240, 240, 400, 32);
 		add(txtFldName);
 		
-		JLabel lblNewLabel_1_1_1 = new JLabel("Price");
+		JLabel lblNewLabel_1_1_1 = new JLabel("Price (SGD$)");
 		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblNewLabel_1_1_1.setBounds(680, 200, 160, 32);
 		add(lblNewLabel_1_1_1);
@@ -67,14 +68,7 @@ public class EditBreadTypeScreen extends JPanel {
 		lblNewLabel.setBounds(240, 288, 320, 32);
 		add(lblNewLabel);
 		
-		txtDietaryTags = new JTextField();
-		txtDietaryTags.setText((String) null);
-		txtDietaryTags.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		txtDietaryTags.setColumns(10);
-		txtDietaryTags.setBounds(240, 328, 600, 32);
-		add(txtDietaryTags);
-		
-		JLabel lblEstimatedPrepationTime = new JLabel("Estimated Prepation Time");
+		JLabel lblEstimatedPrepationTime = new JLabel("Base prepation time (mins)");
 		lblEstimatedPrepationTime.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblEstimatedPrepationTime.setBounds(240, 376, 320, 32);
 		add(lblEstimatedPrepationTime);
@@ -88,7 +82,7 @@ public class EditBreadTypeScreen extends JPanel {
 		
 		JButton btnConfirm = new JButton("Confirm edit");
 		btnConfirm.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnConfirm.setBounds(240, 500, 600, 56);
+		btnConfirm.setBounds(240, 600, 600, 56);
 		add(btnConfirm);
 		
 		JButton btnNewButton = new JButton("Back");
@@ -101,6 +95,53 @@ public class EditBreadTypeScreen extends JPanel {
 		btnNewButton.setBackground(Color.LIGHT_GRAY);
 		btnNewButton.setBounds(40, 40, 160, 48);
 		add(btnNewButton);
+		
+		JCheckBox chckbxBrdHalal = new JCheckBox("Halal");
+		chckbxBrdHalal.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		chckbxBrdHalal.setBounds(240, 328, 80, 32);
+		add(chckbxBrdHalal);
+		
+		JCheckBox chckbxBrdVegan = new JCheckBox("Vegan");
+		chckbxBrdVegan.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		chckbxBrdVegan.setBounds(322, 328, 80, 32);
+		add(chckbxBrdVegan);
+		
+		JCheckBox chckbxBrdVegeterian = new JCheckBox("Vegeterian");
+		chckbxBrdVegeterian.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		chckbxBrdVegeterian.setBounds(404, 328, 112, 32);
+		add(chckbxBrdVegeterian);
+		
+		JCheckBox chckbxBrdNutFree = new JCheckBox("Nut-free");
+		chckbxBrdNutFree.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		chckbxBrdNutFree.setBounds(518, 328, 96, 32);
+		add(chckbxBrdNutFree);
+		
+		JCheckBox chckbxBrdBeefFree = new JCheckBox("Beef-free");
+		chckbxBrdBeefFree.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		chckbxBrdBeefFree.setBounds(616, 328, 104, 32);
+		add(chckbxBrdBeefFree);
+		
+		JCheckBox chckbxBrdDairyfree = new JCheckBox("Dairy-free");
+		chckbxBrdDairyfree.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		chckbxBrdDairyfree.setBounds(722, 328, 120, 32);
+		add(chckbxBrdDairyfree);
+		
+		txtFldTstTime = new JTextField();
+		txtFldTstTime.setText((String) null);
+		txtFldTstTime.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		txtFldTstTime.setColumns(10);
+		txtFldTstTime.setBounds(240, 504, 600, 32);
+		add(txtFldTstTime);
+		
+		JLabel lblToastTime = new JLabel("Time taken to toast (mins)");
+		lblToastTime.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblToastTime.setBounds(240, 464, 320, 32);
+		add(lblToastTime);
+		
+		JCheckBox chckbxOnMenu = new JCheckBox("On menu");
+		chckbxOnMenu.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		chckbxOnMenu.setBounds(880, 200, 120, 32);
+		add(chckbxOnMenu);
 	}
 
 	public BreadType getBreadType() {

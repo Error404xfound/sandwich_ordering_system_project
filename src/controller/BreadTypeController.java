@@ -20,7 +20,7 @@ public class BreadTypeController {
 	public void addBreadType
 	(
 		String name,
-		int price,
+		float price,
 		Vector<String> dietaryTags,
 		float preparationTimeMins,
 		boolean isVisible,
@@ -33,9 +33,16 @@ public class BreadTypeController {
 		this.ds.addBreadType(breadType);
 	}
 
-	public BreadType filterBreadType(String dietaryTags) { 
-		return null;
-	 }
+	public Vector<BreadType> filterBreadTypes(Vector<String> dietaryTags) {
+	    Vector<BreadType> filteredBreadTypes = new Vector<BreadType>();
+	    for (int i = 0; i < ds.getAllBreadTypes().size(); i++) {
+	        BreadType temp = ds.getAllBreadTypes().get(i);
+	        if (temp.getDietaryTags().containsAll(dietaryTags)) {
+	            filteredBreadTypes.add(temp);
+	        }
+	    }
+	    return filteredBreadTypes;
+	}
 
 	public void editBreadType(int ID, BreadType breadType) { 
 	 }

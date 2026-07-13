@@ -39,7 +39,7 @@ public class MenuItem {
 	public MenuItem
 	(
 			String name,
-			int price,
+			float price,
 			Vector<String> dietaryTags,
 			float preparationTimeMins,
 			boolean isVisible,
