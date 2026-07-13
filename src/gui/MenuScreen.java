@@ -9,10 +9,12 @@ import data.BreadType;
 import data.Ingredient;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Dimension;
 import javax.swing.SwingConstants;
 import javax.swing.JScrollPane;
 import javax.swing.JCheckBox;
 import javax.swing.JButton;
+import javax.swing.JList;
 
 public class MenuScreen extends JPanel {
 
@@ -21,18 +23,22 @@ public class MenuScreen extends JPanel {
 	private MainFrame main;
 	private List<BreadType> displayedBreadType;
 	private List<Ingredient> displayedIngredient;
+	private JPanel panel; 
 
 	public MenuScreen(MainFrame main) {
 		this.main = main;
 		setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(0, 0, 1080, 5288);
+		scrollPane.setBounds(0, 0, 1040, 728); 
+		scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+		scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER); 
 		add(scrollPane);
 		
-		JPanel panel = new JPanel();
+		panel = new JPanel();
 		scrollPane.setViewportView(panel);
 		panel.setLayout(null);
+		panel.setPreferredSize(new Dimension(1080, 1700)); 
 		
 		JLabel lblNewLabel_1_1 = new JLabel("Bread Types");
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 24));
@@ -114,14 +120,6 @@ public class MenuScreen extends JPanel {
 		chckbxIngDairyfree.setBounds(722, 1072, 120, 32);
 		panel.add(chckbxIngDairyfree);
 		
-		java.awt.List list_1 = new java.awt.List();
-		list_1.setBounds(241, 1120, 598, 238);
-		panel.add(list_1);
-		
-		java.awt.List list_1_1 = new java.awt.List();
-		list_1_1.setBounds(240, 348, 600, 240);
-		panel.add(list_1_1);
-		
 		JLabel lblBrdNameNPrice = new JLabel("");
 		lblBrdNameNPrice.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblBrdNameNPrice.setBounds(240, 612, 448, 32);
@@ -197,26 +195,40 @@ public class MenuScreen extends JPanel {
 		btnBrdAdd.setBounds(240, 852, 600, 56);
 		panel.add(btnBrdAdd);
 		
-		JButton btnBrdEdit_1 = new JButton("Edit bread type");
-		btnBrdEdit_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		btnBrdEdit_1.setBounds(240, 1541, 288, 48);
-		panel.add(btnBrdEdit_1);
+		JButton btnIngEdit = new JButton("Edit ingredient"); 
+		btnIngEdit.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnIngEdit.setBounds(240, 1541, 288, 48);
+		panel.add(btnIngEdit);
 		
-		JButton btnBrdAdd_1 = new JButton("Add bread type");
-		btnBrdAdd_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnBrdAdd_1.setBounds(240, 1621, 600, 56);
-		panel.add(btnBrdAdd_1);
+		JButton btnIngAdd = new JButton("Add ingredient"); 
+		btnIngAdd.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnIngAdd.setBounds(240, 1621, 600, 56);
+		panel.add(btnIngAdd);
 		
-		JButton btnBrdDelete_1 = new JButton("Delete bread type");
-		btnBrdDelete_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		btnBrdDelete_1.setBounds(554, 1541, 288, 48);
-		panel.add(btnBrdDelete_1);
+		JButton btnIngDelete = new JButton("Delete ingredient"); 
+		btnIngDelete.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnIngDelete.setBounds(554, 1541, 288, 48);
+		panel.add(btnIngDelete);
 		
 		JLabel lblMenu = new JLabel("Menu");
 		lblMenu.setHorizontalAlignment(SwingConstants.CENTER);
 		lblMenu.setFont(new Font("Tahoma", Font.PLAIN, 32));
 		lblMenu.setBounds(380, 80, 320, 48);
 		panel.add(lblMenu);
+		
+		JScrollPane scrollPane_1 = new JScrollPane();
+		scrollPane_1.setBounds(240, 348, 600, 240);
+		panel.add(scrollPane_1);
+		
+		JList list = new JList();
+		scrollPane_1.setViewportView(list);
+		
+		JScrollPane scrollPane_2 = new JScrollPane();
+		scrollPane_2.setBounds(240, 1120, 600, 240);
+		panel.add(scrollPane_2);
+		
+		JList list_1 = new JList();
+		scrollPane_2.setViewportView(list_1);
 	}
 
 	public List<BreadType> getDisplayedBreadType() {
