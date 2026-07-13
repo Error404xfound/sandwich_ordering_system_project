@@ -21,6 +21,8 @@ import javax.swing.JList;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ListSelectionModel;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.event.ListSelectionEvent;
 
 public class MenuScreen extends JPanel {
 
@@ -41,7 +43,7 @@ public class MenuScreen extends JPanel {
 
 	private JComponent lblIngDietaryTags;
 
-	private JLabel lblTstTime;
+	private JLabel lblBrdTstTime;
 
 	private JLabel lblBrdPrice;
 
@@ -50,13 +52,14 @@ public class MenuScreen extends JPanel {
 	private JLabel lblBrdName;
 
 	private JLabel lblIngName;
+	private int selectedIndex;
 
 	public MenuScreen(MainFrame main) {
 		this.main = main;
 		setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(0, 0, 1040, 1728); 
+		scrollPane.setBounds(0, 0, 1040, 728); 
 		scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 		scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER); 
 		add(scrollPane);
@@ -311,6 +314,31 @@ public class MenuScreen extends JPanel {
 		panel.add(scrollPane_1);
 		
 		breadTypeList = new JList();
+		breadTypeList.addListSelectionListener(new ListSelectionListener() {
+			public void valueChanged(ListSelectionEvent e) {
+				selectedIndex = breadTypeList.getSelectedIndex();
+				if (e.getValueIsAdjusting()) {
+					if (selectedIndex == -1) {
+						return;
+					}
+				}
+				BreadType selectedBreadType = displayedBreadType.get(selectedIndex);
+				lblBrdName.setText(selectedBreadType.getName());
+				lblBrdPrice.setText("SGD$ " + String.valueOf(selectedBreadType.getPrice()));
+				lblBrdDietaryTags.setText(String.valueOf(selectedBreadType.getDietaryTags()));
+				Vector<String> tags = selectedBreadType.getDietaryTags();
+				String tagText = "";
+				for (int i = 0; i < tags.size(); i++) {
+				    tagText += tags.get(i);
+				    if (i < tags.size() - 1) {
+				        tagText += ", ";
+				    }
+				}
+				lblBrdDietaryTags.setText(tagText);
+				lblBrdPrpTime.setText(String.valueOf(selectedBreadType.getPreparationTimeMins()));
+				lblBrdTstTime.setText(String.valueOf(selectedBreadType.getToastPreparationTime()));
+			}
+		});
 		breadTypeList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		scrollPane_1.setViewportView(breadTypeList);
 		
@@ -327,10 +355,10 @@ public class MenuScreen extends JPanel {
 		lblNewLabel_2_1_2.setBounds(240, 748, 224, 32);
 		panel.add(lblNewLabel_2_1_2);
 		
-		lblTstTime = new JLabel("");
-		lblTstTime.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblTstTime.setBounds(464, 748, 378, 32);
-		panel.add(lblTstTime);
+		lblBrdTstTime = new JLabel("");
+		lblBrdTstTime.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblBrdTstTime.setBounds(464, 748, 378, 32);
+		panel.add(lblBrdTstTime);
 		
 		lblBrdPrice = new JLabel("");
 		lblBrdPrice.setHorizontalAlignment(SwingConstants.TRAILING);
@@ -345,6 +373,8 @@ public class MenuScreen extends JPanel {
 		panel.add(lblIngPrice);
 		
 		updateDisplayedBreadTypes();
+		
+		
 	}
 	
 	private void updateDisplayedBreadTypes() {
@@ -353,11 +383,13 @@ public class MenuScreen extends JPanel {
 	}
 	public void populateBreadTypeList() {
 		DefaultListModel model = new DefaultListModel();
-		for (int i = 0; i < displayedBreadType.size(); i++) {
-			BreadType breadType = displayedBreadType.get(i);
-			model.addElement(breadType.getName() + "   " + "SGD$" + breadType.getPrice());
+			if (displayedBreadType.size() > 0) {
+			for (int i = 0; i < displayedBreadType.size(); i++) {
+				BreadType breadType = displayedBreadType.get(i);
+				model.addElement(breadType.getName() + "   " + "SGD$" + breadType.getPrice());
+			}
+			this.breadTypeList.setModel(model);
 		}
-		this.breadTypeList.setModel(model);
  	}
 	
 	
