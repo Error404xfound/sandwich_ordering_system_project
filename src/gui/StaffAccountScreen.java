@@ -91,12 +91,16 @@ public class StaffAccountScreen extends JPanel {
 		JButton btnUpdate = new JButton("Update details");
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				staffUser.setUsername(String.valueOf(txtFldUsername.getText()));
-				staffUser.setEmail(String.valueOf(txtFldEmail.getText()));
-				staffUser.setPassword(String.valueOf(pwdFldPassword.getPassword()));
-				boolean isEditted = main.getStaffController().editStaff(main.getCurrentUser().getUserID(), staffUser);
+				String newUsername = String.valueOf(txtFldUsername.getText());
+				String newEmail = String.valueOf(txtFldEmail.getText());
+				String newPwd = String.valueOf(pwdFldPassword.getPassword());
+				int currentID = staffUser.getUserID();
+				String currentRole = String.valueOf(staffUser.getRole());
+				Staff updatedStaff = new Staff(newUsername, newEmail, newPwd, currentID, currentRole);
+				boolean isEditted = main.getStaffController().editStaff(currentID, updatedStaff);
 				if (isEditted) {
 					JOptionPane.showMessageDialog(null, "Your account has been editted successfully", "Notification", JOptionPane.INFORMATION_MESSAGE);
+					main.setCurrentUser(updatedStaff);
 				}
 				else {
 					JOptionPane.showMessageDialog(null, "Your account could not be editted. Please try again.","Notification", JOptionPane.INFORMATION_MESSAGE);
