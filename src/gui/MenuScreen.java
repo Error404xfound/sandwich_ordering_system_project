@@ -275,7 +275,8 @@ public class MenuScreen extends JPanel {
 		JButton btnBrdDelete = new JButton("Delete bread type");
 		btnBrdDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				main.getBreadTypeController().deleteBreadType(selectedIndex);
+				int ID = displayedBreadType.get(selectedIndex).getMenuItemID();
+				main.getBreadTypeController().deleteBreadType(ID);
 				updateDisplayedBreadTypes();
 			}
 		});
