@@ -45,47 +45,47 @@ public class StaffAccountScreen extends JPanel {
 		lblStaffAccount.setBounds(380, 80, 320, 48);
 		add(lblStaffAccount);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Role");
-		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_1_1.setBounds(240, 200, 320, 32);
+		JLabel lblNewLabel_1_1 = new JLabel("Role:");
+		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		lblNewLabel_1_1.setBounds(240, 200, 80, 40);
 		add(lblNewLabel_1_1);
 		
 		lblRole = new JLabel("");
-		lblRole.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblRole.setBounds(240, 240, 320, 32);
+		lblRole.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblRole.setBounds(330, 200, 510, 40);
 		add(lblRole);
 		
 		JLabel lblNewLabel_1_1_1 = new JLabel("Username");
 		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_1_1_1.setBounds(240, 288, 320, 32);
+		lblNewLabel_1_1_1.setBounds(240, 264, 320, 32);
 		add(lblNewLabel_1_1_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Email");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_2.setBounds(240, 376, 120, 32);
+		lblNewLabel_2.setBounds(240, 352, 120, 32);
 		add(lblNewLabel_2);
 		
 		txtFldUsername = new JTextField();
 		txtFldUsername.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		txtFldUsername.setColumns(10);
-		txtFldUsername.setBounds(240, 328, 600, 32);
+		txtFldUsername.setBounds(240, 304, 600, 32);
 		add(txtFldUsername);
 		
 		txtFldEmail = new JTextField();
 		txtFldEmail.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		txtFldEmail.setColumns(10);
-		txtFldEmail.setBounds(240, 416, 600, 32);
+		txtFldEmail.setBounds(240, 392, 600, 32);
 		add(txtFldEmail);
 		
 		JLabel lblNewLabel_3 = new JLabel("Password");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_3.setBounds(240, 464, 120, 32);
+		lblNewLabel_3.setBounds(240, 440, 120, 32);
 		add(lblNewLabel_3);
 		
 		pwdFldPassword = new JPasswordField();
 		pwdFldPassword.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		pwdFldPassword.setColumns(10);
-		pwdFldPassword.setBounds(240, 504, 600, 32);
+		pwdFldPassword.setBounds(240, 480, 600, 32);
 		add(pwdFldPassword);
 		
 		JButton btnUpdate = new JButton("Update details");
