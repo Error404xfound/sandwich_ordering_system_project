@@ -51,7 +51,7 @@ public class StaffAccountScreen extends JPanel {
 		add(lblNewLabel_1_1);
 		
 		lblRole = new JLabel("");
-		lblRole.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblRole.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		lblRole.setBounds(330, 200, 510, 40);
 		add(lblRole);
 		

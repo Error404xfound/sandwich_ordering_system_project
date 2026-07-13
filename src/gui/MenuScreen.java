@@ -38,7 +38,7 @@ public class MenuScreen extends JPanel {
 		panel = new JPanel();
 		scrollPane.setViewportView(panel);
 		panel.setLayout(null);
-		panel.setPreferredSize(new Dimension(1080, 1700)); 
+		panel.setPreferredSize(new Dimension(1080, 1740)); 
 		
 		JLabel lblNewLabel_1_1 = new JLabel("Bread Types");
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 24));
@@ -190,7 +190,7 @@ public class MenuScreen extends JPanel {
 		btnBrdDelete.setBounds(554, 772, 288, 48);
 		panel.add(btnBrdDelete);
 		
-		JButton btnBrdAdd = new JButton("Add bread type");
+		JButton btnBrdAdd = new JButton("Add new bread type");
 		btnBrdAdd.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnBrdAdd.setBounds(240, 852, 600, 56);
 		panel.add(btnBrdAdd);
@@ -200,7 +200,7 @@ public class MenuScreen extends JPanel {
 		btnIngEdit.setBounds(240, 1541, 288, 48);
 		panel.add(btnIngEdit);
 		
-		JButton btnIngAdd = new JButton("Add ingredient"); 
+		JButton btnIngAdd = new JButton("Add new ingredient"); 
 		btnIngAdd.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnIngAdd.setBounds(240, 1621, 600, 56);
 		panel.add(btnIngAdd);
