@@ -101,15 +101,16 @@ public class DataStorage {
 		staffPlural.add(staff);
 		nextUserID++;
 	 }
-	public void editStaff(int ID, Staff staff) {
-		for (int i = 0; i < staffPlural.size(); i++) {
-			Staff t = staffPlural.get(i);
-			if (ID == t.getUserID()) {
-				staffPlural.set(ID, staff);
-			}
-		}
-		staffPlural.set(ID, staff);
-	 }
+	public boolean editStaff(int ID, Staff staff) {
+	    for (int i = 0; i < staffPlural.size(); i++) {
+	        Staff t = staffPlural.get(i);
+	        if (ID == t.getUserID()) {
+	            staffPlural.set(i, staff);
+	            return true;
+	        }
+	    }
+	    return false;
+	}
 	public boolean deleteStaff(int ID) { 
 		for (int i = 0; i < staffPlural.size(); i++) {
 			Staff t = staffPlural.get(i);
