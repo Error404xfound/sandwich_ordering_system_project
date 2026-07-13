@@ -59,7 +59,7 @@ public class MenuScreen extends JPanel {
 		setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(0, 0, 1040, 720); 
+		scrollPane.setBounds(0, 0, 1040, 1720); 
 		scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 		scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER); 
 		add(scrollPane);
@@ -209,7 +209,7 @@ public class MenuScreen extends JPanel {
 		chckbxIngDairyfree.setBounds(722, 1072, 120, 32);
 		panel.add(chckbxIngDairyfree);
 		
-		lblBrdName = new JLabel("");
+		lblBrdName = new JLabel("[Bread type name]");
 		lblBrdName.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblBrdName.setBounds(240, 612, 400, 32);
 		panel.add(lblBrdName);
@@ -219,7 +219,7 @@ public class MenuScreen extends JPanel {
 		lblNewLabel_2.setBounds(240, 660, 120, 32);
 		panel.add(lblNewLabel_2);
 		
-		lblBrdDietaryTags = new JLabel("");
+		lblBrdDietaryTags = new JLabel("[Dietary tags]");
 		lblBrdDietaryTags.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblBrdDietaryTags.setBounds(359, 660, 483, 32);
 		panel.add(lblBrdDietaryTags);
@@ -229,12 +229,12 @@ public class MenuScreen extends JPanel {
 		lblNewLabel_2_1.setBounds(240, 700, 240, 32);
 		panel.add(lblNewLabel_2_1);
 		
-		lblBrdPrpTime = new JLabel("");
+		lblBrdPrpTime = new JLabel("[Estimate base preparation time]");
 		lblBrdPrpTime.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblBrdPrpTime.setBounds(480, 700, 362, 32);
 		panel.add(lblBrdPrpTime);
 		
-		lblIngName = new JLabel("");
+		lblIngName = new JLabel("[Ingredient name]");
 		lblIngName.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblIngName.setBounds(240, 1384, 400, 32);
 		panel.add(lblIngName);
@@ -249,12 +249,12 @@ public class MenuScreen extends JPanel {
 		lblNewLabel_2_1_1.setBounds(240, 1474, 240, 32);
 		panel.add(lblNewLabel_2_1_1);
 		
-		lblIngPrpTime = new JLabel("");
+		lblIngPrpTime = new JLabel("[Estimate base preparation time]");
 		lblIngPrpTime.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblIngPrpTime.setBounds(490, 1474, 352, 32);
+		lblIngPrpTime.setBounds(480, 1474, 352, 32);
 		panel.add(lblIngPrpTime);
 		
-		lblIngDietaryTags = new JLabel("");
+		lblIngDietaryTags = new JLabel("[Dietary tags]");
 		lblIngDietaryTags.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblIngDietaryTags.setBounds(359, 1432, 483, 32);
 		panel.add(lblIngDietaryTags);
@@ -325,19 +325,24 @@ public class MenuScreen extends JPanel {
 				}
 				BreadType selectedBreadType = displayedBreadType.get(selectedIndex);
 				lblBrdName.setText(selectedBreadType.getName());
-				lblBrdPrice.setText("SGD$ " + String.valueOf(selectedBreadType.getPrice()));
-				lblBrdDietaryTags.setText(String.valueOf(selectedBreadType.getDietaryTags()));
+				lblBrdPrice.setText("SGD$ " + String.format("%.2f", selectedBreadType.getPrice()));
+				
 				Vector<String> tags = selectedBreadType.getDietaryTags();
-				String tagText = "";
-				for (int i = 0; i < tags.size(); i++) {
-				    tagText += tags.get(i);
-				    if (i < tags.size() - 1) {
-				        tagText += ", ";
-				    }
+				if (tags.size() <= 0) {
+					lblBrdDietaryTags.setText("None");
 				}
-				lblBrdDietaryTags.setText(tagText);
-				lblBrdPrpTime.setText(String.valueOf(selectedBreadType.getPreparationTimeMins()));
-				lblBrdTstTime.setText(String.valueOf(selectedBreadType.getToastPreparationTime()));
+				else {
+					String tagText = "";
+					for (int i = 0; i < tags.size(); i++) {
+					    tagText += tags.get(i);
+					    if (i < tags.size() - 1) {
+					        tagText += ", ";
+					    }
+					}
+					lblBrdDietaryTags.setText(tagText);
+				}
+				lblBrdPrpTime.setText(String.format("%.2f", selectedBreadType.getPreparationTimeMins()));
+				lblBrdTstTime.setText(String.format("%.2f",selectedBreadType.getToastPreparationTime()));
 			}
 		});
 		breadTypeList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -356,18 +361,18 @@ public class MenuScreen extends JPanel {
 		lblNewLabel_2_1_2.setBounds(240, 740, 224, 32);
 		panel.add(lblNewLabel_2_1_2);
 		
-		lblBrdTstTime = new JLabel("");
+		lblBrdTstTime = new JLabel("[Estimate time taken to toast]");
 		lblBrdTstTime.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblBrdTstTime.setBounds(464, 740, 378, 32);
 		panel.add(lblBrdTstTime);
 		
-		lblBrdPrice = new JLabel("");
+		lblBrdPrice = new JLabel("SGD$ [Price]");
 		lblBrdPrice.setHorizontalAlignment(SwingConstants.TRAILING);
 		lblBrdPrice.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblBrdPrice.setBounds(682, 612, 160, 32);
 		panel.add(lblBrdPrice);
 		
-		lblIngPrice = new JLabel("");
+		lblIngPrice = new JLabel("SGD$ [Price]");
 		lblIngPrice.setHorizontalAlignment(SwingConstants.TRAILING);
 		lblIngPrice.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblIngPrice.setBounds(682, 1384, 160, 32);

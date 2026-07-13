@@ -91,8 +91,8 @@ public class StaffAccountScreen extends JPanel {
 		JButton btnUpdate = new JButton("Update details");
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String newUsername = String.valueOf(txtFldUsername.getText());
-				String newEmail = String.valueOf(txtFldEmail.getText());
+				String newUsername = txtFldUsername.getText();
+				String newEmail = txtFldEmail.getText();
 				String newPwd = String.valueOf(pwdFldPassword.getPassword());
 				int currentID = staffUser.getUserID();
 				String currentRole = String.valueOf(staffUser.getRole());
