@@ -136,7 +136,7 @@ public class MenuScreen extends JPanel {
 		panel.add(lblBrdDietaryTags);
 		
 		JCheckBox chckbxBrdOnMenu = new JCheckBox("On Menu");
-		chckbxBrdOnMenu.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		chckbxBrdOnMenu.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		chckbxBrdOnMenu.setBounds(722, 612, 120, 32);
 		panel.add(chckbxBrdOnMenu);
 		
@@ -176,7 +176,7 @@ public class MenuScreen extends JPanel {
 		panel.add(lblIngDietaryTags);
 		
 		JCheckBox chckbxIngOnMenu = new JCheckBox("On Menu");
-		chckbxIngOnMenu.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		chckbxIngOnMenu.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		chckbxIngOnMenu.setBounds(722, 1383, 120, 32);
 		panel.add(chckbxIngOnMenu);
 		
