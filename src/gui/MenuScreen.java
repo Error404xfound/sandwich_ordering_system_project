@@ -381,7 +381,11 @@ public class MenuScreen extends JPanel {
 		DefaultListModel model = new DefaultListModel();
 		for (int i = 0; i < displayedBreadType.size(); i++) {
 			BreadType breadType = displayedBreadType.get(i);
-			model.addElement(breadType.getName());
+			String xVisibleIndicator = "";
+			if (!breadType.getIsVisible()) {
+				xVisibleIndicator = "   (not on menu)";
+			}
+			model.addElement(breadType.getName() + xVisibleIndicator);
 		}
 		this.breadTypeList.setModel(model);
  	}

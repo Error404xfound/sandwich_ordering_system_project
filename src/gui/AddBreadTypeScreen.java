@@ -14,6 +14,7 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JCheckBox;
+import java.awt.Checkbox;
 
 public class AddBreadTypeScreen extends JPanel {
 
@@ -25,6 +26,7 @@ public class AddBreadTypeScreen extends JPanel {
 	private JTextField txtFldEstPrpTime;
 	private Vector<String> selectedTags = new Vector<String>();
 	private JTextField txtFldTstTime;
+	private boolean visible;
 
 	public AddBreadTypeScreen(MainFrame main) {
 		this.main = main;
@@ -85,7 +87,7 @@ public class AddBreadTypeScreen extends JPanel {
 				float prepTime = Float.valueOf(txtFldEstPrpTime.getText());
 				float toastTime = Float.valueOf(txtFldTstTime.getText());
 				int fillerID = 0;
-				main.getBreadTypeController().addBreadType(name, price,  selectedTags, prepTime, true, null, fillerID, toastTime);
+				main.getBreadTypeController().addBreadType(name, price,  selectedTags, prepTime, visible, null, fillerID, toastTime);
 			}
 		});
 		btnConfirm.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -198,5 +200,21 @@ public class AddBreadTypeScreen extends JPanel {
 		txtFldTstTime.setColumns(10);
 		txtFldTstTime.setBounds(240, 504, 600, 32);
 		add(txtFldTstTime);
+		
+		JCheckBox chckbxOnMenu = new JCheckBox("On Menu");
+		chckbxOnMenu.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (chckbxOnMenu.isSelected()) {
+					visible = true;
+				}
+				else {
+					visible = false;
+				}
+			}
+		});
+		chckbxOnMenu.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		chckbxOnMenu.setSelected(true);
+		chckbxOnMenu.setBounds(880, 200, 120, 32);
+		add(chckbxOnMenu);
 	}
 }
