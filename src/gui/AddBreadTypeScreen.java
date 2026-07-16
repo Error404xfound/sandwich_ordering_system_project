@@ -6,6 +6,7 @@ import javax.swing.JPanel;
 
 import controller.MainFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane; // CHANGED: added for displaying controller messages
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
@@ -82,12 +83,19 @@ public class AddBreadTypeScreen extends JPanel {
 		JButton btnConfirm = new JButton("Confirm addition");
 		btnConfirm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String name = String.valueOf(txtFldName.getText());
-				float price = Float.valueOf(txtFldPrice.getText());
-				float prepTime = Float.valueOf(txtFldEstPrpTime.getText());
-				float toastTime = Float.valueOf(txtFldTstTime.getText());
-				int fillerID = 0;
-				main.getBreadTypeController().addBreadType(name, price,  selectedTags, prepTime, visible, null, fillerID, toastTime);
+				
+				String name = txtFldName.getText();
+				String priceText = txtFldPrice.getText();
+				String prepTimeText = txtFldEstPrpTime.getText();
+				String toastTimeText = txtFldTstTime.getText();
+				String error = main.getBreadTypeController().addBreadType(name, priceText, selectedTags, prepTimeText, visible, null, toastTimeText);
+				
+				if (error == null) {
+					JOptionPane.showMessageDialog(null, "Bread type added successfully.", "Notification", JOptionPane.INFORMATION_MESSAGE);
+				}
+				else {
+					JOptionPane.showMessageDialog(null, error, "Notification", JOptionPane.INFORMATION_MESSAGE);
+				}
 			}
 		});
 		btnConfirm.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -216,5 +224,8 @@ public class AddBreadTypeScreen extends JPanel {
 		chckbxOnMenu.setSelected(true);
 		chckbxOnMenu.setBounds(880, 200, 120, 32);
 		add(chckbxOnMenu);
+		
+		
+		visible = true;
 	}
 }

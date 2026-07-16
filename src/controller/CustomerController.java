@@ -1,7 +1,6 @@
 package controller;
 
 import data.DataStorage;
-import data.Staff;
 import data.Customer;
 
 public class CustomerController {
@@ -18,14 +17,36 @@ public class CustomerController {
 		return null;
 	 }
 
-	public boolean addCustomer(String username, String email, String pwd, int userID) { 
-		// Basic email format check (not domain-restricted, unlike staff sign-up)
-		if (!email.matches("^[\\w.+-]+@[\\w-]+\\.[a-zA-Z]{2,}$")) {
-			return false;
+	
+	public String addCustomer(String username, String email, String pwd) {
+		
+		if (username == null || username.trim().isEmpty()) {
+			return "Username cannot be empty.";
 		}
-		Customer customer = new Customer(username, email, pwd, userID);
+		
+		if (email == null || email.trim().isEmpty()) {
+			return "Email cannot be empty.";
+		}
+		
+		if (!email.trim().matches("^[\\w.+-]+@[\\w-]+\\.[a-zA-Z]{2,}$")) {
+			return "Please use a valid email address.";
+		}
+		
+		if (this.ds.getCustomerbyEmail(email.trim()) != null) {
+			return "An account with this email address already exists.";
+		}
+		
+		if (pwd == null || pwd.isEmpty()) {
+			return "Password cannot be empty.";
+		}
+		
+		if (pwd.length() < 8) {
+			return "Password must be at least 8 characters long.";
+		}
+		
+		Customer customer = new Customer(username.trim(), email.trim(), pwd, 0);
 		this.ds.addCustomer(customer);
-		return true;
+		return null;
 	 }
 
 	public boolean verifyCustomer(String email, String password) {

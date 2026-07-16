@@ -67,28 +67,31 @@ public class SignUpScreen extends JPanel {
 				String email = String.valueOf(txtFldEmail.getText());
 				String password = String.valueOf(pwdFldPassword.getPassword());
 				String rolePlaceholder = "staff";
-				int fillerID = 0;
-				boolean isAdded;
+
 				if (rdStaff.isSelected()) {
-					isAdded = main.getStaffController().addStaff(username, email, password, fillerID, rolePlaceholder);
-					if (isAdded) {
-						String msg = "Sign up successful\nWelcome to the crew, " + username + " !";
+				
+					String error = main.getStaffController().addStaff(username, email, password, rolePlaceholder);
+					if (error == null) {
+						
+						String msg = "Sign up successful. Welcome, " + username.trim() + ".";
 						JOptionPane.showMessageDialog(null, msg, "Notification", JOptionPane.INFORMATION_MESSAGE);
 					}
 					else {
-						String msg = "Sign up unsuccessful\nPlease use your company email address.";
-						JOptionPane.showMessageDialog(null, msg, "Notification", JOptionPane.INFORMATION_MESSAGE);
+						
+						JOptionPane.showMessageDialog(null, error, "Notification", JOptionPane.INFORMATION_MESSAGE);
 					}
 				}
 				else if (rdCustomer.isSelected()) {
-					isAdded = main.getCustomerController().addCustomer(username, email, password, fillerID);
-					if (isAdded) {
-						String msg = "Sign up successful\nLet's get munching, " + username + " !";
+					
+					String error = main.getCustomerController().addCustomer(username, email, password);
+					if (error == null) {
+						
+						String msg = "Sign up successful. Welcome, " + username.trim() + ".";
 						JOptionPane.showMessageDialog(null, msg, "Notification", JOptionPane.INFORMATION_MESSAGE);
 					}
 					else {
-						String msg = "Sign up unsuccessful\nPlease use a valid email address.";
-						JOptionPane.showMessageDialog(null, msg, "Notification", JOptionPane.INFORMATION_MESSAGE);
+						
+						JOptionPane.showMessageDialog(null, error, "Notification", JOptionPane.INFORMATION_MESSAGE);
 					}
 				}
 				else {

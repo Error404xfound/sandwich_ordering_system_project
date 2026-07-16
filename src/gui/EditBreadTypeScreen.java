@@ -9,6 +9,7 @@ import java.util.Vector;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane; 
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -24,10 +25,10 @@ public class EditBreadTypeScreen extends JPanel {
 	private BreadType breadType;
 	private int breadTypeIndex;
 	private JTextField txtFldName;
-	private JTextField txtFldPrice;                                  // renamed from textField
+	private JTextField txtFldPrice;                                  
 	private JTextField txtFldEstPrpTime;
 	private JTextField txtFldTstTime;
-	private JCheckBox chckbxOnMenu;                                  // promoted to field
+	private JCheckBox chckbxOnMenu;                                  
 	private Vector<String> selectedTags = new Vector<String>();
 
 	public EditBreadTypeScreen(MainFrame main, int breadTypeIndex, BreadType breadType) {
@@ -49,7 +50,7 @@ public class EditBreadTypeScreen extends JPanel {
 		add(lblNewLabel_1_1);
 
 		txtFldName = new JTextField();
-		txtFldName.setText(breadType.getName());                     // prefilled
+		txtFldName.setText(breadType.getName());                     
 		txtFldName.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		txtFldName.setColumns(10);
 		txtFldName.setBounds(240, 240, 400, 32);
@@ -61,7 +62,7 @@ public class EditBreadTypeScreen extends JPanel {
 		add(lblNewLabel_1_1_1);
 
 		txtFldPrice = new JTextField();
-		txtFldPrice.setText(String.format("%.2f", breadType.getPrice()));   // prefilled
+		txtFldPrice.setText(String.format("%.2f", breadType.getPrice()));   
 		txtFldPrice.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		txtFldPrice.setColumns(10);
 		txtFldPrice.setBounds(680, 240, 160, 32);
@@ -78,7 +79,7 @@ public class EditBreadTypeScreen extends JPanel {
 		add(lblEstimatedPrepationTime);
 
 		txtFldEstPrpTime = new JTextField();
-		txtFldEstPrpTime.setText(String.format("%.2f", breadType.getPreparationTimeMins()));   // prefilled
+		txtFldEstPrpTime.setText(String.format("%.2f", breadType.getPreparationTimeMins()));   
 		txtFldEstPrpTime.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		txtFldEstPrpTime.setColumns(10);
 		txtFldEstPrpTime.setBounds(240, 416, 600, 32);
@@ -90,7 +91,7 @@ public class EditBreadTypeScreen extends JPanel {
 		add(lblToastTime);
 
 		txtFldTstTime = new JTextField();
-		txtFldTstTime.setText(String.format("%.2f", breadType.getToastPreparationTime()));     // prefilled
+		txtFldTstTime.setText(String.format("%.2f", breadType.getToastPreparationTime()));    
 		txtFldTstTime.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		txtFldTstTime.setColumns(10);
 		txtFldTstTime.setBounds(240, 504, 600, 32);
@@ -99,7 +100,7 @@ public class EditBreadTypeScreen extends JPanel {
 		chckbxOnMenu = new JCheckBox("On menu");
 		chckbxOnMenu.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		chckbxOnMenu.setBounds(880, 200, 120, 32);
-		chckbxOnMenu.setSelected(breadType.getIsVisible());          // prefilled
+		chckbxOnMenu.setSelected(breadType.getIsVisible());         
 		add(chckbxOnMenu);
 
 		JCheckBox chckbxBrdHalal = new JCheckBox("Halal");
@@ -193,18 +194,25 @@ public class EditBreadTypeScreen extends JPanel {
 		add(chckbxBrdDairyfree);
 
 		JButton btnConfirm = new JButton("Confirm edit");
-		btnConfirm.addActionListener(new ActionListener() {                      // wired
+		btnConfirm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 				String name = txtFldName.getText();
-				float price = Float.valueOf(txtFldPrice.getText());
-				float prepTime = Float.valueOf(txtFldEstPrpTime.getText());
-				float toastTime = Float.valueOf(txtFldTstTime.getText());
+				String priceText = txtFldPrice.getText();
+				String prepTimeText = txtFldEstPrpTime.getText();
+				String toastTimeText = txtFldTstTime.getText();
 				boolean isVisible = chckbxOnMenu.isSelected();
 				String imagePath = breadType.getImagePath();
 				int ID = breadType.getMenuItemID();
-				BreadType updatedBreadType = new BreadType(name, price, selectedTags, prepTime, isVisible, imagePath, ID, toastTime);
-				main.getBreadTypeController().editBreadType(ID, updatedBreadType);
-				main.showMenu();
+				String error = main.getBreadTypeController().editBreadType(ID, name, priceText, selectedTags, prepTimeText, isVisible, imagePath, toastTimeText);
+				
+				if (error == null) {
+					JOptionPane.showMessageDialog(null, "Bread type updated successfully.", "Notification", JOptionPane.INFORMATION_MESSAGE);
+					main.showMenu();
+				}
+				else {
+					JOptionPane.showMessageDialog(null, error, "Notification", JOptionPane.INFORMATION_MESSAGE);
+				}
 			}
 		});
 		btnConfirm.setFont(new Font("Tahoma", Font.PLAIN, 20));

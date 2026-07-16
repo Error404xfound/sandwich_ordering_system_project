@@ -241,10 +241,11 @@ public class DataStorage {
 	public void setBreadTypes(Vector<BreadType> breadTypes) { 
 		 this.breadTypes = breadTypes; 
 	}
-	public void addBreadType(BreadType breadType) { 
+	public boolean addBreadType(BreadType breadType) { 
 		breadType.setMenuItemID(nextMenuItemID);
 		breadTypes.add(breadType);
 		nextMenuItemID++;
+		return true;
 	 }
 	public boolean editBreadType(int ID, BreadType breadType) { 
 		for (int i = 0; i < breadTypes.size(); i++) {

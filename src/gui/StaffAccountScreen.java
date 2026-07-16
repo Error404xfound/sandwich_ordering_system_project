@@ -23,20 +23,23 @@ public class StaffAccountScreen extends JPanel {
 
 	private MainFrame main;
 	private JTextField txtFldUsername;
-	private JTextField txtFldEmail;
 	private JPasswordField pwdFldPassword;
 	private JLabel lblRole;
+	private JLabel lblEmail;
 	private Staff staffUser;
 	private String role;
+	private String email;
+
 
 	public StaffAccountScreen(MainFrame main) {
 		this.main = main;
 		setLayout(null);
 		
-		if (main.getCurrentUser() instanceof Staff) {
-		    staffUser = (Staff) main.getCurrentUser();
-		    role = staffUser.getRole();
-		}
+		
+	    staffUser = (Staff) main.getCurrentUser();
+	    role = staffUser.getRole();
+	    email = staffUser.getEmail();
+
 		
 		
 		JLabel lblStaffAccount = new JLabel("My Account");
@@ -60,9 +63,9 @@ public class StaffAccountScreen extends JPanel {
 		lblNewLabel_1_1_1.setBounds(240, 264, 320, 32);
 		add(lblNewLabel_1_1_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("Email");
+		JLabel lblNewLabel_2 = new JLabel("Email:");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_2.setBounds(240, 352, 120, 32);
+		lblNewLabel_2.setBounds(240, 352, 80, 32);
 		add(lblNewLabel_2);
 		
 		txtFldUsername = new JTextField();
@@ -71,39 +74,39 @@ public class StaffAccountScreen extends JPanel {
 		txtFldUsername.setBounds(240, 304, 600, 32);
 		add(txtFldUsername);
 		
-		txtFldEmail = new JTextField();
-		txtFldEmail.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		txtFldEmail.setColumns(10);
-		txtFldEmail.setBounds(240, 392, 600, 32);
-		add(txtFldEmail);
-		
 		JLabel lblNewLabel_3 = new JLabel("Password");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_3.setBounds(240, 440, 120, 32);
+		lblNewLabel_3.setBounds(240, 398, 120, 32);
 		add(lblNewLabel_3);
+		
+		lblEmail = new JLabel("");
+		lblEmail.setBounds(320, 352, 520, 32);
+		add(lblEmail);
 		
 		pwdFldPassword = new JPasswordField();
 		pwdFldPassword.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		pwdFldPassword.setColumns(10);
-		pwdFldPassword.setBounds(240, 480, 600, 32);
+		pwdFldPassword.setBounds(240, 438, 600, 32);
 		add(pwdFldPassword);
 		
 		JButton btnUpdate = new JButton("Update details");
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String newUsername = txtFldUsername.getText();
-				String newEmail = txtFldEmail.getText();
 				String newPwd = String.valueOf(pwdFldPassword.getPassword());
 				int currentID = staffUser.getUserID();
-				String currentRole = String.valueOf(staffUser.getRole());
-				Staff updatedStaff = new Staff(newUsername, newEmail, newPwd, currentID, currentRole);
-				boolean isEditted = main.getStaffController().editStaff(currentID, updatedStaff);
-				if (isEditted) {
-					JOptionPane.showMessageDialog(null, "Your account has been editted successfully", "Notification", JOptionPane.INFORMATION_MESSAGE);
-					main.setCurrentUser(updatedStaff);
+				
+				String error = main.getStaffController().editStaff(currentID, newUsername, newPwd);
+				if (error == null) {
+					
+					JOptionPane.showMessageDialog(null, "Your account has been updated successfully.", "Notification", JOptionPane.INFORMATION_MESSAGE);
+					
+					staffUser = main.getStaffController().getStaffbyEmail(email);
+					main.setCurrentUser(staffUser);
 				}
 				else {
-					JOptionPane.showMessageDialog(null, "Your account could not be editted. Please try again.","Notification", JOptionPane.INFORMATION_MESSAGE);
+					
+					JOptionPane.showMessageDialog(null, error, "Notification", JOptionPane.INFORMATION_MESSAGE);
 				}
 			}
 		});
@@ -137,11 +140,12 @@ public class StaffAccountScreen extends JPanel {
 					int currentUserID = main.getCurrentUser().getUserID();
 					boolean isDeleted = main.getStaffController().deleteStaff(currentUserID);
 					if (isDeleted) {
-						JOptionPane.showMessageDialog(null, "Your account has been deleted successfully", "Notification", JOptionPane.INFORMATION_MESSAGE);
+						
+						JOptionPane.showMessageDialog(null, "Your account has been deleted successfully.", "Notification", JOptionPane.INFORMATION_MESSAGE);
 						main.showLogin();
 					}
 					else {
-						JOptionPane.showMessageDialog(null, "Your account could not be deleted", "Notification", JOptionPane.INFORMATION_MESSAGE);
+						JOptionPane.showMessageDialog(null, "Your account could not be deleted. Please try again.", "Notification", JOptionPane.INFORMATION_MESSAGE);
 					}
 				}
 			}
@@ -154,9 +158,9 @@ public class StaffAccountScreen extends JPanel {
 		
 		lblRole.setText(role);
 		txtFldUsername.setText(main.getCurrentUser().getUsername());
-		txtFldEmail.setText(main.getCurrentUser().getEmail());
+		lblEmail.setText(email);
 		pwdFldPassword.setText(main.getCurrentUser().getPassword());
+		
+		
 	}
-
-
 }

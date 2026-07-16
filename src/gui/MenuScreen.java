@@ -18,6 +18,7 @@ import javax.swing.JComponent;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JList;
+import javax.swing.JOptionPane; 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ListSelectionModel;
@@ -262,10 +263,12 @@ public class MenuScreen extends JPanel {
 		JButton btnBrdEdit = new JButton("Edit bread type");
 		btnBrdEdit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (selectedIndex == -1) {
+				
+				int index = breadTypeList.getSelectedIndex();
+				if (index == -1) {
 					return;
 				}
-				main.showEditBreadType(selectedIndex, displayedBreadType.get(selectedIndex));
+				main.showEditBreadType(index, displayedBreadType.get(index));
 			}
 		});
 		btnBrdEdit.setFont(new Font("Tahoma", Font.PLAIN, 16));
@@ -275,9 +278,31 @@ public class MenuScreen extends JPanel {
 		JButton btnBrdDelete = new JButton("Delete bread type");
 		btnBrdDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int ID = displayedBreadType.get(selectedIndex).getMenuItemID();
-				main.getBreadTypeController().deleteBreadType(ID);
-				updateDisplayedBreadTypes();
+				
+				int index = breadTypeList.getSelectedIndex();
+				if (index == -1) {
+					return;
+				}
+				
+				int choice = JOptionPane.showConfirmDialog(
+						null,
+						"Are you sure you want to delete this bread type?",
+						"Confirmation",
+						JOptionPane.YES_NO_OPTION,
+						JOptionPane.WARNING_MESSAGE);
+				if (choice == JOptionPane.YES_OPTION) {
+					int ID = displayedBreadType.get(index).getMenuItemID();
+					// CHANGED: return value now checked and reported to the user
+					// (previously ignored, giving no feedback either way)
+					boolean isDeleted = main.getBreadTypeController().deleteBreadType(ID);
+					if (isDeleted) {
+						JOptionPane.showMessageDialog(null, "Bread type deleted successfully.", "Notification", JOptionPane.INFORMATION_MESSAGE);
+						updateDisplayedBreadTypes();
+					}
+					else {
+						JOptionPane.showMessageDialog(null, "Bread type could not be deleted. Please try again.", "Notification", JOptionPane.INFORMATION_MESSAGE);
+					}
+				}
 			}
 		});
 		btnBrdDelete.setFont(new Font("Tahoma", Font.PLAIN, 16));
@@ -415,7 +440,11 @@ public class MenuScreen extends JPanel {
 			lblBrdDietaryTags.setText(tagText);
 		}
 		lblBrdPrpTime.setText(String.format("%.2f", selectedBreadType.getPreparationTimeMins()));
-		lblBrdTstTime.setText(String.format("%.2f",selectedBreadType.getToastPreparationTime()));
+		String note = "";
+		if (selectedBreadType.getToastPreparationTime() <= 0) {
+			note = "   (not applicable)";
+		}
+		lblBrdTstTime.setText(String.format("%.2f",selectedBreadType.getToastPreparationTime()) + note);
 	}
 	
 	public Vector<BreadType> getDisplayedBreadType() {
