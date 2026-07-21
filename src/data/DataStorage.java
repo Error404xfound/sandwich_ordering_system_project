@@ -172,33 +172,53 @@ public class DataStorage {
 
 
 	// ===== ItemStock =====
-	public ItemStock getItemStock(int ID) {
-		for (int i = 0; i < itemStock.size(); i++) {
-			ItemStock itemStockObj = itemStock.get(i);
-			if (itemStockObj.getItemStockID() == ID) {
-				return itemStockObj;
+		public ItemStock getItemStock(int ID) {
+			for (int i = 0; i < itemStock.size(); i++) {
+				ItemStock itemStockObj = itemStock.get(i);
+				if (itemStockObj.getItemStockID() == ID) {
+					return itemStockObj;
+				}
 			}
+			return null;
 		}
-		return null;
-	}
-	public Vector<ItemStock> getAllItemStock() {
-	 	 return itemStock; 
-	}
-	public void setItemStock(Vector<ItemStock> itemStock) { 
-		 this.itemStock = itemStock; 
-	}
-	public void addItemStock(ItemStock itemStock) { 
-	 }
-	public void editItemStock(int ID, ItemStock itemStock) { 
-	 } 
-	public void deleteItemStock(int ID) { 
-	 }
-	public int getNextItemStockID() {
-	 	 return nextItemStockID; 
-	}
-	public void setNextItemStockID(int nextItemStockID) { 
-		 this.nextItemStockID = nextItemStockID; 
-	}
+		public Vector<ItemStock> getAllItemStock() {
+		 	 return itemStock; 
+		}
+		public void setItemStock(Vector<ItemStock> itemStock) { 
+			 this.itemStock = itemStock; 
+		}
+		public boolean addItemStock(ItemStock itemStock) { 
+			itemStock.setItemStockID(nextItemStockID);
+			this.itemStock.add(itemStock);
+			nextItemStockID++;
+			return true;
+		 }
+		public boolean editItemStock(int ID, ItemStock itemStock) { 
+			for (int i = 0; i < this.itemStock.size(); i++) {
+				ItemStock t = this.itemStock.get(i);
+				if (ID == t.getItemStockID()) {
+					this.itemStock.set(i, itemStock);
+					return true;
+				}
+			}
+			return false;
+		 } 
+		public boolean deleteItemStock(int ID) { 
+			for (int i = 0; i < this.itemStock.size(); i++) {
+				ItemStock t = this.itemStock.get(i);
+				if (ID == t.getItemStockID()) {
+					this.itemStock.remove(i);
+					return true;
+				}
+			}
+			return false;
+		 }
+		public int getNextItemStockID() {
+		 	 return nextItemStockID; 
+		}
+		public void setNextItemStockID(int nextItemStockID) { 
+			 this.nextItemStockID = nextItemStockID; 
+		}
 
 
 	// ===== Ingredient =====
