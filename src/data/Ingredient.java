@@ -7,7 +7,7 @@ public class Ingredient extends MenuItem {
 	public Ingredient
 	(
 		String name,
-		int price,
+		float price,
 		Vector<String> dietaryTags,
 		float preparationTimeMins,
 		boolean isVisible,

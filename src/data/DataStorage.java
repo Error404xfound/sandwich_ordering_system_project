@@ -217,11 +217,31 @@ public class DataStorage {
 	public void setIngredients(Vector<Ingredient> ingredients) { 
 		 this.ingredients = ingredients; 
 	}
-	public void addIngredient(Ingredient ingredient) { 
+	public boolean addIngredient(Ingredient ingredient) { 
+		ingredient.setMenuItemID(nextMenuItemID);
+		ingredients.add(ingredient);
+		nextMenuItemID++;
+		return true;
 	 }
-	public void editIngredient(int ID, Ingredient ingredient) { 
+	public boolean editIngredient(int ID, Ingredient ingredient) { 
+		for (int i = 0; i < ingredients.size(); i++) {
+			Ingredient t = ingredients.get(i);
+			if (ID == t.getMenuItemID()) {
+				ingredients.set(i, ingredient);
+				return true;
+			}
+		}
+		return false;
 	 }
-	public void deleteIngredient(int ID) { 
+	public boolean deleteIngredient(int ID) { 
+		for (int i = 0; i < ingredients.size(); i++) {
+			Ingredient t = ingredients.get(i);
+			if (ID == t.getMenuItemID()) {
+				ingredients.remove(i);
+				return true;
+			}
+		}
+		return false;
 	 }
 
 
