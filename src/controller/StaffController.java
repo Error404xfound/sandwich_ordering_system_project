@@ -1,5 +1,7 @@
 package controller;
 
+import java.util.Vector;
+
 import data.DataStorage;
 import data.Staff;
 
@@ -50,10 +52,6 @@ public class StaffController {
 		return null;
 	 }
 
-	public Staff getAllStaff() { 
-		return null;
-	 }
-
 	
 	public String editStaff(int ID, String username, String pwd) {
 		
@@ -82,6 +80,10 @@ public class StaffController {
 
 	public Staff getStaffbyEmail(String email) {
 		return this.ds.getStaffbyEmail(email);
+	}
+	
+	public Vector<Staff> getAllStaff() {
+		return this.ds.getAllStaff();
 	}
 
 }
