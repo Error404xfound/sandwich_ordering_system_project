@@ -87,14 +87,8 @@ public class BreadTypeController {
 	    return filteredBreadTypes;
 	}
 
-	public boolean editBreadType(int ID, BreadType breadType)
-		{
-		    return this.ds.editBreadType(ID, breadType);
-		}
 
-	// CHANGED: new overload — returns String (null = success, otherwise error message);
-	// accepts raw Strings for the numeric fields so the view no longer parses them.
-	// Mirrors the same validation as addBreadType.
+
 	public String editBreadType
 	(
 		int ID,

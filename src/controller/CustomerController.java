@@ -10,9 +10,6 @@ public class CustomerController {
 	public void deleteCustomer(int ID) { 
 	 }
 
-	public void editCustomer(Customer customer, int ID) { 
-	 }
-
 	public Customer getAllCustomers() { 
 		return null;
 	 }
