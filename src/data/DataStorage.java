@@ -65,10 +65,28 @@ public class DataStorage {
 		customers.add(customer);
 		nextUserID++;
 	 }
-	public void editCustomer(int ID, Customer customer) { 
+	public boolean editCustomer(int ID, Customer customer) { 
+		for (int i = 0; i < customers.size(); i++) {
+			Customer t = customers.get(i);
+			if (ID == t.getUserID()) {
+				customers.set(i, customer);
+				return true;
+			}
+		}
+		return false;
 	 }
-	public void deleteCustomer(int ID) { 
+	
+	public boolean deleteCustomer(int ID) { 
+		for (int i = 0; i < customers.size(); i++) {
+			Customer t = customers.get(i);
+			if (ID == t.getUserID()) {
+				customers.remove(i);
+				return true;
+			}
+		}
+		return false;
 	 }
+	
 	public Customer getCustomerbyEmail(String email) {
 		for (int i = 0; i < customers.size(); i++) {
 			Customer temp = customers.get(i);
@@ -151,18 +169,43 @@ public class DataStorage {
 		}
 		return null;
 	}
+	
 	public Vector<Order> getAllOrders() {
 	 	 return orders; 
 	}
+	
 	public void setOrders(Vector<Order> orders) { 
 		 this.orders = orders; 
 	}
+	
 	public void addOrder(Order order) { 
+		order.setOrderID(nextOrderID);
+		orders.add(order);
+		nextOrderID++;
 	 }
-	public void editOrder(int ID, Order order) { 
+	
+	public boolean editOrder(int ID, Order order) { 
+		for (int i = 0; i < orders.size(); i++) {
+			Order t = orders.get(i);
+			if (ID == t.getOrderID()) {
+				orders.set(i, order);
+				return true;
+			}
+		}
+		return false;
 	 }
-	public void deleteOrder(int ID) { 
+	
+	public boolean deleteOrder(int ID) { 
+		for (int i = 0; i < orders.size(); i++) {
+			Order t = orders.get(i);
+			if (ID == t.getOrderID()) {
+				orders.remove(i);
+				return true;
+			}
+		}
+		return false;
 	 }
+	
 	public int getNextOrderID() {
 	 	 return nextOrderID; 
 	}
@@ -319,18 +362,24 @@ public class DataStorage {
 
 
 	// ===== MenuItem =====
-	public Vector<MenuItem> getAllMenuItems() { 
-		return null;
+	public Vector<MenuItem> getAllMenuItems() {
+		Vector<MenuItem> menuItems = new Vector<MenuItem>();
+		for (int i = 0; i < breadTypes.size(); i++) {
+			menuItems.add( breadTypes.get(i));
+		}
+		for (int i = 0; i < ingredients.size(); i++) {
+			menuItems.add(ingredients.get(i));
+		}
+		return menuItems;
 	 }
 
 
 	// ===== Sandwich =====
-	public void addSandwich(Sandwich sandwich) { 
-	 }
-	public void editSandwich(int ID, Sandwich sandwich) { 
-	 }
-	public void deleteSandwich(int ID) { 
-	 }
+	public void assignSandwichID(Sandwich sandwich) { 
+		sandwich.setSandwichID(nextSandwichID);
+		nextSandwichID++;
+	}
+	
 	public int getNextSandwichID() {
 	 	 return nextSandwichID; 
 	}

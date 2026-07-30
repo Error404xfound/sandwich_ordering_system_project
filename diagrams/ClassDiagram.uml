@@ -450,19 +450,8 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_HgbDEHoJEfGphexfQdctHw" name="getAllLoyaltyDiscounts">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_pCIpwHoKEfGphexfQdctHw" type="_6Dl5QHoCEfGphexfQdctHw" direction="return"/>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_13N-UHuVEfGNIvLfvL9nvw" name="addSandwich">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_oh200HuXEfGNIvLfvL9nvw" name="sandwich" type="_UcqAEFypEfG5MafHy1tCUg"/>
-        </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_1Bmk8HuVEfGNIvLfvL9nvw" name="deleteSandwich">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_WMj4gHuXEfGNIvLfvL9nvw" name="ID">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_1QRTEHuVEfGNIvLfvL9nvw" name="editSandwich">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_bNbKUHuXEfGNIvLfvL9nvw" name="ID">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_eom3wHuXEfGNIvLfvL9nvw" name="sandwich" type="_UcqAEFypEfG5MafHy1tCUg"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_DHq-EIu4EfGfHecZmYnNVw" name="assignSandwichID">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_OcaBsIu4EfGfHecZmYnNVw" name="sandwich" type="_UcqAEFypEfG5MafHy1tCUg"/>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_6Dl5QHoCEfGphexfQdctHw" name="LoyaltyDiscount">
@@ -517,6 +506,20 @@
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_G_z28HuWEfGNIvLfvL9nvw" name="getAllOrders">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_QfNwoHuWEfGNIvLfvL9nvw" type="_K4_nwFzFEfG5MafHy1tCUg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_13N-UHuVEfGNIvLfvL9nvw" name="addSandwich">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_oh200HuXEfGNIvLfvL9nvw" name="sandwich" type="_UcqAEFypEfG5MafHy1tCUg"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_1QRTEHuVEfGNIvLfvL9nvw" name="editSandwich">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_bNbKUHuXEfGNIvLfvL9nvw" name="ID">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_eom3wHuXEfGNIvLfvL9nvw" name="sandwich" type="_UcqAEFypEfG5MafHy1tCUg"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_1Bmk8HuVEfGNIvLfvL9nvw" name="deleteSandwich">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_WMj4gHuXEfGNIvLfvL9nvw" name="ID">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_UcqAEFypEfG5MafHy1tCUg" name="Sandwich">
@@ -1915,4 +1918,5 @@
   <java:JavaMethod xmi:id="_cL9WIIUOEfGGxLYBr9FptQ" base_Operation="_ajPr4IUOEfGGxLYBr9FptQ"/>
   <java:JavaProperty xmi:id="_wATN4IUPEfGGxLYBr9FptQ" base_Property="_nFdZ0IUPEfGGxLYBr9FptQ"/>
   <java:JavaProperty xmi:id="_wnLAoIUPEfGGxLYBr9FptQ" base_Property="_mt-G4IUPEfGGxLYBr9FptQ"/>
+  <java:JavaMethod xmi:id="_KXaiQIu4EfGfHecZmYnNVw" base_Operation="_DHq-EIu4EfGfHecZmYnNVw"/>
 </xmi:XMI>
